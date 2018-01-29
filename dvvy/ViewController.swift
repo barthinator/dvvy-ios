@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
     
+    @IBOutlet weak var navContainer: UIView!
+    
+    
     var menuShowing = false
     
     override func viewDidLoad() {
@@ -20,10 +23,12 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        guard let location = touch?.location(in: self.view) else { return }
-        if !menuView.frame.contains(location) {
-            openMenu()
+        if (menuShowing){
+            let touch = touches.first
+            guard let location = touch?.location(in: self.view) else { return }
+            if !menuView.frame.contains(location) {
+                openMenu()
+            }
         }
     }
     
