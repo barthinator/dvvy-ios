@@ -13,13 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var menuView: UIView!
     
-    @IBOutlet weak var navContainer: UIView!
-    
-    
     var menuShowing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     
