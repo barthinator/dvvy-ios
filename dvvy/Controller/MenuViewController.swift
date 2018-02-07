@@ -8,6 +8,7 @@
 
 import UIKit
 
+//This delegate is responsible for calling the slide function passed through a seperate view controller
 protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
