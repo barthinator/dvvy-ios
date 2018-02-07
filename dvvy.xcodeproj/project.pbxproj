@@ -14,6 +14,7 @@
 		796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796E159C201E5C4E0051605E /* LaunchScreen.storyboard */; };
 		796E15A9201E5C4F0051605E /* dvvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15A8201E5C4F0051605E /* dvvyTests.swift */; };
 		796E15B4201E5C4F0051605E /* dvvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15B3201E5C4F0051605E /* dvvyUITests.swift */; };
+		79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A75253202AC76F00B9BC99 /* ProfileViewController.swift */; };
 		7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234B82029A226009AE35F /* BaseViewController.swift */; };
 		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
@@ -52,6 +53,7 @@
 		796E15AF201E5C4F0051605E /* dvvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dvvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E15B3201E5C4F0051605E /* dvvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dvvyUITests.swift; sourceTree = "<group>"; };
 		796E15B5201E5C4F0051605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A75253202AC76F00B9BC99 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7F4234B82029A226009AE35F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7F4234BA2029A30C009AE35F /* CollabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabViewController.swift; sourceTree = "<group>"; };
 		7F4234BC2029A3A5009AE35F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 		7F8C08B6202831A80051B6F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				79A75253202AC76F00B9BC99 /* ProfileViewController.swift */,
 				796E1595201E5C4E0051605E /* ViewController.swift */,
 				7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */,
 				7F4234B82029A226009AE35F /* BaseViewController.swift */,
@@ -304,6 +307,7 @@
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
+				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

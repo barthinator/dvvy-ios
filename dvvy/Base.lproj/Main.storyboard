@@ -259,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="1580" y="133.5832083958021"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="kii-rv-Yub">
             <objects>
-                <viewController restorationIdentifier="Settings" storyboardIdentifier="Settings" id="pFj-YL-UKG" customClass="SettingsViewController" customModule="dvvy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="Profile" storyboardIdentifier="Profile" id="pFj-YL-UKG" customClass="ProfileViewController" customModule="dvvy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ViF-AI-IUg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -597,7 +597,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEQ-Ev-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="-600"/>
+            <point key="canvasLocation" x="2370" y="-637"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="r0O-4M-6Aa">
@@ -676,4 +676,7 @@
             <point key="canvasLocation" x="2544.8000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="johndoe" width="225" height="225"/>
+    </resources>
 </document>
