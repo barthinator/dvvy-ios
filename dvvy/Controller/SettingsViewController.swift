@@ -1,14 +1,14 @@
 //
-//  FeedViewController.swift
+//  SettingsViewController.swift
 //  dvvy
 //
-//  Created by David B on 2/6/18.
+//  Created by Nathan Frasier on 2/6/18.
 //  Copyright © 2018 David Bartholomew. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: BaseViewController {
+class SettingsViewController : BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,8 @@ class FeedViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 }
+
+
+
+
