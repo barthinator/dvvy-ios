@@ -216,17 +216,40 @@
                                     <constraint firstItem="xb2-YU-9xB" firstAttribute="centerX" secondItem="Ya7-6O-sKE" secondAttribute="centerX" id="vZK-qO-ZeS"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-d3-OKU">
+                                <rect key="frame" x="16" y="120" width="343" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EvX-2b-xZ5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ya7-6O-sKE" secondAttribute="trailing" id="1U8-He-qlo"/>
+                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="trailing" secondItem="Ya7-6O-sKE" secondAttribute="trailing" id="1fK-de-Fl8"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="centerX" secondItem="Ya7-6O-sKE" secondAttribute="centerX" id="KfY-bf-zO8"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="MBS-QP-vpx"/>
+                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" id="MxU-BF-zlu"/>
+                            <constraint firstItem="Ya7-6O-sKE" firstAttribute="top" secondItem="sDi-d3-OKU" secondAttribute="bottom" id="Nji-Xg-ssE"/>
                             <constraint firstItem="Ya7-6O-sKE" firstAttribute="leading" secondItem="Old-Uu-s3q" secondAttribute="leading" id="Ola-UU-5GI"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="QSy-3s-u7V"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="zle-IQ-eSl" secondAttribute="leading" constant="16" id="RDu-Jx-2a3"/>
+                            <constraint firstItem="zle-IQ-eSl" firstAttribute="trailing" secondItem="sDi-d3-OKU" secondAttribute="trailing" constant="16" id="TaL-2m-91z"/>
+                            <constraint firstItem="Ya7-6O-sKE" firstAttribute="top" secondItem="sDi-d3-OKU" secondAttribute="bottom" id="apM-ez-vqC"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="zle-IQ-eSl" secondAttribute="leading" constant="16" id="bhf-u8-34z"/>
                             <constraint firstItem="Ya7-6O-sKE" firstAttribute="bottom" secondItem="zle-IQ-eSl" secondAttribute="bottom" id="d7c-FQ-TRc"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="dOc-sY-zzd"/>
+                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="leading" secondItem="Ya7-6O-sKE" secondAttribute="leading" id="e2o-Ef-PE7"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="Old-Uu-s3q" secondAttribute="leadingMargin" id="itR-4P-U3t"/>
+                            <constraint firstItem="zle-IQ-eSl" firstAttribute="trailing" secondItem="sDi-d3-OKU" secondAttribute="trailing" constant="16" id="j7I-Ag-2hH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zle-IQ-eSl"/>
                     </view>
                     <navigationItem key="navigationItem" title="dvvy" id="nba-7S-9YS"/>
                     <connections>
+                        <outlet property="collabTableView" destination="sDi-d3-OKU" id="UXd-2V-khL"/>
                         <segue destination="Je0-dJ-3hc" kind="show" id="bhG-OA-sC3"/>
                         <segue destination="nDh-gZ-Etm" kind="show" identifier="pushToPlay" id="F1X-XT-8aa"/>
                         <segue destination="pFj-YL-UKG" kind="custom" id="jP3-qc-gr3"/>
@@ -254,7 +277,6 @@
         <!--View Controller-->
         <scene sceneID="vA9-Bj-Mnb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PEQ-Ev-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="nDh-gZ-Etm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vud-rQ-BeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -448,6 +470,7 @@
                         <viewLayoutGuide key="safeArea" id="Nna-SX-n89"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEQ-Ev-Xnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2546" y="-600"/>
         </scene>

@@ -10,9 +10,12 @@ import UIKit
 
 class CollabViewController: BaseViewController {
     
+    @IBOutlet weak var collabTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        collabTableView.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
         // Do any additional setup after loading the view.
     }
     
