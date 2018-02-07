@@ -29,6 +29,12 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifier("Feed")
             
             break
+        case 2:
+            print("Profile\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Profile")
+            
+            break
         default:
             print("default\n", terminator: "")
         }

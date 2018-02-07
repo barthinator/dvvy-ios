@@ -60,6 +60,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //Pass in icon with ["title":"Name", "icon":"Name"]
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Feed"])
+        arrayMenuOptions.append(["title":"Profile"])
         
         tblMenuOptions.reloadData()
     }
