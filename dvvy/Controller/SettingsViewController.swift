@@ -1,15 +1,15 @@
 //
-//  FeedViewController.swift
+//  SettingsViewController.swift
 //  dvvy
 //
-//  Created by David B on 2/6/18.
+//  Created by Nathan Frasier on 2/6/18.
 //  Copyright © 2018 David Bartholomew. All rights reserved.
 //
 
 import UIKit
 
-class FeedViewController: BaseViewController {
-    //This is the Feed screen
+class SettingsViewController : BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
@@ -20,8 +20,8 @@ class FeedViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> adcbab002a95be332cddb4bb9094a27b5882eaa1
 }
+
+
+
+
