@@ -20,8 +20,4 @@ class FeedViewController: BaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> adcbab002a95be332cddb4bb9094a27b5882eaa1
 }
