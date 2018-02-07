@@ -14,6 +14,10 @@
 		796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796E159C201E5C4E0051605E /* LaunchScreen.storyboard */; };
 		796E15A9201E5C4F0051605E /* dvvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15A8201E5C4F0051605E /* dvvyTests.swift */; };
 		796E15B4201E5C4F0051605E /* dvvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15B3201E5C4F0051605E /* dvvyUITests.swift */; };
+		7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234B82029A226009AE35F /* BaseViewController.swift */; };
+		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
+		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
+		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		796E15AF201E5C4F0051605E /* dvvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dvvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E15B3201E5C4F0051605E /* dvvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dvvyUITests.swift; sourceTree = "<group>"; };
 		796E15B5201E5C4F0051605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F4234B82029A226009AE35F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7F4234BA2029A30C009AE35F /* CollabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabViewController.swift; sourceTree = "<group>"; };
+		7F4234BC2029A3A5009AE35F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,10 @@
 		796E1592201E5C4E0051605E /* dvvy */ = {
 			isa = PBXGroup;
 			children = (
+				7F8C08B6202831A80051B6F9 /* Controller */,
+				7F8C08B7202831A80051B6F9 /* Model */,
+				7F8C08B8202831A80051B6F9 /* Views */,
 				796E1593201E5C4E0051605E /* AppDelegate.swift */,
-				796E1595201E5C4E0051605E /* ViewController.swift */,
 				796E1597201E5C4E0051605E /* Main.storyboard */,
 				796E159A201E5C4E0051605E /* Assets.xcassets */,
 				796E159C201E5C4E0051605E /* LaunchScreen.storyboard */,
@@ -123,6 +133,32 @@
 				796E15B5201E5C4F0051605E /* Info.plist */,
 			);
 			path = dvvyUITests;
+			sourceTree = "<group>";
+		};
+		7F8C08B6202831A80051B6F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				796E1595201E5C4E0051605E /* ViewController.swift */,
+				7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */,
+				7F4234B82029A226009AE35F /* BaseViewController.swift */,
+				7F4234BA2029A30C009AE35F /* CollabViewController.swift */,
+				7F4234BC2029A3A5009AE35F /* FeedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7F8C08B7202831A80051B6F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7F8C08B8202831A80051B6F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +296,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
+				7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */,
+				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
+				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
+				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,11 +469,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W5US56K3E;
 				INFOPLIST_FILE = dvvy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redsource.dvvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,11 +485,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W5US56K3E;
 				INFOPLIST_FILE = dvvy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redsource.dvvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
