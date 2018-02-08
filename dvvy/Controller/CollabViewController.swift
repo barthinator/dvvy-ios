@@ -9,10 +9,12 @@
 import UIKit
 
 class CollabViewController: BaseViewController {
-    // TEST Comment
+    
+    @IBOutlet weak var collabTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        collabTableView.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
         // Do any additional setup after loading the view.
     }
     
@@ -21,16 +23,7 @@ class CollabViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    //test comments
     
 }
 
