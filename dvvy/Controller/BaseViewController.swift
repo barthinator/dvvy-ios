@@ -15,6 +15,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
+        topViewController.isModalInPopover = true
+        topViewController.modalPresentationStyle = .overCurrentContext
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:

@@ -44,6 +44,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         tblMenuOptions.tableFooterView = UIView()
         btnCloseMenuOverlay.alpha = 1
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
         // Do any additional setup after loading the view.
     }
     
