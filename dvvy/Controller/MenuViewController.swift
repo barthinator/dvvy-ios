@@ -20,6 +20,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      */
     @IBOutlet var tblMenuOptions : UITableView!
     
+    
+    
     /**
      *  Transparent button to hide menu
      */
@@ -43,6 +45,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         tblMenuOptions.tableFooterView = UIView()
+        tblMenuOptions.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
+        tblMenuOptions.tintColor = UIColor.white
         btnCloseMenuOverlay.alpha = 1
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
