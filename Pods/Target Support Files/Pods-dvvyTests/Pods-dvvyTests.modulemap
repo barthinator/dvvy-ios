@@ -1,0 +1,6 @@
+framework module Pods_dvvyTests {
+  umbrella header "Pods-dvvyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
