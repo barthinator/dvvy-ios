@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902703E203AA685000A09CC /* SubmitViewController.swift */; };
+		19819554203AAD3500E88201 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19819553203AAD3500E88201 /* MessageViewController.swift */; };
 		796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1593201E5C4E0051605E /* AppDelegate.swift */; };
 		796E1596201E5C4E0051605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1595201E5C4E0051605E /* ViewController.swift */; };
 		796E1599201E5C4E0051605E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796E1597201E5C4E0051605E /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1902703E203AA685000A09CC /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		19819553203AAD3500E88201 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		796E1590201E5C4E0051605E /* dvvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dvvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E1593201E5C4E0051605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796E1595201E5C4E0051605E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				7F4234BA2029A30C009AE35F /* CollabViewController.swift */,
 				7F4234BC2029A3A5009AE35F /* FeedViewController.swift */,
 				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
+				1902703E203AA685000A09CC /* SubmitViewController.swift */,
+				19819553203AAD3500E88201 /* MessageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
+				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
+				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 			);
