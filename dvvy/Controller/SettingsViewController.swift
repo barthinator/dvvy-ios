@@ -22,6 +22,8 @@ class SettingsViewController : BaseViewController {
     @IBOutlet weak var Friends: UIButton!
     @IBOutlet weak var Support: UIButton!
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
