@@ -114,7 +114,6 @@
                                 </state>
                                 <connections>
                                     <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6sn-uf-Y0B"/>
-                                    <segue destination="rjh-Ck-grR" kind="show" identifier="pushToHome" id="bxu-BP-5br"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IwF-xM-se2">
@@ -191,6 +190,7 @@
                         <outlet property="passwordLbl" destination="zdC-wy-imi" id="LgF-Sh-RFv"/>
                         <outlet property="signInBtn" destination="dtS-gJ-o4U" id="fNy-r3-NxL"/>
                         <outlet property="usernameLbl" destination="IwF-xM-se2" id="zUN-RP-7yp"/>
+                        <segue destination="rjh-Ck-grR" kind="show" identifier="pushToHome" id="wcy-86-Pnc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -864,7 +864,6 @@
                                 </state>
                                 <connections>
                                     <action selector="createUser:" destination="hfS-Xk-1qf" eventType="touchUpInside" id="tuz-4F-GIZ"/>
-                                    <segue destination="rjh-Ck-grR" kind="show" identifier="pushToHome" id="oiG-oF-m0H"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PxH-AL-XW9">
@@ -940,6 +939,7 @@
                         <outlet property="emailLbl" destination="PxH-AL-XW9" id="RCc-GZ-u0d"/>
                         <outlet property="passwordLbl" destination="Kdo-AL-mtE" id="V1b-4E-qVo"/>
                         <outlet property="usernameLbl" destination="JMA-zL-t9D" id="dkF-gf-RJH"/>
+                        <segue destination="rjh-Ck-grR" kind="show" identifier="pushToHome" id="CfK-QR-jeD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gky-A3-2W9" sceneMemberID="firstResponder"/>
@@ -951,6 +951,6 @@
         <image name="johndoe" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oiG-oF-m0H"/>
+        <segue reference="wcy-86-Pnc"/>
     </inferredMetricsTieBreakers>
 </document>
