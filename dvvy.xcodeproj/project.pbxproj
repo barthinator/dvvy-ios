@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06294ABE203A273E001530FE /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06294ABD203A273E001530FE /* FriendsTableViewCell.swift */; };
+		06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109665203A97F0004827E4 /* PopUpViewController.swift */; };
+		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
+		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
+		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
 		06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
 		06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
 		06AE2BCB2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
 		06AE2BCC2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
 		06AE2BCD2038EB89008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
 		06AE2BCE2038EB8A008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
-		06AE2BD02038F550008E24B5 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AE2BCF2038F550008E24B5 /* IBDesignable.swift */; };
 		06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE22592039249B00DED1CA /* PortfolioController.swift */; };
 		796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1593201E5C4E0051605E /* AppDelegate.swift */; };
 		796E1596201E5C4E0051605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1595201E5C4E0051605E /* ViewController.swift */; };
@@ -49,10 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06294ABD203A273E001530FE /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		06109665203A97F0004827E4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
+		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
 		06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Light-trial.ttf"; sourceTree = "<group>"; };
 		06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Ultralight-trial.ttf"; sourceTree = "<group>"; };
-		06AE2BCF2038F550008E24B5 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
 		06EE22592039249B00DED1CA /* PortfolioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
 		796E1590201E5C4E0051605E /* dvvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dvvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E1593201E5C4E0051605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06109669203AA7B6004827E4 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0610966C203AA907004827E4 /* FriendsCell.xib */,
+				0610966E203AAAFD004827E4 /* customFriendCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		06AE2BCA2038EB55008E24B5 /* font */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,9 +179,9 @@
 		7F8C08B6202831A80051B6F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				06294ABD203A273E001530FE /* FriendsTableViewCell.swift */,
+				06109667203AA603004827E4 /* FriendsViewController.swift */,
+				06109665203A97F0004827E4 /* PopUpViewController.swift */,
 				79A75253202AC76F00B9BC99 /* ProfileViewController.swift */,
-				06AE2BCF2038F550008E24B5 /* IBDesignable.swift */,
 				796E1595201E5C4E0051605E /* ViewController.swift */,
 				7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */,
 				7F4234B82029A226009AE35F /* BaseViewController.swift */,
@@ -190,6 +203,7 @@
 		7F8C08B8202831A80051B6F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				06109669203AA7B6004827E4 /* Custom Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 				796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */,
 				06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */,
 				796E159B201E5C4E0051605E /* Assets.xcassets in Resources */,
+				0610966D203AA907004827E4 /* FriendsCell.xib in Resources */,
 				06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */,
 				796E1599201E5C4E0051605E /* Main.storyboard in Resources */,
 			);
@@ -334,13 +349,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
 				7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */,
 				D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */,
-				06294ABE203A273E001530FE /* FriendsTableViewCell.swift in Sources */,
+				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
-				06AE2BD02038F550008E24B5 /* IBDesignable.swift in Sources */,
+				06109668203AA603004827E4 /* FriendsViewController.swift in Sources */,
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,

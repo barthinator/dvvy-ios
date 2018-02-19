@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController {
+class ProfileViewController: BaseViewController{
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
@@ -23,6 +23,7 @@ class ProfileViewController: BaseViewController {
         
         profileTableView.backgroundColor = UIColor.darkGray
     }
+    
     
     
     
