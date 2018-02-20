@@ -25,6 +25,7 @@
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
 		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
 		D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B0DC3202A987900677E53 /* SettingsViewController.swift */; };
+		D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886FF2B203BBC91008573A2 /* AccountViewController.swift */; };
 		F0E9DBA3478B5E903598A17D /* Pods_dvvyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5F64B00883769C694EB9D5 /* Pods_dvvyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C77D72FCE7C8D8157904926D /* Pods-dvvy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvy.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvy/Pods-dvvy.release.xcconfig"; sourceTree = "<group>"; };
 		D80B0DC3202A987900677E53 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D886FF2B203BBC91008573A2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		DC08679F92E4A8560130B8D2 /* Pods-dvvyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyUITests/Pods-dvvyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -182,6 +184,7 @@
 				7F4234B82029A226009AE35F /* BaseViewController.swift */,
 				7F4234BA2029A30C009AE35F /* CollabViewController.swift */,
 				7F4234BC2029A3A5009AE35F /* FeedViewController.swift */,
+				D886FF2B203BBC91008573A2 /* AccountViewController.swift */,
 				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
 				79BDE3D720396DF50011853A /* SignInViewController.swift */,
 				79BDE3D9203977BE0011853A /* SignUpViewController.swift */,
@@ -524,6 +527,7 @@
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
+				D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
