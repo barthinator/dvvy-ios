@@ -17,8 +17,14 @@ class AccountViewController: UIViewController {
     
     }
     @IBAction func handleLogout(_ target: UIButton) {
-        try! Auth.auth().signOut()
-        self.dismiss(animated: false, completion: nil)
+        if Auth.auth().currentUser != nil {
+            do {
+                try Auth.auth().signOut()
+                self.dismiss(animated: false, completion: nil)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }
