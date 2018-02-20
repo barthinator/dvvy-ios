@@ -19,8 +19,8 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         friendsTableView.dataSource = self
         
         friendsTableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "customFriendCell")
-
-        // Do any additional setup after loading the view.
+        
+        configureTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customFriendCell", for: indexPath) as! customFriendCell
         
-        let nameArray = ["Zack Goldstein, Drea Driver, Jason Kirschenmann, Keaka Kaakau, David Bartholomew, Nathan Frasier"]
+        let nameArray = ["Zack", "Drea", "Jason", "Keaka", "David", "Nathan"]
         
         cell.nameLbl.text = nameArray[indexPath.row]
         
@@ -43,6 +43,11 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 6
     }
     
+    func configureTableView(){
+        friendsTableView.rowHeight = UITableViewAutomaticDimension
+        friendsTableView.estimatedRowHeight = 120.0
+    }
+
 
     /*
     // MARK: - Navigation

@@ -14,14 +14,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomFriendCell" customModule="dvvy" customModuleProvider="target">
-            <connections>
-                <outlet property="nameLbl" destination="HLp-7B-bEc" id="xcc-41-HBv"/>
-                <outlet property="profileImage" destination="72Y-cJ-dqd" id="nNg-WW-jP3"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customFriendsCell" rowHeight="137" id="ufl-D9-fmU">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customFriendCell" rowHeight="137" id="ufl-D9-fmU" customClass="customFriendCell" customModule="dvvy" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="550" height="137"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufl-D9-fmU" id="cXX-ge-Rp4">
@@ -35,12 +30,17 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLp-7B-bEc">
                         <rect key="frame" x="136" y="11" width="394" height="115"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="43"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="HLp-7B-bEc" id="Cao-8v-u1k"/>
+                <outlet property="profileImage" destination="72Y-cJ-dqd" id="RDH-8P-27m"/>
+            </connections>
             <point key="canvasLocation" x="39" y="-56.5"/>
         </tableViewCell>
     </objects>

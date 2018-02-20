@@ -104,13 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06109669203AA7B6004827E4 /* Custom Cell */ = {
+		06109669203AA7B6004827E4 /* Custom Friends Cell */ = {
 			isa = PBXGroup;
 			children = (
 				0610966C203AA907004827E4 /* FriendsCell.xib */,
 				0610966E203AAAFD004827E4 /* customFriendCell.swift */,
 			);
-			path = "Custom Cell";
+			path = "Custom Friends Cell";
 			sourceTree = "<group>";
 		};
 		06AE2BCA2038EB55008E24B5 /* font */ = {
@@ -150,6 +150,7 @@
 				7F8C08B8202831A80051B6F9 /* Views */,
 				796E1593201E5C4E0051605E /* AppDelegate.swift */,
 				796E1597201E5C4E0051605E /* Main.storyboard */,
+				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
 				06AE2BCA2038EB55008E24B5 /* font */,
 				796E159A201E5C4E0051605E /* Assets.xcassets */,
 				796E159C201E5C4E0051605E /* LaunchScreen.storyboard */,
@@ -187,7 +188,6 @@
 				7F4234B82029A226009AE35F /* BaseViewController.swift */,
 				7F4234BA2029A30C009AE35F /* CollabViewController.swift */,
 				7F4234BC2029A3A5009AE35F /* FeedViewController.swift */,
-				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
 				06EE22592039249B00DED1CA /* PortfolioController.swift */,
 			);
 			path = Controller;
@@ -203,7 +203,7 @@
 		7F8C08B8202831A80051B6F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06109669203AA7B6004827E4 /* Custom Cell */,
+				06109669203AA7B6004827E4 /* Custom Friends Cell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
