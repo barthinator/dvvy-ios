@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: BaseViewController{
     
+    @IBOutlet var friendsBtn: UIButton!
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
     
@@ -17,9 +19,10 @@ class ProfileViewController: BaseViewController{
         super.viewDidLoad()
         //Calls the slide menu button
         addSlideMenuButton()
-        
+        friendsBtn.layer.borderWidth = 1
+        friendsBtn.layer.cornerRadius = 5
+        friendsBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
         //Set the data of the user
-        usernameLabel.text = "John Doe"
         
         profileTableView.backgroundColor = UIColor.darkGray
     }
