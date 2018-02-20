@@ -20,6 +20,7 @@ class SignUpViewController : UIViewController {
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
         
+        
         // TODO: Make some sort of email / pass validation
         if let email = emailLbl.text, let pass = passwordLbl.text {
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
@@ -66,59 +67,59 @@ class SignUpViewController : UIViewController {
                     case .invalidUserToken:
                         print("Invalid user token")
                     case .networkError:
-                        print("invalid email")
+                        print("Network error")
                     case .userTokenExpired:
-                        print("invalid email")
+                        print("User token has expired")
                     case .invalidAPIKey:
-                        print("invalid email")
+                        print("Invalid API key")
                     case .userMismatch:
-                        print("invalid email")
+                        print("User mismatch")
                     case .credentialAlreadyInUse:
-                        print("invalid email")
+                        print("Already logged in")
                     case .weakPassword:
-                        print("invalid email")
+                        print("Weak Password")
                     case .appNotAuthorized:
-                        print("invalid email")
+                        print("App not authorized")
                     case .expiredActionCode:
-                        print("invalid email")
+                        print("Expired action code")
                     case .invalidActionCode:
-                        print("invalid email")
+                        print("Invalid action code")
                     case .invalidMessagePayload:
-                        print("invalid email")
+                        print("Invalid message payload")
                     case .invalidSender:
-                        print("invalid email")
+                        print("Invalid sender")
                     case .invalidRecipientEmail:
-                        print("invalid email")
+                        print("Invalid recipient email")
                     case .missingPhoneNumber:
-                        print("invalid email")
+                        print("Missing phone number")
                     case .invalidPhoneNumber:
-                        print("invalid email")
+                        print("Invalid phone number")
                     case .missingVerificationCode:
-                        print("invalid email")
+                        print("Missing verification code")
                     case .invalidVerificationCode:
-                        print("invalid email")
+                        print("Invalid verification code")
                     case .missingVerificationID:
-                        print("invalid email")
+                        print("Missing verification ID")
                     case .invalidVerificationID:
-                        print("invalid email")
+                        print("Invalid verification ID")
                     case .missingAppCredential:
-                        print("invalid email")
+                        print("Missing app credential")
                     case .invalidAppCredential:
-                        print("invalid email")
+                        print("Invalid app credential")
                     case .sessionExpired:
-                        print("invalid email")
+                        print("Session expired")
                     case .quotaExceeded:
-                        print("invalid email")
+                        print("Quota exceeded")
                     case .missingAppToken:
-                        print("invalid email")
+                        print("Missing app token")
                     case .notificationNotForwarded:
-                        print("invalid email")
+                        print("Notification not forwarded")
                     case .appNotVerified:
-                        print("invalid email")
+                        print("App not verified")
                     case .keychainError:
-                        print("invalid email")
+                        print("Keychain error")
                     case .internalError:
-                        print("invalid email")
+                        print("Internal error")
                     }
                 }
             }
