@@ -193,25 +193,18 @@
                                 <rect key="frame" x="16" y="120" width="343" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EvX-2b-xZ5">
-                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="MBS-QP-vpx"/>
-                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" id="MxU-BF-zlu"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="QSy-3s-u7V"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="zle-IQ-eSl" secondAttribute="leading" constant="16" id="RDu-Jx-2a3"/>
                             <constraint firstItem="zle-IQ-eSl" firstAttribute="trailing" secondItem="sDi-d3-OKU" secondAttribute="trailing" constant="16" id="TaL-2m-91z"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="zle-IQ-eSl" secondAttribute="leading" constant="16" id="bhf-u8-34z"/>
-                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="leading" secondItem="Old-Uu-s3q" secondAttribute="leading" id="bzl-nM-PnU"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="dOc-sY-zzd"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="Old-Uu-s3q" secondAttribute="leadingMargin" id="itR-4P-U3t"/>
                             <constraint firstItem="zle-IQ-eSl" firstAttribute="trailing" secondItem="sDi-d3-OKU" secondAttribute="trailing" constant="16" id="j7I-Ag-2hH"/>
                             <constraint firstItem="zle-IQ-eSl" firstAttribute="bottom" secondItem="sDi-d3-OKU" secondAttribute="bottom" constant="61" id="pFA-sv-q18"/>
-                            <constraint firstItem="EvX-2b-xZ5" firstAttribute="centerX" secondItem="sDi-d3-OKU" secondAttribute="centerX" id="vE2-3a-cNT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zle-IQ-eSl"/>
                     </view>
@@ -222,6 +215,8 @@
                         <segue destination="pFj-YL-UKG" kind="custom" id="jP3-qc-gr3"/>
                         <segue destination="vEE-8N-vqN" kind="custom" identifier="pushToPlay" id="7h5-pj-dFd"/>
                         <segue destination="Je0-dJ-3hc" kind="custom" id="jLl-Tz-PK8"/>
+                        <segue destination="dpQ-8x-XxP" kind="custom" identifier="pushToPlay" id="czH-Ve-A0Y"/>
+                        <segue destination="r8K-nG-1Xw" kind="custom" identifier="pushToPlay" id="4C0-yP-PMI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdE-ZD-rqJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -440,6 +435,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8e-Mb-Hry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3045" y="989"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="03Q-a0-xui">
+            <objects>
+                <viewController restorationIdentifier="Messages" storyboardIdentifier="Messages" id="r8K-nG-1Xw" customClass="MessageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vvf-FY-d7E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vIV-gJ-WtX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeZ-4X-DbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="-637"/>
+        </scene>
+        <!--Submit View Controller-->
+        <scene sceneID="izb-LB-ZpX">
+            <objects>
+                <viewController restorationIdentifier="Submit" storyboardIdentifier="Submit" id="dpQ-8x-XxP" customClass="SubmitViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9F5-Je-nYf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-Li-Gje">
+                                <rect key="frame" x="204" y="450" width="155" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="clip" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbX-av-9Bq">
+                                <rect key="frame" x="16" y="450" width="186" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40392156862745099" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="CHECK ON A SUBMISSION">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CHECK ON A SUBMISSION">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="15"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Bq0-ks-z9d"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNe-RV-PSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1580" y="-637.33133433283365"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vA9-Bj-Mnb">

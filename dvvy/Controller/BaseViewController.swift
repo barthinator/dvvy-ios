@@ -20,9 +20,9 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
-            print("Collab\n", terminator: "")
+            print("Messages\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("Collab")
+            self.openViewControllerBasedOnIdentifier("Messages")
             
             break
         case 1:
@@ -31,15 +31,21 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             self.openViewControllerBasedOnIdentifier("Feed")
         
         case 2:
-            print("Settings\n", terminator: "")
+            print("Collab\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("Settings")
+            self.openViewControllerBasedOnIdentifier("Collab")
             
             break
         case 3:
-            print("Profile\n", terminator: "")
+            print("Submit\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("Profile")
+            self.openViewControllerBasedOnIdentifier("Submit")
+            
+            break
+        case 4:
+            print("Settings\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Settings")
             
             break
         default:

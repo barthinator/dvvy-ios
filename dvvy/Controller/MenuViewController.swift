@@ -65,10 +65,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func updateArrayMenuOptions(){
         //Pass in icon with ["title":"Name", "icon":"Name"]
-        arrayMenuOptions.append(["title":"Collab"])
+        arrayMenuOptions.append(["title":"Messages"])
         arrayMenuOptions.append(["title":"Feed"])
+        arrayMenuOptions.append(["title":"Collab"])
+        arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
-        arrayMenuOptions.append(["title":"Profile"])
         
         tblMenuOptions.reloadData()
     }
