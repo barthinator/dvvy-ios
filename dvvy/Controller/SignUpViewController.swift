@@ -121,7 +121,16 @@ class SignUpViewController : UIViewController {
                     case .internalError:
                         print("Internal error")
                     }
+                } else {
+                    
+                    if let u = user {
+                        // User found go to home screen
+                        self.performSegue(withIdentifier: "pushToHome", sender: self)
+                        print(u.email ?? "broken")
+                    }
+                    
                 }
+                
             }
         }
         
