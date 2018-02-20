@@ -18,7 +18,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         friendsTableView.delegate = self
         friendsTableView.dataSource = self
         
-        friendsTableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "customFriendCell")
+        friendsTableView.register(UINib(nibName: "FriendsCell", bundle: nil), forCellReuseIdentifier: "cusFriendCell")
         
         configureTableView()
     }
@@ -27,14 +27,18 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customFriendCell", for: indexPath) as! customFriendCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cusFriendCell", for: indexPath) as! customFriendCell
         
-        let nameArray = ["Zack", "Drea", "Jason", "Keaka", "David", "Nathan"]
+        let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
         
+        cell.layer.cornerRadius = 20
         cell.nameLbl.text = nameArray[indexPath.row]
-        
+        cell.profileImage.image = UIImage(named: nameArray[indexPath.row])
         return cell
     }
     

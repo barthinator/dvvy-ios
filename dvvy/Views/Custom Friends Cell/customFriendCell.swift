@@ -11,8 +11,11 @@ import UIKit
 class customFriendCell: UITableViewCell {
 
     
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet var friendBackground: UIView!
+    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet var nameLbl: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
