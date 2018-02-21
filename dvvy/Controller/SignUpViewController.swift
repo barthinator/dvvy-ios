@@ -17,14 +17,26 @@ class SignUpViewController : UIViewController {
     
     @IBOutlet weak var passwordLbl: UITextField!
     
+    
+    
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
+        
+        guard let username = usernameLbl.text else { return }
         
         
         // TODO: Make some sort of email / pass validation
         if let email = emailLbl.text, let pass = passwordLbl.text {
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                 // ...
+                
+                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                changeRequest?.displayName = username
+                changeRequest?.commitChanges { error in
+                    if error == nil {
+                        print("User ")
+                    }
+                }
                 if let error = error as NSError? {
                     
                     guard let errorCode = AuthErrorCode(rawValue: error.code) else {
