@@ -70,6 +70,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
+        arrayMenuOptions.append(["title":"Profile"])
         
         tblMenuOptions.reloadData()
     }
