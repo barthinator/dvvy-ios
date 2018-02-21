@@ -868,11 +868,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-ct-cBg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-ct-cBg">
                                 <rect key="frame" x="16" y="56" width="343" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xe7-fu-a6A">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xe7-fu-a6A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -880,12 +880,12 @@
                         <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fW3-ct-cBg" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leadingMargin" id="2Lj-4o-IYn"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="top" secondItem="F2l-9v-9La" secondAttribute="top" id="6ZC-7S-Ftg"/>
-                            <constraint firstAttribute="trailing" secondItem="xe7-fu-a6A" secondAttribute="trailing" id="FWV-gC-07N"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leading" id="RSO-Co-lSi"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="centerX" secondItem="fW3-ct-cBg" secondAttribute="centerX" id="UuL-yE-lUc"/>
+                            <constraint firstItem="xe7-fu-a6A" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="top" id="Lne-R4-P4p"/>
+                            <constraint firstAttribute="trailing" secondItem="xe7-fu-a6A" secondAttribute="trailing" id="WWj-eG-vrj"/>
+                            <constraint firstItem="xe7-fu-a6A" firstAttribute="top" secondItem="0YE-X7-2K0" secondAttribute="top" id="a9A-Pf-B0u"/>
+                            <constraint firstItem="xe7-fu-a6A" firstAttribute="centerX" secondItem="fW3-ct-cBg" secondAttribute="centerX" id="hCQ-HM-zeL"/>
                             <constraint firstItem="F2l-9v-9La" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="bottom" constant="69" id="idK-hK-QI2"/>
-                            <constraint firstItem="fW3-ct-cBg" firstAttribute="top" secondItem="xe7-fu-a6A" secondAttribute="bottom" id="yaV-Mg-Q3d"/>
+                            <constraint firstItem="xe7-fu-a6A" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leading" id="kd9-GO-wOk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F2l-9v-9La"/>
                     </view>
@@ -903,6 +903,6 @@
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7h5-pj-dFd"/>
+        <segue reference="E3V-j2-Yf7"/>
     </inferredMetricsTieBreakers>
 </document>
