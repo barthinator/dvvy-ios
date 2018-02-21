@@ -10,17 +10,18 @@ import UIKit
 
 class customFeedCell: UITableViewCell {
 
+    @IBOutlet var optionsBtn: UIButton!
+    @IBOutlet var dvvyBtn: UIButton!
+    @IBOutlet var messageBtn: UIButton!
+    @IBOutlet var feedMessageTextView: UITextView!
+    @IBOutlet var feedMessageView: UIView!
     @IBOutlet var feedNameLbl: UILabel!
     @IBOutlet var feedProfileImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
