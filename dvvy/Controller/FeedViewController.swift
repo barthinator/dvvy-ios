@@ -8,7 +8,8 @@
 
 import UIKit
 
-class FeedViewController: BaseViewController {
+class FeedViewController: BaseViewController, UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var feedTableView: UITableView!
     //This is the Feed screen
     override func viewDidLoad() {
