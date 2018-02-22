@@ -11,7 +11,10 @@ import UIKit
 class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var feedTableView: UITableView!
+    let cellSpacingHeight: CGFloat = 5
+    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
     
+
     
     //This is the Feed screen
     override func viewDidLoad() {
@@ -19,10 +22,12 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         addSlideMenuButton()
         // Do any additional setup after loading the view.
         
-        feedTableView.layer.backgroundColor = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0).cgColor
+        
+        //text color
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
+        
         
         feedTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
         
@@ -34,24 +39,43 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         return 200
     }
     
+    //sections test
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return nameArray.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    //end
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cusFeedCell", for: indexPath) as! customFeedCell
+
+        cell.backgroundColor = UIColor.white
+        cell.layer.cornerRadius = 12
+        cell.clipsToBounds = true
         
-        let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
-        
-        cell.layer.cornerRadius = 20
-        cell.feedNameLbl.text = nameArray[indexPath.row]
-        cell.feedProfileImage.image = UIImage(named: nameArray[indexPath.row])
+        //cell.layer.cornerRadius = 60
+        cell.feedNameLbl.text = nameArray[indexPath.section]
+        cell.feedProfileImage.image = UIImage(named: nameArray[indexPath.section])
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
         return cell
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 6
-    }
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//
+//        return 6
+//    }
     
     func configureTableView(){
         feedTableView.rowHeight = UITableViewAutomaticDimension

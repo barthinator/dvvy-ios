@@ -361,7 +361,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="MBS-QP-vpx"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="QSy-3s-u7V"/>
@@ -627,7 +627,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-0a-AmH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f5X-vN-h72">
@@ -641,7 +641,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-MR-8dE">
-                                <rect key="frame" x="150" y="595" width="75" height="35"/>
+                                <rect key="frame" x="150" y="592" width="75" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="DxN-Dt-SHa"/>
                                 </constraints>
@@ -1006,32 +1006,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-ct-cBg">
-                                <rect key="frame" x="16" y="56" width="343" height="542"/>
+                                <rect key="frame" x="16" y="76" width="343" height="522"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xe7-fu-a6A">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <searchBar contentMode="redraw" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="GnZ-NY-OLL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <color key="barTintColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fW3-ct-cBg" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leadingMargin" id="2Lj-4o-IYn"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="top" id="Lne-R4-P4p"/>
-                            <constraint firstAttribute="trailing" secondItem="xe7-fu-a6A" secondAttribute="trailing" id="WWj-eG-vrj"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="top" secondItem="0YE-X7-2K0" secondAttribute="top" id="a9A-Pf-B0u"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="centerX" secondItem="fW3-ct-cBg" secondAttribute="centerX" id="hCQ-HM-zeL"/>
+                            <constraint firstItem="fW3-ct-cBg" firstAttribute="trailing" secondItem="0YE-X7-2K0" secondAttribute="trailingMargin" id="3si-wR-yy8"/>
+                            <constraint firstItem="fW3-ct-cBg" firstAttribute="top" secondItem="F2l-9v-9La" secondAttribute="top" constant="56" id="8GB-jx-uSI"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="top" secondItem="0YE-X7-2K0" secondAttribute="top" constant="20" id="MvI-Sv-E5a"/>
                             <constraint firstItem="F2l-9v-9La" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="bottom" constant="69" id="idK-hK-QI2"/>
-                            <constraint firstItem="xe7-fu-a6A" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leading" id="kd9-GO-wOk"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leading" id="nNC-0n-rkh"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="centerX" secondItem="fW3-ct-cBg" secondAttribute="centerX" id="opq-Mr-Bhn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F2l-9v-9La"/>
                     </view>
                     <navigationItem key="navigationItem" id="yTr-dd-dcm"/>
                     <connections>
                         <outlet property="feedTableView" destination="fW3-ct-cBg" id="87t-Gg-kTc"/>
+                        <outlet property="searchDisplayController" destination="qq1-39-xBJ" id="RLk-4e-Gxo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2s-vo-dsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Ial-n4-0HE">
+                    <connections>
+                        <outlet property="delegate" destination="Je0-dJ-3hc" id="tHZ-Jn-kiN"/>
+                        <outlet property="searchContentsController" destination="Je0-dJ-3hc" id="x4J-dh-ZwL"/>
+                        <outlet property="searchResultsDataSource" destination="Je0-dJ-3hc" id="Jn8-j6-epK"/>
+                        <outlet property="searchResultsDelegate" destination="Je0-dJ-3hc" id="H1Y-t6-73I"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="qq1-39-xBJ">
+                    <connections>
+                        <outlet property="delegate" destination="Je0-dJ-3hc" id="rqs-jz-h7T"/>
+                        <outlet property="searchContentsController" destination="Je0-dJ-3hc" id="mqi-yF-ZIR"/>
+                        <outlet property="searchResultsDataSource" destination="Je0-dJ-3hc" id="6O4-ol-gjd"/>
+                        <outlet property="searchResultsDelegate" destination="Je0-dJ-3hc" id="B1w-Jf-H1a"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2544.8000000000002" y="133.5832083958021"/>
         </scene>
@@ -1138,7 +1156,7 @@
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ecc-fz-7DY"/>
+        <segue reference="7h5-pj-dFd"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="V3l-ye-iRZ"/>
     </inferredMetricsTieBreakers>
