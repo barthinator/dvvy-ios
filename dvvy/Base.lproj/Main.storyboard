@@ -702,29 +702,13 @@
                                         <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKR-ke-jIw">
-                                        <rect key="frame" x="137" y="584" width="101" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="3d4-yi-oyb"/>
-                                            <constraint firstAttribute="width" constant="101" id="tId-DU-R5d"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="17"/>
-                                        <state key="normal" title="BACK">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vEE-8N-vqN" kind="show" id="E3V-j2-Yf7"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.45882352941176469" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Xu0-JR-Ydk" firstAttribute="centerX" secondItem="CKR-ke-jIw" secondAttribute="centerX" id="1f1-5c-Kjy"/>
                                     <constraint firstItem="zja-95-oSb" firstAttribute="leading" secondItem="Xu0-JR-Ydk" secondAttribute="leading" id="EXg-1b-9Wb"/>
                                     <constraint firstItem="zja-95-oSb" firstAttribute="top" secondItem="UDb-Na-Glp" secondAttribute="top" constant="32" id="Qna-O4-ZZJ"/>
                                     <constraint firstItem="zja-95-oSb" firstAttribute="trailing" secondItem="Xu0-JR-Ydk" secondAttribute="trailing" id="Wnk-NA-LfL"/>
                                     <constraint firstItem="zja-95-oSb" firstAttribute="leading" secondItem="UDb-Na-Glp" secondAttribute="leading" constant="39" id="csN-yd-LPQ"/>
-                                    <constraint firstAttribute="bottom" secondItem="CKR-ke-jIw" secondAttribute="bottom" constant="43" id="dts-zv-ZJL"/>
                                     <constraint firstItem="zja-95-oSb" firstAttribute="centerX" secondItem="UDb-Na-Glp" secondAttribute="centerX" id="o12-lY-k20"/>
                                     <constraint firstItem="Xu0-JR-Ydk" firstAttribute="top" secondItem="UDb-Na-Glp" secondAttribute="top" constant="331" id="yqg-ho-gOG"/>
                                 </constraints>
