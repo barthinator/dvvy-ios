@@ -47,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="22" width="244" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OQs-A5-HhF" id="nfl-pa-GAE">
-                                            <rect key="frame" x="0.0" y="0.0" width="244" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="244" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p83-Fz-Hsp">
@@ -360,9 +360,18 @@
                                 <rect key="frame" x="16" y="120" width="343" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7l-mX-69u">
+                                <rect key="frame" x="153" y="82" width="69" height="30"/>
+                                <state key="normal" title="David add"/>
+                                <connections>
+                                    <action selector="addDavid:" destination="Rdi-Ms-WA0" eventType="touchUpInside" id="H0d-hl-48J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f7l-mX-69u" firstAttribute="centerX" secondItem="sDi-d3-OKU" secondAttribute="centerX" id="Bmm-uy-SlB"/>
+                            <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="f7l-mX-69u" secondAttribute="bottom" constant="8" symbolic="YES" id="Epp-6N-aPK"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="MBS-QP-vpx"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="top" secondItem="zle-IQ-eSl" secondAttribute="top" constant="56" id="QSy-3s-u7V"/>
                             <constraint firstItem="sDi-d3-OKU" firstAttribute="leading" secondItem="zle-IQ-eSl" secondAttribute="leading" constant="16" id="RDu-Jx-2a3"/>
@@ -627,21 +636,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-0a-AmH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f5X-vN-h72">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f5X-vN-h72" id="ujB-KI-Ncs">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-MR-8dE">
-                                <rect key="frame" x="150" y="592" width="75" height="38"/>
+                                <rect key="frame" x="150" y="595" width="75" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="DxN-Dt-SHa"/>
                                 </constraints>
@@ -1138,8 +1147,7 @@
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yYY-Y8-D6X"/>
-        <segue reference="E3V-j2-Yf7"/>
+        <segue reference="7h5-pj-dFd"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="V3l-ye-iRZ"/>
     </inferredMetricsTieBreakers>

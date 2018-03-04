@@ -7,7 +7,7 @@ target 'dvvy' do
 
   # Pods for dvvy
   pod 'Firebase/Core'
-  pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
   pod 'KeychainSwift'
 
