@@ -13,16 +13,23 @@ class SignUpViewController : UIViewController {
     
     @IBOutlet weak var usernameLbl: UITextField!
     
+    @IBOutlet weak var frName: UITextField!
+    
     @IBOutlet weak var emailLbl: UITextField!
+    
+    @IBOutlet weak var lName: UITextField!
+    
+    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBOutlet weak var passwordLbl: UITextField!
     
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
+        let userModel = UserModel.init()
         
         
         // TODO: Make some sort of email / pass validation
-        if let email = emailLbl.text, let pass = passwordLbl.text {
+        if let email = emailLbl.text, let pass = passwordLbl.text, let username = usernameLbl.text, let fn = frName.text, let ln = lName.text, let phone = phoneNumber.text {
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                 // ...
                 if let error = error as NSError? {
@@ -150,7 +157,10 @@ class SignUpViewController : UIViewController {
                 } else {
                     
                     if let u = user {
-                        // User found go to home screen
+                        
+                        //user added to database if successful
+                        userModel.setupUser(firstname: fn, lastname: ln, username: username, email: email, phoneNumber: phone)
+                        
                         self.performSegue(withIdentifier: "pushToHome", sender: self)
                         print(u.email ?? "broken")
                     }
