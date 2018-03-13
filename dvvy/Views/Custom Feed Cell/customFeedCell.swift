@@ -10,9 +10,9 @@ import UIKit
 
 class customFeedCell: UITableViewCell {
 
-    @IBOutlet var messageBtn: UIButton!
-    @IBOutlet var dvvyBtn: UIButton!
-    @IBOutlet var optionsBtn: UIButton!
+    @IBOutlet var btnDvvy: UIButton!
+    @IBOutlet var btnOptions: UIButton!
+    @IBOutlet var btnLike: UIButton!
     
     @IBOutlet var feedMessageTextView: UITextView!
     @IBOutlet var feedMessageView: UIView!

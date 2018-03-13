@@ -14,7 +14,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     let cellSpacingHeight: CGFloat = 5
     let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
     
-
+    
     
     //This is the Feed screen
     override func viewDidLoad() {
@@ -22,11 +22,11 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         addSlideMenuButton()
         // Do any additional setup after loading the view.
         
-        
-        //text color
-        
         feedTableView.delegate = self
         feedTableView.dataSource = self
+        
+        //do this on all table views to remove highlighting
+        feedTableView.allowsSelection = false
         
         
         feedTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
@@ -69,6 +69,8 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
+        //buttons
         return cell
     }
     

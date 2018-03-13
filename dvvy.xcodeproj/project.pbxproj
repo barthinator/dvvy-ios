@@ -40,7 +40,6 @@
 		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
 		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
-		BA7A3C63EEF32110CB75A291 /* Pods_dvvyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662FF2B75D3A22B0BF58B0AB /* Pods_dvvyTests.framework */; };
 		D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B0DC3202A987900677E53 /* SettingsViewController.swift */; };
 		D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */; };
 		D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886FF2B203BBC91008573A2 /* AccountViewController.swift */; };
@@ -788,7 +787,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -805,7 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
