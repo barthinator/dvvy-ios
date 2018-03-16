@@ -12,8 +12,8 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var collabTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
-    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
-    let needArray = ["guitar", "piano", "composition", "producer", "drums", "violin"]
+    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier", "Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
+    let needArray = ["guitar", "piano", "composition", "producer", "drums", "violin", "guitar", "piano", "composition", "producer", "drums", "violin"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
 
         
         
-        collabTableView.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
+        
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 50
     }
     
     //sections test
