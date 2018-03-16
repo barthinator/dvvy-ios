@@ -11,7 +11,6 @@ import UIKit
 class CollabViewController: BaseViewController {
     
     @IBOutlet weak var collabTableView: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
@@ -22,6 +21,12 @@ class CollabViewController: BaseViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //Trying to add david to the user model with the button
+    @IBAction func addDavid(_ sender: Any) {
+        let userModel = UserModel.init()
+        userModel.addDavid()
     }
     
     //test comments

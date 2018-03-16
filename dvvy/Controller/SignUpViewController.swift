@@ -13,7 +13,13 @@ class SignUpViewController : UIViewController {
     
     @IBOutlet weak var usernameLbl: UITextField!
     
+    @IBOutlet weak var frName: UITextField!
+    
     @IBOutlet weak var emailLbl: UITextField!
+    
+    @IBOutlet weak var lName: UITextField!
+    
+    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBOutlet weak var passwordLbl: UITextField!
     
@@ -21,12 +27,13 @@ class SignUpViewController : UIViewController {
     
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
+        let userModel = UserModel.init()
         
         guard let username = usernameLbl.text else { return }
         
         
         // TODO: Make some sort of email / pass validation
-        if let email = emailLbl.text, let pass = passwordLbl.text {
+        if let email = emailLbl.text, let pass = passwordLbl.text, let username = usernameLbl.text, let fn = frName.text, let ln = lName.text, let phone = phoneNumber.text {
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                 // ...
                 
@@ -132,11 +139,40 @@ class SignUpViewController : UIViewController {
                         print("Keychain error")
                     case .internalError:
                         print("Internal error")
+                    case .missingEmail:
+                        print("invalid email")
+                    case .missingIosBundleID:
+                        print("invalid email")
+                    case .missingAndroidPackageName:
+                        print("invalid email")
+                    case .unauthorizedDomain:
+                        print("invalid email")
+                    case .invalidContinueURI:
+                        print("invalid email")
+                    case .missingContinueURI:
+                        print("invalid email")
+                    case .captchaCheckFailed:
+                        print("invalid email")
+                    case .webContextAlreadyPresented:
+                        print("invalid email")
+                    case .webContextCancelled:
+                        print("invalid email")
+                    case .appVerificationUserInteractionFailure:
+                        print("invalid email")
+                    case .invalidClientID:
+                        print("invalid email")
+                    case .webNetworkRequestFailed:
+                        print("invalid email")
+                    case .webInternalError:
+                        print("invalid email")
                     }
                 } else {
                     
                     if let u = user {
-                        // User found go to home screen
+                        
+                        //user added to database if successful
+                        userModel.setupUser(firstname: fn, lastname: ln, username: username, email: email, phoneNumber: phone)
+                        
                         self.performSegue(withIdentifier: "pushToHome", sender: self)
                         print(u.email ?? "broken")
                     }
