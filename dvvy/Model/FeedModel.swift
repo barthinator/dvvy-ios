@@ -21,9 +21,11 @@ class FeedModel {
         db = Firestore.firestore()
     }
     
+    //
     func getFeedUpdates(){
         
     }
+    
     
 }
 
