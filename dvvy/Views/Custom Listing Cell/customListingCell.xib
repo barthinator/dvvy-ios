@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,39 +26,39 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j1S-Sy-RkI">
-                        <rect key="frame" x="20" y="42" width="33" height="30"/>
+                        <rect key="frame" x="20" y="31" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="33" id="mBA-T9-jRq"/>
+                            <constraint firstAttribute="width" constant="50" id="Ks6-ye-hmM"/>
+                            <constraint firstAttribute="height" constant="50" id="jKT-YQ-gjK"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-TL-8p4">
-                        <rect key="frame" x="280" y="41" width="182" height="30"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-a5-1W7">
+                        <rect key="frame" x="78" y="43" width="35.5" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="182" id="abO-wF-WqA"/>
+                            <constraint firstAttribute="height" constant="30" id="GPC-PH-hhp"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZU-a5-1W7">
-                        <rect key="frame" x="73" y="41" width="199" height="30"/>
-                        <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-TL-8p4">
+                        <rect key="frame" x="134" y="45" width="31" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="oyV-Y1-XcB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="12"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="nZU-a5-1W7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="2uT-qh-Lks"/>
-                    <constraint firstItem="j1S-Sy-RkI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="31" id="319-wC-GI5"/>
-                    <constraint firstItem="nZU-a5-1W7" firstAttribute="leading" secondItem="j1S-Sy-RkI" secondAttribute="trailing" constant="20" id="7lO-Cg-pga"/>
-                    <constraint firstItem="j1S-Sy-RkI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="B82-sg-Uj4"/>
-                    <constraint firstItem="8Ay-TL-8p4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="BVX-2F-Fgj"/>
-                    <constraint firstItem="nZU-a5-1W7" firstAttribute="baseline" secondItem="8Ay-TL-8p4" secondAttribute="baseline" id="C4f-bS-bb3"/>
-                    <constraint firstItem="8Ay-TL-8p4" firstAttribute="leading" secondItem="nZU-a5-1W7" secondAttribute="trailing" constant="8" symbolic="YES" id="KVL-jj-sL6"/>
-                    <constraint firstItem="j1S-Sy-RkI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Tfl-tq-Xog"/>
-                    <constraint firstItem="nZU-a5-1W7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WLS-7q-p9h"/>
-                    <constraint firstItem="nZU-a5-1W7" firstAttribute="firstBaseline" secondItem="8Ay-TL-8p4" secondAttribute="firstBaseline" id="a4d-mp-XzP"/>
+                    <constraint firstItem="8Ay-TL-8p4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="34" id="1N2-KC-DRx"/>
+                    <constraint firstItem="8Ay-TL-8p4" firstAttribute="leading" secondItem="nZU-a5-1W7" secondAttribute="trailing" constant="20.5" id="DhS-aI-gM1"/>
+                    <constraint firstItem="nZU-a5-1W7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="32" id="I6O-GA-ZEy"/>
+                    <constraint firstItem="j1S-Sy-RkI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="S8E-I9-Qhw"/>
+                    <constraint firstItem="j1S-Sy-RkI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Wip-fe-WYF"/>
+                    <constraint firstItem="nZU-a5-1W7" firstAttribute="leading" secondItem="j1S-Sy-RkI" secondAttribute="trailing" constant="8" id="jmt-Og-6sd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -68,7 +67,7 @@
                 <outlet property="lblNameListing" destination="nZU-a5-1W7" id="lv9-7R-U1W"/>
                 <outlet property="lblNeedTypeCollab" destination="8Ay-TL-8p4" id="lGf-K7-vxa"/>
             </connections>
-            <point key="canvasLocation" x="-46" y="-35"/>
+            <point key="canvasLocation" x="54" y="-41"/>
         </tableViewCell>
     </objects>
 </document>
