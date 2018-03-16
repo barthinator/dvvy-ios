@@ -29,7 +29,7 @@ class SignUpViewController : UIViewController {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
         let userModel = UserModel.init()
         
-        guard let username = usernameLbl.text else { return }
+        //guard let username = usernameLbl.text else { return }
         
         
         // TODO: Make some sort of email / pass validation

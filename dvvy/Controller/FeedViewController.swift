@@ -9,25 +9,15 @@
 import UIKit
 import Firebase
 
-<<<<<<< HEAD
-class FeedViewController: BaseViewController {
-    
-    @IBOutlet weak var feedTableView: UITableView!
-=======
 class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var feedTableView: UITableView!
-    
-    
->>>>>>> dev
+
     //This is the Feed screen
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
         // Do any additional setup after loading the view.
-        
-<<<<<<< HEAD
-=======
         feedTableView.layer.backgroundColor = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0).cgColor
         
         feedTableView.delegate = self
@@ -65,7 +55,6 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     func configureTableView(){
         feedTableView.rowHeight = UITableViewAutomaticDimension
         feedTableView.estimatedRowHeight = 120.0
->>>>>>> dev
     }
     
     
