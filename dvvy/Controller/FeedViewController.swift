@@ -72,6 +72,11 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
 
         //buttons
+        cell.btnDvvy.layer.cornerRadius = 10
+        cell.btnLike.layer.cornerRadius = 10
+        cell.btnOptions.layer.cornerRadius = 10
+        
+        
         return cell
     }
 
