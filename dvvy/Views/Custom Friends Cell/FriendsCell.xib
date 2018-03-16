@@ -21,11 +21,11 @@
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cusFriendCell" rowHeight="182" id="ufl-D9-fmU" customClass="customFriendCell" customModule="dvvy" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="766" height="182"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufl-D9-fmU" id="cXX-ge-Rp4">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ufl-D9-fmU" id="cXX-ge-Rp4">
                 <rect key="frame" x="0.0" y="0.0" width="766" height="181.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-cJ-dqd">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="72Y-cJ-dqd">
                         <rect key="frame" x="47" y="15" width="164" height="151"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="72Y-cJ-dqd" secondAttribute="height" multiplier="164:151" id="8kL-K0-iWV"/>
@@ -33,7 +33,7 @@
                             <constraint firstAttribute="width" secondItem="72Y-cJ-dqd" secondAttribute="height" multiplier="164:151" id="wJw-Dz-9Br"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZr-nC-Ont">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="LABEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZr-nC-Ont">
                         <rect key="frame" x="219" y="15" width="537" height="151"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="xZr-nC-Ont" secondAttribute="height" multiplier="537:151" id="47G-Ky-ghb"/>

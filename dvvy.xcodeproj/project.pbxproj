@@ -11,6 +11,8 @@
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
+		06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06806E84203D4E9F00D4EE34 /* customFeedCell.xib */; };
+		06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06806E85203D4E9F00D4EE34 /* customFeedCell.swift */; };
 		06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
 		06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
 		06AE2BCB2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
@@ -68,6 +70,8 @@
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
+		06806E84203D4E9F00D4EE34 /* customFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customFeedCell.xib; sourceTree = "<group>"; };
+		06806E85203D4E9F00D4EE34 /* customFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customFeedCell.swift; sourceTree = "<group>"; };
 		06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Light-trial.ttf"; sourceTree = "<group>"; };
 		06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Ultralight-trial.ttf"; sourceTree = "<group>"; };
 		06EE22592039249B00DED1CA /* PortfolioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 				0610966E203AAAFD004827E4 /* customFriendCell.swift */,
 			);
 			path = "Custom Friends Cell";
+			sourceTree = "<group>";
+		};
+		06806E83203D4E9F00D4EE34 /* Custom Feed Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06806E84203D4E9F00D4EE34 /* customFeedCell.xib */,
+				06806E85203D4E9F00D4EE34 /* customFeedCell.swift */,
+			);
+			path = "Custom Feed Cell";
 			sourceTree = "<group>";
 		};
 		06AE2BCA2038EB55008E24B5 /* font */ = {
@@ -260,6 +273,7 @@
 		7F8C08B8202831A80051B6F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				06806E83203D4E9F00D4EE34 /* Custom Feed Cell */,
 				06109669203AA7B6004827E4 /* Custom Friends Cell */,
 			);
 			path = Views;
@@ -396,6 +410,7 @@
 			files = (
 				796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */,
 				79BDE3D620395E8F0011853A /* GoogleService-Info.plist in Resources */,
+				06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */,
 				06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */,
 				796E159B201E5C4E0051605E /* Assets.xcassets in Resources */,
 				0610966D203AA907004827E4 /* FriendsCell.xib in Resources */,
@@ -617,6 +632,7 @@
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
 				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
+				06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 				79FFFD6A2049E97500DE4E18 /* UserModel.swift in Sources */,
 				D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */,

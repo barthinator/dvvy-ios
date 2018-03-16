@@ -6,30 +6,48 @@
 //  Copyright © 2018 David Bartholomew. All rights reserved.
 //
 
-import Foundation
 import Firebase
 
-protocol DocumentSerializable {
-    init?(dictionary:[String:Any])
+class FeedModel {
+    var db: Firestore!
+    
+    //TODO: Add some error handling to ensure the data is valid. Eg the phone number
+    
+    init() {
+        // [START setup]
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        // [END setup]
+        db = Firestore.firestore()
+    }
+    
+    func getFeedUpdates(){
+        
+    }
+    
 }
 
-struct FeedModel {
-    var user: String
-    var songLink: String
-    var description: String
-    var category: String
-    var timeStamp: Date
-    
-    var dictionary:[String:Any] {
-        return [
-            "user":user,
-            "songLink": songLink,
-            "description": description,
-            "category": category,
-            "timeStamp": timeStamp
-        ]
-    }
-}
+//protocol DocumentSerializable {
+//    init?(dictionary:[String:Any])
+//}
+//
+//struct FeedModel {
+//    var user: String
+//    var songLink: String
+//    var description: String
+//    var category: String
+//    var timeStamp: Date
+//
+//    var dictionary:[String:Any] {
+//        return [
+//            "user":user,
+//            "songLink": songLink,
+//            "description": description,
+//            "category": category,
+//            "timeStamp": timeStamp
+//        ]
+//    }
+//}
 
 //extension Feed : DocumentSerializable {
 //    init?(dictionary: [String:Any]) {
