@@ -49,14 +49,12 @@ class UserModel {
             "email": email,
             "phoneNumber": phoneNumber
         ]) { err in
-            if let err = err {
+            if let err = err { 
                 print("Error adding document: \(err)")
             } else {
                 print("Document added with ID: \(ref!.documentID)")
             }
         }
     }
-    
-    
     
 }
