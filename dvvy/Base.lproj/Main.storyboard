@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -629,7 +630,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="m49-xk-2AD" firstAttribute="leading" secondItem="UiI-dK-kOp" secondAttribute="trailing" constant="6" id="3R6-pA-lNt"/>
                                     <constraint firstItem="n5u-2j-j9W" firstAttribute="bottom" secondItem="Mxo-MG-G9U" secondAttribute="bottomMargin" id="4RL-Am-fbF"/>
@@ -742,7 +743,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="LZV-EI-aN6" firstAttribute="bottom" secondItem="6oT-Cm-crX" secondAttribute="bottomMargin" id="4TJ-Yo-3yc"/>
                                     <constraint firstItem="frZ-Eq-97q" firstAttribute="leading" secondItem="6oT-Cm-crX" secondAttribute="leadingMargin" id="FZr-em-idQ"/>
@@ -907,9 +908,72 @@
                     <view key="view" contentMode="scaleToFill" id="9F5-Je-nYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="READY TO MAKE IT BIG?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKg-oI-eyq">
+                                <rect key="frame" x="16" y="20" width="343" height="478"/>
+                                <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="PZW-DB-IkG"/>
+                                    <constraint firstAttribute="height" constant="478" id="meb-ux-KSB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="44"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdg-uq-sxc">
+                                <rect key="frame" x="16" y="513" width="166" height="86"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cdg-uq-sxc" secondAttribute="height" multiplier="83:43" id="AQG-Fa-GWC"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CHECK ON A SUBMISSION">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m3O-8g-D51">
+                                <rect key="frame" x="190" y="513" width="169" height="86"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="Naa-xa-N6l"/>
+                                    <constraint firstAttribute="height" constant="86" id="XGS-S9-NR2"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SUBMIT">
+                                            <attributes>
+                                                <font key="NSFont" size="19" name=".AppleSystemUIFont"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cdg-uq-sxc" firstAttribute="leading" secondItem="Bq0-ks-z9d" secondAttribute="leading" constant="16" id="BTO-Er-dZB"/>
+                            <constraint firstItem="Bq0-ks-z9d" firstAttribute="bottom" secondItem="cdg-uq-sxc" secondAttribute="bottom" constant="68" id="E7P-hB-aw0"/>
+                            <constraint firstItem="sKg-oI-eyq" firstAttribute="top" secondItem="Bq0-ks-z9d" secondAttribute="top" id="HR9-iS-Gll"/>
+                            <constraint firstItem="sKg-oI-eyq" firstAttribute="leading" secondItem="Bq0-ks-z9d" secondAttribute="leading" constant="16" id="K1y-Xt-yS0"/>
+                            <constraint firstItem="Bq0-ks-z9d" firstAttribute="trailing" secondItem="m3O-8g-D51" secondAttribute="trailing" constant="16" id="Q69-ql-u9x"/>
+                            <constraint firstItem="m3O-8g-D51" firstAttribute="top" secondItem="sKg-oI-eyq" secondAttribute="bottom" constant="15" id="Qe2-N5-hRw"/>
+                            <constraint firstItem="cdg-uq-sxc" firstAttribute="leading" secondItem="Bq0-ks-z9d" secondAttribute="leading" constant="16" id="dPK-hs-ctw"/>
+                            <constraint firstItem="cdg-uq-sxc" firstAttribute="top" secondItem="sKg-oI-eyq" secondAttribute="bottom" constant="15" id="vwq-kO-3XX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bq0-ks-z9d"/>
                     </view>
+                    <connections>
+                        <outlet property="checkBtn" destination="cdg-uq-sxc" id="m6K-5r-qQL"/>
+                        <outlet property="readyLbl" destination="sKg-oI-eyq" id="aFq-MF-74a"/>
+                        <outlet property="submitBtn" destination="m3O-8g-D51" id="Lio-vl-vpz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNe-RV-PSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
