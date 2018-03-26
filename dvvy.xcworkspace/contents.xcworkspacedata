@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/zackgoldstein/Desktop/dvvy/dvvy-ios/dvvy/Controller/TermsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:dvvy.xcodeproj">
    </FileRef>
    <FileRef

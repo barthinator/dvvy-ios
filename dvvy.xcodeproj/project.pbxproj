@@ -11,6 +11,8 @@
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
+		067B0A152069520C0037BA9D /* Submit2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B0A142069520C0037BA9D /* Submit2ViewController.swift */; };
+		067B0A19206960F70037BA9D /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B0A18206960F70037BA9D /* TermsViewController.swift */; };
 		06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06806E84203D4E9F00D4EE34 /* customFeedCell.xib */; };
 		06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06806E85203D4E9F00D4EE34 /* customFeedCell.swift */; };
 		06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
@@ -70,6 +72,8 @@
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
+		067B0A142069520C0037BA9D /* Submit2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submit2ViewController.swift; sourceTree = "<group>"; };
+		067B0A18206960F70037BA9D /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TermsViewController.swift; path = "/Users/zackgoldstein/Desktop/dvvy/dvvy-ios/dvvy/Controller/TermsViewController.swift"; sourceTree = "<absolute>"; };
 		06806E84203D4E9F00D4EE34 /* customFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customFeedCell.xib; sourceTree = "<group>"; };
 		06806E85203D4E9F00D4EE34 /* customFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customFeedCell.swift; sourceTree = "<group>"; };
 		06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Light-trial.ttf"; sourceTree = "<group>"; };
@@ -257,6 +261,8 @@
 				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
 				19819553203AAD3500E88201 /* MessageViewController.swift */,
+				067B0A142069520C0037BA9D /* Submit2ViewController.swift */,
+				067B0A18206960F70037BA9D /* TermsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -620,7 +626,9 @@
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,
 				06109668203AA603004827E4 /* FriendsViewController.swift in Sources */,
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
+				067B0A152069520C0037BA9D /* Submit2ViewController.swift in Sources */,
 				96A031552057927800BDC4DA /* customListingCell.swift in Sources */,
+				067B0A19206960F70037BA9D /* TermsViewController.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
 				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
