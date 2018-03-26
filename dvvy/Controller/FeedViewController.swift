@@ -34,6 +34,14 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
 
         configureTableView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let test = FeedModel.init()
+        let posts:[Post] = test.getFeedUpdates()
+        print(posts)
+    }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

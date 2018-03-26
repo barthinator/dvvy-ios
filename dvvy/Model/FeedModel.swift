@@ -8,6 +8,14 @@
 
 import Firebase
 
+struct Post {
+    var uid: String
+    var description: String
+    var title: String
+    //var profImage: UIImage
+    var datePosted: Date
+}
+
 class FeedModel {
     var db: Firestore!
     
@@ -21,10 +29,41 @@ class FeedModel {
         db = Firestore.firestore()
     }
     
-    // Going to pull from the current user who is logged in
-    func getFeedUpdates(){
-        
+    func getPost() {
     }
+    
+    // Going to pull from the current user who is logged in
+    //Should only pull the most recent 10 or something
+    func getFeedUpdates() -> [Post] {
+        //Suppose to grab the posts from the world document, then order them by
+        //the date posted (only limit to 10 for now)
+        var posts = [Post]()
+        
+        db.collection("feed").document("world").collection("posts").order(by: "datePosted").limit(to: 10).getDocuments(){ (querySnapshot, err) in
+            if let err = err {
+                print("Error geting posts: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    
+                    var dataDict = document.data()
+                    
+                    let documentPost = Post(
+                        uid: dataDict["uid"] as! String,
+                        description: dataDict["description"] as! String,
+                        title: dataDict["title"] as! String,
+                        datePosted: dataDict["datePosted"] as! Date
+                    )
+                    
+                    posts.append(documentPost)
+                }
+            }
+        }
+        
+        //For some reason this is always returning 0, maybe needs to complete first?
+        return posts
+    }
+    
     
     
 }
