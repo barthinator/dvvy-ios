@@ -173,6 +173,9 @@ class SignUpViewController : UIViewController {
                         //user added to database if successful
                         userModel.setupUser(firstname: fn, lastname: ln, username: username, email: email, phoneNumber: phone)
                         
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.synchronize()
+                        
                         self.performSegue(withIdentifier: "pushToHome", sender: self)
                         print(u.email ?? "broken")
                     }

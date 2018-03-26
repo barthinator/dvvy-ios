@@ -25,8 +25,6 @@ class CollabViewController: BaseViewController {
     
     //Trying to add david to the user model with the button
     @IBAction func addDavid(_ sender: Any) {
-        let userModel = UserModel.init()
-        userModel.addDavid()
     }
     
     //test comments

@@ -21,7 +21,7 @@ class FeedModel {
         db = Firestore.firestore()
     }
     
-    //
+    // Going to pull from the current user who is logged in
     func getFeedUpdates(){
         
     }

@@ -25,9 +25,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         
         feedTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
         
-        configureTableView()
-        
-        
+        configureTableView()        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
