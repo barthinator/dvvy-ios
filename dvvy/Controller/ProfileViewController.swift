@@ -12,11 +12,14 @@ class ProfileViewController: BaseViewController{
     
     @IBOutlet var friendsBtn: UIButton!
     
+    @IBOutlet var popUp: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
+    var isHidden = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        popUp.isHidden = isHidden
         //Calls the slide menu button
         addSlideMenuButton()
         friendsBtn.layer.borderWidth = 1
@@ -28,6 +31,11 @@ class ProfileViewController: BaseViewController{
     }
     
     
+    @IBAction func showPopUp(_ sender: Any) {
+        isHidden = !isHidden
+        popUp.isHidden = isHidden
+        
+    }
     
     
 }

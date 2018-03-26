@@ -42,6 +42,8 @@
 		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
 		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
+		96A031552057927800BDC4DA /* customListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A031532057927800BDC4DA /* customListingCell.swift */; };
+		96A031562057927800BDC4DA /* customListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A031542057927800BDC4DA /* customListingCell.xib */; };
 		D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B0DC3202A987900677E53 /* SettingsViewController.swift */; };
 		D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */; };
 		D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886FF2B203BBC91008573A2 /* AccountViewController.swift */; };
@@ -108,6 +110,8 @@
 		7F4234BA2029A30C009AE35F /* CollabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabViewController.swift; sourceTree = "<group>"; };
 		7F4234BC2029A3A5009AE35F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		96A031532057927800BDC4DA /* customListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customListingCell.swift; path = "dvvy/Views/Custom Listing Cell/customListingCell.swift"; sourceTree = SOURCE_ROOT; };
+		96A031542057927800BDC4DA /* customListingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = customListingCell.xib; path = "dvvy/Views/Custom Listing Cell/customListingCell.xib"; sourceTree = SOURCE_ROOT; };
 		C77D72FCE7C8D8157904926D /* Pods-dvvy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvy.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvy/Pods-dvvy.release.xcconfig"; sourceTree = "<group>"; };
 		D80B0DC3202A987900677E53 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 		7F8C08B8202831A80051B6F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9675CED9205A27A00041E19D /* Custom Listing Cell */,
 				06806E83203D4E9F00D4EE34 /* Custom Feed Cell */,
 				06109669203AA7B6004827E4 /* Custom Friends Cell */,
 			);
@@ -290,6 +295,15 @@
 				DC08679F92E4A8560130B8D2 /* Pods-dvvyUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9675CED9205A27A00041E19D /* Custom Listing Cell */ = {
+			isa = PBXGroup;
+			children = (
+				96A031532057927800BDC4DA /* customListingCell.swift */,
+				96A031542057927800BDC4DA /* customListingCell.xib */,
+			);
+			path = "Custom Listing Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +430,7 @@
 				0610966D203AA907004827E4 /* FriendsCell.xib in Resources */,
 				06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */,
 				796E1599201E5C4E0051605E /* Main.storyboard in Resources */,
+				96A031562057927800BDC4DA /* customListingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +643,7 @@
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,
 				06109668203AA603004827E4 /* FriendsViewController.swift in Sources */,
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
+				96A031552057927800BDC4DA /* customListingCell.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
 				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
@@ -803,7 +819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -820,7 +836,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
