@@ -30,6 +30,7 @@ class FeedModel {
     }
     
     func getPost() {
+        
     }
     
     // Going to pull from the current user who is logged in
@@ -39,7 +40,8 @@ class FeedModel {
         //the date posted (only limit to 10 for now)
         var posts = [Post]()
         
-        db.collection("feed").document("world").collection("posts").order(by: "datePosted").limit(to: 10).getDocuments(){ (querySnapshot, err) in
+        db.collection("feed").document("world").collection("posts").order(by: "datePosted").limit(to: 10).getDocuments(){
+            (querySnapshot, err) in
             if let err = err {
                 print("Error geting posts: \(err)")
             } else {
@@ -56,6 +58,7 @@ class FeedModel {
                     )
                     
                     posts.append(documentPost)
+                    print(posts)
                 }
             }
         }

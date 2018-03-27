@@ -17,13 +17,12 @@ class AccountViewController: UIViewController {
     
     }
     @IBAction func handleLogout(_ target: UIButton) {
+        //Need to implement something that sets the value to false for signed in user here
+        UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        UserDefaults.standard.synchronize()
         if Auth.auth().currentUser != nil {
             do {
                 try Auth.auth().signOut()
-                //Need to implement something that sets the value to false for signed in user here
-                UserDefaults.standard.set(false, forKey: "isLoggedIn")
-                UserDefaults.standard.synchronize()
-                self.dismiss(animated: false, completion: nil)
             } catch let error as NSError {
                 print(error.localizedDescription)
             }

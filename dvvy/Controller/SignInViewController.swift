@@ -173,11 +173,10 @@ class SignInViewController : UIViewController {
     
     //Checks if the user is already logged in. If so then go to home page!
     override func viewDidAppear(_ animated: Bool) {
-        let userModel = UserModel.init()
-        if(userModel.isLoggedIn()){
+        if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
             // User found go to home screen
-            UserDefaults.standard.set(true, forKey: "isLoggedIn")
             UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUser")
+            UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "pushToHome", sender: self)
         }
     }
