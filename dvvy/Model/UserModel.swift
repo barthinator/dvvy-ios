@@ -69,4 +69,18 @@ class UserModel {
             return UserDefaults.standard.string(forKey: "currentUser")!
         }
     }
+
+    func getProfileName() {
+        var firstname : String = "empty"
+        db.collection("users").document(getUID()).getDocument{
+            (document, err) in
+            if let document = document {
+                let dataDict = document.data()
+                firstname = dataDict!["firstname"] as! String
+                //completion(firstname)
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
 }

@@ -16,6 +16,7 @@ class ProfileViewController: BaseViewController{
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileTableView: UITableView!
     var isHidden = true
+    var profileModel = UserModel.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class ProfileViewController: BaseViewController{
         //Set the data of the user
         
         profileTableView.backgroundColor = UIColor.darkGray
+        print(profileModel.getProfileName())
+        //usernameLabel.text
     }
     
     

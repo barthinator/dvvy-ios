@@ -60,6 +60,7 @@ class FeedModel {
                     posts.append(documentPost)
                     print(posts)
                 }
+                
             }
         }
         
