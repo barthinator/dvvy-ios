@@ -1123,25 +1123,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-ct-cBg" userLabel="feedTableView">
-                                <rect key="frame" x="16" y="76" width="343" height="522"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fW3-ct-cBg" userLabel="feedTableView">
+                                <rect key="frame" x="16" y="85" width="343" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="search" translatesAutoresizingMaskIntoConstraints="NO" id="GnZ-NY-OLL">
-                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="18" width="375" height="56"/>
                                 <color key="barTintColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="fW3-ct-cBg" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leadingMargin" id="2Lj-4o-IYn"/>
-                            <constraint firstItem="fW3-ct-cBg" firstAttribute="trailing" secondItem="0YE-X7-2K0" secondAttribute="trailingMargin" id="3si-wR-yy8"/>
-                            <constraint firstItem="fW3-ct-cBg" firstAttribute="top" secondItem="F2l-9v-9La" secondAttribute="top" constant="56" id="8GB-jx-uSI"/>
-                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="top" secondItem="0YE-X7-2K0" secondAttribute="top" constant="20" id="MvI-Sv-E5a"/>
-                            <constraint firstItem="F2l-9v-9La" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="bottom" constant="69" id="idK-hK-QI2"/>
-                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="leading" secondItem="0YE-X7-2K0" secondAttribute="leading" id="nNC-0n-rkh"/>
-                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="centerX" secondItem="fW3-ct-cBg" secondAttribute="centerX" id="opq-Mr-Bhn"/>
+                            <constraint firstItem="F2l-9v-9La" firstAttribute="trailing" secondItem="fW3-ct-cBg" secondAttribute="trailing" constant="16" id="30C-xU-En3"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="leading" secondItem="F2l-9v-9La" secondAttribute="leading" id="363-ly-E8R"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="top" secondItem="0YE-X7-2K0" secondAttribute="top" constant="18" id="6Q5-oO-i1d"/>
+                            <constraint firstItem="fW3-ct-cBg" firstAttribute="top" secondItem="GnZ-NY-OLL" secondAttribute="bottom" constant="11" id="8VQ-1i-jXh"/>
+                            <constraint firstItem="GnZ-NY-OLL" firstAttribute="trailing" secondItem="F2l-9v-9La" secondAttribute="trailing" id="SjX-fg-vrV"/>
+                            <constraint firstItem="F2l-9v-9La" firstAttribute="bottom" secondItem="fW3-ct-cBg" secondAttribute="bottom" constant="69" id="ex8-Ro-yVu"/>
+                            <constraint firstItem="fW3-ct-cBg" firstAttribute="leading" secondItem="F2l-9v-9La" secondAttribute="leading" constant="16" id="pLc-PB-WNr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="F2l-9v-9La"/>
                     </view>
