@@ -117,6 +117,32 @@ class SignInViewController : UIViewController {
                         print("invalid email")
                     case .internalError:
                         print("invalid email")
+                    case .missingEmail:
+                        print("invalid email")
+                    case .missingIosBundleID:
+                        print("invalid email")
+                    case .missingAndroidPackageName:
+                        print("invalid email")
+                    case .unauthorizedDomain:
+                        print("invalid email")
+                    case .invalidContinueURI:
+                        print("invalid email")
+                    case .missingContinueURI:
+                        print("invalid email")
+                    case .captchaCheckFailed:
+                        print("invalid email")
+                    case .webContextAlreadyPresented:
+                        print("invalid email")
+                    case .webContextCancelled:
+                        print("invalid email")
+                    case .appVerificationUserInteractionFailure:
+                        print("invalid email")
+                    case .invalidClientID:
+                        print("invalid email")
+                    case .webNetworkRequestFailed:
+                        print("invalid email")
+                    case .webInternalError:
+                        print("invalid email")
                     }
                 } else {
                     
