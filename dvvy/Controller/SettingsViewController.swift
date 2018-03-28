@@ -16,12 +16,6 @@ class SettingsViewController : BaseViewController {
         
         // Do any additional setup after loading the view.
     }
-    @IBOutlet weak var General: UIButton!
-    @IBOutlet weak var Profile: UIButton!
-    @IBOutlet weak var Account: UIButton!
-    @IBOutlet weak var Friends: UIButton!
-    @IBOutlet weak var Support: UIButton!
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
