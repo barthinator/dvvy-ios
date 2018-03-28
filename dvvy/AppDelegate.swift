@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ZLSwipeableViewSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

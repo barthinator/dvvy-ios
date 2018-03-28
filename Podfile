@@ -10,6 +10,8 @@ target 'dvvy' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'KeychainSwift'
+  pod 'ZLSwipeableViewSwift'
+  pod 'pop', '~> 1.0'
 
   target 'dvvyTests' do
     inherit! :search_paths

@@ -363,11 +363,19 @@
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McO-NQ-6hf">
-                                <rect key="frame" x="138" y="69" width="98" height="43"/>
+                                <rect key="frame" x="52" y="69" width="98" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <segue destination="So8-b4-dhs" kind="show" id="b6e-tl-Ots"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaU-QW-htJ">
+                                <rect key="frame" x="211" y="69" width="98" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Listings"/>
+                                <connections>
+                                    <segue destination="5yT-LD-VpA" kind="show" id="NXd-vm-rmx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -919,7 +927,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XKe-B8-ySR">
                                 <rect key="frame" x="16" y="511" width="169.5" height="80"/>
-                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="FwZ-0t-Hld"/>
                                 </constraints>
@@ -946,7 +954,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="READY TO MAKE IT BIG?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXX-pU-IVx">
-                                <rect key="frame" x="16" y="20" width="343" height="483"/>
+                                <rect key="frame" x="16" y="64" width="343" height="439"/>
                                 <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="44"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -989,7 +997,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JH6-gz-0yK">
-                                <rect key="frame" x="16" y="20" width="343" height="485"/>
+                                <rect key="frame" x="16" y="64" width="343" height="441"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TERMS &amp; CONDITIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-tF-EhA">
                                         <rect key="frame" x="8" y="30" width="327" height="64"/>
@@ -1001,7 +1009,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d07-DI-21m">
-                                        <rect key="frame" x="8" y="93" width="327" height="362"/>
+                                        <rect key="frame" x="8" y="93" width="327" height="318"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tincidunt tortor. Praesent vel leo in urna congue tempor. Nullam aliquet, velit et accumsan placerat, lorem arcu hendrerit tortor, vehicula elementum magna justo quis velit. Donec quis enim at felis egestas venenatis ut nec risus. Nunc sed imperdiet orci, et finibus tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec posuere nec justo quis condimentum. Vestibulum rhoncus fermentum lacus, a tristique enim eleifend in. Etiam laoreet pellentesque elit, quis venenatis nisi pellentesque et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam a neque et tellus tincidunt hendrerit. Ut quis dui congue, laoreet magna vel, tincidunt enim. </string>
                                         <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -1021,7 +1029,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="i90-qb-8XR">
                                 <rect key="frame" x="16" y="513" width="169" height="80"/>
-                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="PHA-ZD-bsP"/>
                                     <constraint firstAttribute="width" constant="169" id="rbE-Zt-oEp"/>
@@ -1348,6 +1356,36 @@
             </objects>
             <point key="canvasLocation" x="2370" y="-637"/>
         </scene>
+        <!--Card Listings View Controller-->
+        <scene sceneID="Wc1-7T-8hs">
+            <objects>
+                <viewController id="5yT-LD-VpA" customClass="CardListingsViewController" customModule="dvvy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4w3-ZK-afz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fbv-tl-M6E" userLabel="Swipeable Card View" customClass="SwipeableCardViewContainer" customModule="dvvy" customModuleProvider="target">
+                                <rect key="frame" x="16" y="72" width="343" height="544"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fbv-tl-M6E" firstAttribute="trailing" secondItem="4w3-ZK-afz" secondAttribute="trailingMargin" id="DL6-Tf-vZG"/>
+                            <constraint firstItem="fbv-tl-M6E" firstAttribute="top" secondItem="RHu-T6-YgB" secondAttribute="top" constant="8" id="JdO-Pe-etT"/>
+                            <constraint firstItem="fbv-tl-M6E" firstAttribute="centerY" secondItem="4w3-ZK-afz" secondAttribute="centerY" constant="10.5" id="Wad-5C-T7w"/>
+                            <constraint firstItem="fbv-tl-M6E" firstAttribute="leading" secondItem="4w3-ZK-afz" secondAttribute="leadingMargin" id="k8T-xE-VHa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RHu-T6-YgB"/>
+                    </view>
+                    <connections>
+                        <outlet property="swipeableCardView" destination="fbv-tl-M6E" id="xcD-47-6zs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIj-la-gDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3432.8000000000002" y="-707.49625187406298"/>
+        </scene>
         <!--Feed View Controller-->
         <scene sceneID="r0O-4M-6Aa">
             <objects>
@@ -1509,7 +1547,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WSK-Pg-S28"/>
-        <segue reference="ByR-Mz-qWQ"/>
+        <segue reference="b6e-tl-Ots"/>
         <segue reference="7h5-pj-dFd"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="V3l-ye-iRZ"/>
