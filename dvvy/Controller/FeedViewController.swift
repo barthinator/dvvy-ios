@@ -9,40 +9,72 @@
 import UIKit
 import Firebase
 
-class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDelegate, UITableViewDataSource {
+    
+    //Creates the feed data class and delegate connection
+    let feedData = FeedModel.init()
+    var allPosts: [Post] = []
 
     @IBOutlet var feedTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
     let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
+    
+    //Makes the refresh happen when pulled down
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshTable), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0)
+        
+        return refreshControl
+    }()
+    
+    //Used for when refreshed is called, need to query the data here too
+    @objc func refreshTable(_ refreshControl: UIRefreshControl){
+        feedData.getFeedUpdates()
+        self.feedTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
 
-
-
+    func finishedLoading(_ posts: [Post]?) {
+        
+        //Grabs the data passed in from the model class and then puts it in the allPosts array
+        allPosts = posts!
+        
+        //Reloads the data after it is all fetched
+        self.feedTableView.reloadData()
+        
+    }
+    
+    
     //This is the Feed screen
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
-        // Do any additional setup after loading the view.
+        
+        //The model
+        feedData.delegate = self
+        feedData.getFeedUpdates()
 
+        // The table view delegate
         feedTableView.delegate = self
         feedTableView.dataSource = self
-
+        
         //do this on all table views to remove highlighting
         feedTableView.allowsSelection = false
-
-
         feedTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
+        self.feedTableView.addSubview(self.refreshControl)
 
         configureTableView()
-
-
     }
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
 
     //sections test
     func numberOfSections(in tableView: UITableView) -> Int {
-        return nameArray.count
+        return allPosts.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -65,8 +97,10 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         cell.clipsToBounds = true
 
         //cell.layer.cornerRadius = 60
-        cell.feedNameLbl.text = nameArray[indexPath.section]
-        cell.feedProfileImage.image = UIImage(named: nameArray[indexPath.section])
+        cell.feedNameLbl.text = allPosts[indexPath.section].title
+        cell.feedMessageTextView.text = allPosts[indexPath.section].description
+        //This will have to wait until we figure out images
+        //cell.feedProfileImage.image = UIImage(named: nameArray[indexPath.section])
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
@@ -75,8 +109,8 @@ class FeedViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         cell.btnDvvy.layer.cornerRadius = 10
         cell.btnLike.layer.cornerRadius = 10
         cell.btnOptions.layer.cornerRadius = 10
-        
-        
+
+
         return cell
     }
 

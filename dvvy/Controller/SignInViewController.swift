@@ -149,6 +149,10 @@ class SignInViewController : UIViewController {
                     if let u = user {
                         // User found go to home screen
                         self.performSegue(withIdentifier: "pushToHome", sender: self)
+                        
+                        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.set(user?.uid, forKey: "currentUser")
+                        UserDefaults.standard.synchronize()
                         print(u.email ?? "broken")
                     }
                     
@@ -166,4 +170,16 @@ class SignInViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    //Checks if the user is already logged in. If so then go to home page!
+    override func viewDidAppear(_ animated: Bool) {
+        if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            // User found go to home screen
+            UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUser")
+            UserDefaults.standard.synchronize()
+            self.performSegue(withIdentifier: "pushToHome", sender: self)
+        }
+    }
+    
+    
 }
