@@ -15,18 +15,43 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     
     func slideMenuItemSelectedAtIndex(_ index: Int32) {
         let topViewController : UIViewController = self.navigationController!.topViewController!
+        topViewController.isModalInPopover = true
+        topViewController.modalPresentationStyle = .overCurrentContext
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
         case 0:
-            print("Collab\n", terminator: "")
+            print("Messages\n", terminator: "")
             
-            self.openViewControllerBasedOnIdentifier("Collab")
+            self.openViewControllerBasedOnIdentifier("Messages")
             
             break
         case 1:
             print("Feed\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Feed")
+        
+        case 2:
+            print("Collab\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Collab")
+            
+            break
+        case 3:
+            print("Submit\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Submit")
+            
+            break
+        case 4:
+            print("Settings\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Settings")
+            
+            break
+        case 5:
+            print("Profile\n", terminator: "")
+            
+            self.openViewControllerBasedOnIdentifier("Profile")
             
             break
         default:

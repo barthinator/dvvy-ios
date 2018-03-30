@@ -8,6 +8,7 @@
 
 import UIKit
 
+//This delegate is responsible for calling the slide function passed through a seperate view controller
 protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
@@ -18,6 +19,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      *  Array to display menu options
      */
     @IBOutlet var tblMenuOptions : UITableView!
+    
+    
     
     /**
      *  Transparent button to hide menu
@@ -42,7 +45,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         tblMenuOptions.tableFooterView = UIView()
+        tblMenuOptions.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
+        tblMenuOptions.tintColor = UIColor.white
         btnCloseMenuOverlay.alpha = 1
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
         // Do any additional setup after loading the view.
     }
     
@@ -58,8 +65,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func updateArrayMenuOptions(){
         //Pass in icon with ["title":"Name", "icon":"Name"]
-        arrayMenuOptions.append(["title":"Collab"])
+        arrayMenuOptions.append(["title":"Messages"])
         arrayMenuOptions.append(["title":"Feed"])
+        arrayMenuOptions.append(["title":"Collab"])
+        arrayMenuOptions.append(["title":"Submit"])
+        arrayMenuOptions.append(["title":"Settings"])
+        arrayMenuOptions.append(["title":"Profile"])
         
         tblMenuOptions.reloadData()
     }
