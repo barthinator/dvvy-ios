@@ -1,6 +1,0 @@
-framework module Pods_dvvy {
-  umbrella header "Pods-dvvy-umbrella.h"
-
-  export *
-  module * { export * }
-}
