@@ -8,7 +8,21 @@
 
 import UIKit
 
+protocol PopUpDelegate {
+    func slideMenuItemSelectedAtIndex(_ index : Int32)
+}
+
 class PopUpViewController: UIViewController {
+    
+    /**
+     *  Menu button which was tapped to display the menu
+     */
+    var btnCreate : UIButton!
+    
+    /**
+     *  Delegate of the MenuVC
+     */
+    var delegate : PopUpDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
