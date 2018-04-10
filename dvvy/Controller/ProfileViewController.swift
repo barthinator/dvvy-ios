@@ -21,7 +21,6 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        popUp.isHidden = isHidden
         //Calls the slide menu button
         addSlideMenuButton()
         friendsBtn.layer.borderWidth = 1

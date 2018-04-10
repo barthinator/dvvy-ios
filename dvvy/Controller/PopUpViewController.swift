@@ -8,12 +8,34 @@
 
 import UIKit
 
+protocol PopUpDelegate {
+    func slideMenuItemSelectedAtIndex(_ index : Int32)
+}
+
 class PopUpViewController: UIViewController {
+    
+    @IBOutlet weak var popUpView: UIView!
+    
+    @IBOutlet weak var contentView: UIView!
+    
+    /**
+     *  Menu button which was tapped to display the menu
+     */
+    var btnCreate : UIButton!
+    
+    /**
+     *  Delegate of the MenuVC
+     */
+    var delegate : PopUpDelegate?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        popUpView.layer.shadowColor = UIColor.black.cgColor
+        popUpView.layer.shadowOpacity = 1
+        popUpView.layer.shadowOffset = CGSize.zero
+        popUpView.layer.shadowRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +43,8 @@ class PopUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismissPopup(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }

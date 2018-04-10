@@ -1,7 +1,8 @@
 
 import UIKit
 
-class BaseViewController: UIViewController, SlideMenuDelegate {
+
+class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,36 +20,36 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         topViewController.modalPresentationStyle = .overCurrentContext
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
-        case 0:
+        case 1:
             print("Messages\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Messages")
             
             break
-        case 1:
+        case 2:
             print("Feed\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Feed")
         
-        case 2:
+        case 3:
             print("Collab\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Collab")
             
             break
-        case 3:
+        case 4:
             print("Submit\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Submit")
             
             break
-        case 4:
+        case 5:
             print("Settings\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Settings")
             
             break
-        case 5:
+        case 6:
             print("Profile\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Profile")
@@ -78,6 +79,13 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         btnShowMenu.addTarget(self, action: #selector(BaseViewController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
         self.navigationItem.leftBarButtonItem = customBarItem;
+        
+        let btnCreate = UIButton(type: UIButtonType.system)
+        btnCreate.setImage(#imageLiteral(resourceName: "dvvyBtnImg"), for: UIControlState())
+        btnCreate.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        btnCreate.addTarget(self, action: #selector(BaseViewController.onCreatePostPress(_:)), for: UIControlEvents.touchUpInside)
+        let customBarItemRight = UIBarButtonItem(customView: btnCreate)
+        self.navigationItem.rightBarButtonItem = customBarItemRight;
     }
     
     func defaultMenuImage() -> UIImage {
@@ -140,6 +148,48 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         
         UIView.animate(withDuration: 0.3, animations: { () -> Void in
             menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
+            sender.isEnabled = true
+        }, completion:nil)
+    }
+    
+    @objc func onCreatePostPress(_ sender : UIButton){
+        if (sender.tag == 10)
+        {
+            // To Hide Menu If it already there
+            self.slideMenuItemSelectedAtIndex(-1);
+            
+            sender.tag = 0;
+            
+            let viewMenuBack : UIView = view.subviews.last!
+            
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                var frameMenu : CGRect = viewMenuBack.frame
+                frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+                viewMenuBack.frame = frameMenu
+                viewMenuBack.layoutIfNeeded()
+                viewMenuBack.backgroundColor = UIColor.clear
+            }, completion: { (finished) -> Void in
+                viewMenuBack.removeFromSuperview()
+            })
+            
+            return
+        }
+        
+        sender.isEnabled = false
+        sender.tag = 10
+        
+        let popVC : PopUpViewController = self.storyboard!.instantiateViewController(withIdentifier: "PostPopUp") as! PopUpViewController
+        popVC.btnCreate = sender
+        popVC.delegate = self
+        self.view.addSubview(popVC.view)
+        self.addChildViewController(popVC)
+        popVC.view.layoutIfNeeded()
+        
+        
+        popVC.view.frame=CGRect(x: 0 - UIScreen.main.bounds.size.width, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
+        
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+            popVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
             sender.isEnabled = true
         }, completion:nil)
     }
