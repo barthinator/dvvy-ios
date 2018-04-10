@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ProfileViewController: BaseViewController{
+class ProfileViewController: BaseViewController, UserModelDelegate{
     
+    var profileUser = User(first: "nil", last: "nil")
     @IBOutlet var friendsBtn: UIButton!
     
     @IBOutlet var popUp: UIView!
@@ -28,9 +29,10 @@ class ProfileViewController: BaseViewController{
         friendsBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
         //Set the data of the user
         
+        
         profileTableView.backgroundColor = UIColor.darkGray
-        print(profileModel.getProfileName())
-        //usernameLabel.text
+        profileModel.delegate = self
+        profileModel.getUser(uid: UserDefaults.standard.value(forKey: "currentUser") as! String)
     }
     
     
@@ -40,6 +42,11 @@ class ProfileViewController: BaseViewController{
         
     }
     
+    func finishedLoading(user: User) {
+        profileUser = user
+        print(profileUser)
+        usernameLabel.text = profileUser.first + " " + profileUser.last
+    }
     
 }
 
