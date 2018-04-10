@@ -31,6 +31,7 @@
 		796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796E159C201E5C4E0051605E /* LaunchScreen.storyboard */; };
 		796E15A9201E5C4F0051605E /* dvvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15A8201E5C4F0051605E /* dvvyTests.swift */; };
 		796E15B4201E5C4F0051605E /* dvvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15B3201E5C4F0051605E /* dvvyUITests.swift */; };
+		797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A6DD9207CB43B00583A77 /* SideUserCell.swift */; };
 		79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A75253202AC76F00B9BC99 /* ProfileViewController.swift */; };
 		79BDE3D620395E8F0011853A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79BDE3D520395E8F0011853A /* GoogleService-Info.plist */; };
 		79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BDE3D720396DF50011853A /* SignInViewController.swift */; };
@@ -98,6 +99,7 @@
 		796E15AF201E5C4F0051605E /* dvvyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dvvyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E15B3201E5C4F0051605E /* dvvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dvvyUITests.swift; sourceTree = "<group>"; };
 		796E15B5201E5C4F0051605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		797A6DD9207CB43B00583A77 /* SideUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideUserCell.swift; sourceTree = "<group>"; };
 		79A75253202AC76F00B9BC99 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		79BDE3D520395E8F0011853A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		79BDE3D720396DF50011853A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				9675CED9205A27A00041E19D /* Custom Listing Cell */,
 				06806E83203D4E9F00D4EE34 /* Custom Feed Cell */,
 				06109669203AA7B6004827E4 /* Custom Friends Cell */,
+				797A6DD9207CB43B00583A77 /* SideUserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */,
 				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
+				797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */,
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,

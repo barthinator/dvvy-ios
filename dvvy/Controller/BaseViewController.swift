@@ -20,36 +20,36 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         topViewController.modalPresentationStyle = .overCurrentContext
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
-        case 0:
+        case 1:
             print("Messages\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Messages")
             
             break
-        case 1:
+        case 2:
             print("Feed\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Feed")
         
-        case 2:
+        case 3:
             print("Collab\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Collab")
             
             break
-        case 3:
+        case 4:
             print("Submit\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Submit")
             
             break
-        case 4:
+        case 5:
             print("Settings\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Settings")
             
             break
-        case 5:
+        case 6:
             print("Profile\n", terminator: "")
             
             self.openViewControllerBasedOnIdentifier("Profile")

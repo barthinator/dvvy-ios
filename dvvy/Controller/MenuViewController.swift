@@ -51,6 +51,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
         // Do any additional setup after loading the view.
+        tblMenuOptions.rowHeight = UITableViewAutomaticDimension
+        tblMenuOptions.estimatedRowHeight = 140
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,12 +67,14 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func updateArrayMenuOptions(){
         //Pass in icon with ["title":"Name", "icon":"Name"]
+        arrayMenuOptions.append(["head": UserDefaults.standard.value(forKey: "currentUser") as! String])
         arrayMenuOptions.append(["title":"Messages"])
         arrayMenuOptions.append(["title":"Feed"])
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
         arrayMenuOptions.append(["title":"Profile"])
+        print(arrayMenuOptions)
         
         tblMenuOptions.reloadData()
     }
@@ -109,9 +113,20 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //To enable icons
         //imgIcon.image = UIImage(named: arrayMenuOptions[indexPath.row]["icon"]!)
-        lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
         
-        return cell
+        if (indexPath.row == 0){
+            let headCell = tableView.dequeueReusableCell(withIdentifier: "head") as! SideUserCell
+            headCell.backgroundColor = UIColor.clear
+            headCell.userLbl.text = "David Bartholomew"
+            headCell.userLbl.textColor = UIColor.white
+            headCell.userImg.layer.borderWidth = 2
+            headCell.userImg.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+            return headCell
+        }
+        else{
+            lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

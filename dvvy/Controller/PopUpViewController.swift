@@ -14,6 +14,10 @@ protocol PopUpDelegate {
 
 class PopUpViewController: UIViewController {
     
+    @IBOutlet weak var popUpView: UIView!
+    
+    @IBOutlet weak var contentView: UIView!
+    
     /**
      *  Menu button which was tapped to display the menu
      */
@@ -23,11 +27,15 @@ class PopUpViewController: UIViewController {
      *  Delegate of the MenuVC
      */
     var delegate : PopUpDelegate?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        popUpView.layer.shadowColor = UIColor.black.cgColor
+        popUpView.layer.shadowOpacity = 1
+        popUpView.layer.shadowOffset = CGSize.zero
+        popUpView.layer.shadowRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
