@@ -8,9 +8,20 @@
 
 import Firebase
 
+struct User {
+    var first: String
+    var last: String
+}
+
+protocol UserModelDelegate: class {
+    func finishedLoading(user: User)
+}
+
 class UserModel {
     
     var db: Firestore!
+    var user = User(first: "nil", last: "nil")
+    weak var delegate: UserModelDelegate?
     
     //TODO: Add some error handling to ensure the data is valid. Eg the phone number
     
@@ -70,17 +81,21 @@ class UserModel {
         }
     }
 
-    func getProfileName()  {
-        var firstname : String = "empty"
-        db.collection("users").document(getUID()).getDocument{
-            (document, err) in
+    func getUser(uid: String){
+        db.collection("users").document(uid).getDocument {
+           (document, err) in
             if let document = document {
                 let dataDict = document.data()
-                firstname = dataDict!["firstname"] as! String
+                self.user = User(
+                    first: dataDict!["firstname"] as! String,
+                    last: dataDict!["lastname"] as! String )
             } else {
                 print("Document does not exist")
-                firstname = "we messed up..."
             }
+
+            self.delegate?.finishedLoading(user: self.user)
         }
     }
+    
+    
 }

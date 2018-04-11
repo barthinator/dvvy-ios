@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FriendsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var friendsTableView: UITableView!
     
