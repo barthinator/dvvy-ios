@@ -78,14 +78,16 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         btnShowMenu.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btnShowMenu.addTarget(self, action: #selector(BaseViewController.onSlideMenuButtonPressed(_:)), for: UIControlEvents.touchUpInside)
         let customBarItem = UIBarButtonItem(customView: btnShowMenu)
-        self.navigationItem.leftBarButtonItem = customBarItem;
+        //self.navigationItem.leftBarButtonItem = customBarItem;
         
         let btnCreate = UIButton(type: UIButtonType.system)
         btnCreate.setImage(#imageLiteral(resourceName: "dvvyBtnImg"), for: UIControlState())
         btnCreate.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         btnCreate.addTarget(self, action: #selector(BaseViewController.onCreatePostPress(_:)), for: UIControlEvents.touchUpInside)
         let customBarItemRight = UIBarButtonItem(customView: btnCreate)
-        self.navigationItem.rightBarButtonItem = customBarItemRight;
+        //self.navigationItem.rightBarButtonItem = customBarItemRight;
+        
+        self.setToolbarItems([customBarItem, customBarItemRight], animated: false)
     }
     
     func defaultMenuImage() -> UIImage {

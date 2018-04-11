@@ -20,8 +20,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      */
     @IBOutlet var tblMenuOptions : UITableView!
     
-    
-    
     /**
      *  Transparent button to hide menu
      */
@@ -41,6 +39,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      *  Delegate of the MenuVC
      */
     var delegate : SlideMenuDelegate?
+    var userDelegate : UserModelDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +73,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
         arrayMenuOptions.append(["title":"Profile"])
-        print(arrayMenuOptions)
         
         tblMenuOptions.reloadData()
     }
@@ -119,8 +117,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             headCell.backgroundColor = UIColor.clear
             headCell.userLbl.text = "David Bartholomew"
             headCell.userLbl.textColor = UIColor.white
-            headCell.userImg.layer.borderWidth = 2
-            headCell.userImg.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
             return headCell
         }
         else{
