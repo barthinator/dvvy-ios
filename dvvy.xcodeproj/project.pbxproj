@@ -39,7 +39,6 @@
 		79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EDD5BB205B9D990022DDCC /* FeedModel.swift */; };
 		79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA59A920316815003C7131 /* BottomNavController.swift */; };
 		79FFFD6A2049E97500DE4E18 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FFFD692049E97500DE4E18 /* UserModel.swift */; };
-		7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234B82029A226009AE35F /* BaseViewController.swift */; };
 		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
 		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
@@ -48,6 +47,8 @@
 		D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B0DC3202A987900677E53 /* SettingsViewController.swift */; };
 		D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */; };
 		D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D886FF2B203BBC91008573A2 /* AccountViewController.swift */; };
+		D8F8FFB2207F195D0061E8B4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8FFB1207F195D0061E8B4 /* BaseViewController.swift */; };
+		D8F8FFB4207F1AEC0061E8B4 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */; };
 		F0E9DBA3478B5E903598A17D /* Pods_dvvyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D5F64B00883769C694EB9D5 /* Pods_dvvyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +109,6 @@
 		79FA59A920316815003C7131 /* BottomNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomNavController.swift; path = dvvy/Controller/BottomNavController.swift; sourceTree = SOURCE_ROOT; };
 		79FFFD692049E97500DE4E18 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserModel.swift; path = dvvy/Model/UserModel.swift; sourceTree = SOURCE_ROOT; };
 		7AD0C3207FD2F57736191EAF /* Pods-dvvy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dvvy/Pods-dvvy.debug.xcconfig"; sourceTree = "<group>"; };
-		7F4234B82029A226009AE35F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		7F4234BA2029A30C009AE35F /* CollabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabViewController.swift; sourceTree = "<group>"; };
 		7F4234BC2029A3A5009AE35F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +118,8 @@
 		D80B0DC3202A987900677E53 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		D886FF2B203BBC91008573A2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D8F8FFB1207F195D0061E8B4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		DC08679F92E4A8560130B8D2 /* Pods-dvvyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyUITests/Pods-dvvyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 			children = (
 				79EDD5BB205B9D990022DDCC /* FeedModel.swift */,
 				79FFFD692049E97500DE4E18 /* UserModel.swift */,
+				D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,12 +259,12 @@
 			isa = PBXGroup;
 			children = (
 				79FA59A920316815003C7131 /* BottomNavController.swift */,
+				D8F8FFB1207F195D0061E8B4 /* BaseViewController.swift */,
 				06109667203AA603004827E4 /* FriendsViewController.swift */,
 				06109665203A97F0004827E4 /* PopUpViewController.swift */,
 				79A75253202AC76F00B9BC99 /* ProfileViewController.swift */,
 				796E1595201E5C4E0051605E /* ViewController.swift */,
 				7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */,
-				7F4234B82029A226009AE35F /* BaseViewController.swift */,
 				7F4234BA2029A30C009AE35F /* CollabViewController.swift */,
 				D8187AB4203CC7E2005EEAC8 /* GeneralViewController.swift */,
 				7F4234BC2029A3A5009AE35F /* FeedViewController.swift */,
@@ -634,10 +637,10 @@
 			files = (
 				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
-				7F4234B92029A226009AE35F /* BaseViewController.swift in Sources */,
 				79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */,
 				79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */,
 				D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */,
+				D8F8FFB2207F195D0061E8B4 /* BaseViewController.swift in Sources */,
 				D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */,
 				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
@@ -647,6 +650,7 @@
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,
 				06109668203AA603004827E4 /* FriendsViewController.swift in Sources */,
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
+				D8F8FFB4207F1AEC0061E8B4 /* ChatModel.swift in Sources */,
 				96A031552057927800BDC4DA /* customListingCell.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
