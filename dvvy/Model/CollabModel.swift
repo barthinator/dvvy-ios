@@ -14,6 +14,8 @@ struct CollabPost {
     var title: String
     //var profImage: UIImage
     var datePosted: Date
+    var category: String
+    var name: String
 }
 
 protocol CollabModelDelegate: class {
@@ -35,7 +37,7 @@ class CollabModel {
     
     // Going to pull from the current user who is logged in
     //Should only pull the most recent 10 or something
-    func getFeedUpdates() {
+    func getCollabUpdates() {
         //Suppose to grab the posts from the world document, then order them by
         //the date posted (only limit to 10 for now)
         
@@ -55,7 +57,9 @@ class CollabModel {
                         uid: dataDict["uid"] as! String,
                         description: dataDict["description"] as! String,
                         title: dataDict["title"] as! String,
-                        datePosted: dataDict["datePosted"] as! Date
+                        datePosted: dataDict["datePosted"] as! Date,
+                        category: dataDict["category"] as! String,
+                        name: dataDict["name"] as! String
                     )
                     
                     self.posts.append(documentPost)
