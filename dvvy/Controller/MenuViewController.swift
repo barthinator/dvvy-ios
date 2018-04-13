@@ -14,6 +14,11 @@ protocol SlideMenuDelegate {
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserModelDelegate {
+    
+    func finishLoadingFollowers(followers: [String]) {
+        
+    }
+    
 
 
     /**

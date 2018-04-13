@@ -15,6 +15,7 @@ struct User {
 
 protocol UserModelDelegate: class {
     func finishedLoading(user: User)
+    func finishLoadingFollowers(followers: [String])
 }
 
 class UserModel {
@@ -22,6 +23,7 @@ class UserModel {
     var db: Firestore!
     var user = User(first: "nil", last: "nil")
     weak var delegate: UserModelDelegate?
+    var followers : [String] = []
     
     //TODO: Add some error handling to ensure the data is valid. Eg the phone number
     
@@ -79,6 +81,34 @@ class UserModel {
         else{
             return UserDefaults.standard.string(forKey: "currentUser")!
         }
+    }
+    
+    func getFollowers(uid: String){
+        db.collection("users").document(uid).collection("followers").order(by: "dateFollowed").getDocuments(){
+            (querySnapshot, err) in
+            if let err = err {
+                print("Error geting posts: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    self.followers.append(document.documentID)
+                }
+                self.delegate?.finishLoadingFollowers(followers: self.followers )
+            }
+        }
+    }
+    
+    func follow(senderUID: String, recieverUID: String){
+        //populate senderUID following collection with recieverUID
+        db.collection("users").document(senderUID).collection("following").document(recieverUID).setData(
+            ["datePosted": NSDate()]
+        )
+        
+        //popoulate the recieverUID follower collection with senderUID
+        db.collection("users").document(recieverUID).collection("followers").document(senderUID).setData(
+            ["datePosted": NSDate()]
+        )
+        
     }
 
     func getUser(uid: String){
