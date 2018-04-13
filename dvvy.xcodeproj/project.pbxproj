@@ -24,6 +24,7 @@
 		1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1902703E203AA685000A09CC /* SubmitViewController.swift */; };
 		19819554203AAD3500E88201 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19819553203AAD3500E88201 /* MessageViewController.swift */; };
 		3FF51460C232934EFD31E72E /* Pods_dvvy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F5454B1C5AA6E68F33A858 /* Pods_dvvy.framework */; };
+		79245D2F20812FA300DF3423 /* CollabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79245D2E20812FA300DF3423 /* CollabModel.swift */; };
 		796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1593201E5C4E0051605E /* AppDelegate.swift */; };
 		796E1596201E5C4E0051605E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E1595201E5C4E0051605E /* ViewController.swift */; };
 		796E1599201E5C4E0051605E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796E1597201E5C4E0051605E /* Main.storyboard */; };
@@ -86,6 +87,7 @@
 		3248EB318A16252DDEBF72B2 /* Pods-dvvyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyTests/Pods-dvvyTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C0D3A85752E2B5377AAD53E /* Pods_dvvyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dvvyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5F64B00883769C694EB9D5 /* Pods_dvvyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dvvyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79245D2E20812FA300DF3423 /* CollabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabModel.swift; sourceTree = "<group>"; };
 		796E1590201E5C4E0051605E /* dvvy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dvvy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		796E1593201E5C4E0051605E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796E1595201E5C4E0051605E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				79EDD5BB205B9D990022DDCC /* FeedModel.swift */,
 				79FFFD692049E97500DE4E18 /* UserModel.swift */,
+				79245D2E20812FA300DF3423 /* CollabModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */,
 				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
+				79245D2F20812FA300DF3423 /* CollabModel.swift in Sources */,
 				797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */,
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
