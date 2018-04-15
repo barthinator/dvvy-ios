@@ -12,7 +12,6 @@ import Firebase
 class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDelegate, UITableViewDataSource {
     
     //Creates the feed data class and delegate connection
-    let feedData = FeedModel.init()
     var allPosts: [Post] = []
 
     @IBOutlet var feedTableView: UITableView!
@@ -30,7 +29,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
     
     //Used for when refreshed is called, need to query the data here too
     @objc func refreshTable(_ refreshControl: UIRefreshControl){
-        feedData.getFeedUpdates()
+        super.feedModel.getFeedUpdates()
         self.feedTableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -52,8 +51,8 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         addSlideMenuButton()
         
         //The model
-        feedData.delegate = self
-        feedData.getFeedUpdates()
+        super.feedModel.delegate = self
+        super.feedModel.getFeedUpdates()
 
         // The table view delegate
         feedTableView.delegate = self

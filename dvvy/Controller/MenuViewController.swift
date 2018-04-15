@@ -80,7 +80,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
         arrayMenuOptions.append(["title":"Profile"])
-        print(arrayMenuOptions)
 
         tblMenuOptions.reloadData()
     }

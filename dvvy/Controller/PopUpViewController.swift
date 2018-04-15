@@ -47,7 +47,21 @@ class PopUpViewController: UIViewController {
     }
     
     func dismissPopup() {
-        dismiss(animated: true, completion: nil)
+        let viewMenuBack : UIView = view.subviews.last!
+        
+        //Need to figure out how to change menu bar items tag to 0
+        
+        //This triggers an animation to close the popup
+        
+        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+            var frameMenu : CGRect = viewMenuBack.frame
+            frameMenu.origin.x = -1 * UIScreen.main.bounds.size.width
+            viewMenuBack.frame = frameMenu
+            viewMenuBack.layoutIfNeeded()
+            viewMenuBack.backgroundColor = UIColor.clear
+        }, completion: { (finished) -> Void in
+            viewMenuBack.removeFromSuperview()
+        })
     }
     
     @IBAction func makePost(_ sender: Any) {
@@ -59,7 +73,7 @@ class PopUpViewController: UIViewController {
             category: categoryField.text!,
             name: "test"
         )
-        
+
         collabModel?.makePost(post: post)
         dismissPopup()
     }

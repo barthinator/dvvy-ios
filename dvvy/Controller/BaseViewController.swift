@@ -5,10 +5,12 @@ import UIKit
 class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
     
     let collabModel = CollabModel.init()
+    let feedModel = FeedModel.init()
+    
+    var delegate : PopUpDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
 
@@ -52,7 +54,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
 
             break
         default:
-            print("default\n", terminator: "")
+            1 == 1
         }
     }
 
