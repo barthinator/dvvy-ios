@@ -3,9 +3,12 @@ import UIKit
 
 
 class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
+    
+    let collabModel = CollabModel.init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -174,6 +177,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         sender.tag = 10
 
         let popVC : PopUpViewController = self.storyboard!.instantiateViewController(withIdentifier: "PostPopUp") as! PopUpViewController
+        popVC.collabModel = collabModel
         popVC.btnCreate = sender
         popVC.delegate = self
         self.view.addSubview(popVC.view)

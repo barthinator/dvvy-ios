@@ -69,6 +69,27 @@ class CollabModel {
         }
     }
     
+    func makePost(post: CollabPost){
+        
+        //Sets the data of the global collab collection
+        let ref = db.collection("collab").document("global").collection("collabpost").document()
+        ref.setData([
+            "uid": post.uid,
+            "description": post.description,
+            "title": post.title,
+            "datePosted": post.datePosted,
+            "category": post.category,
+            "name": post.name
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+    }
+    
     
     
 }

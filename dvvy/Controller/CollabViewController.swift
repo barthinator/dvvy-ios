@@ -14,17 +14,12 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var collabTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
-    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier", "Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
-    let needArray = ["guitar", "piano", "composition", "producer", "drums", "violin", "guitar", "piano", "composition", "producer", "drums", "violin"]
-    
-    let collabModel = CollabModel.init()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
         
-        collabModel.delegate = self
-        collabModel.getCollabUpdates()
+        super.collabModel.delegate = self
+        super.collabModel.getCollabUpdates()
 
         collabTableView.delegate = self
         collabTableView.dataSource = self
