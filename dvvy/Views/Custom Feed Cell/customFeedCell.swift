@@ -19,6 +19,8 @@ class customFeedCell: UITableViewCell {
     @IBOutlet var feedNameLbl: UILabel!
     @IBOutlet var feedProfileImage: UIImageView!
     
+    var uid: String?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
