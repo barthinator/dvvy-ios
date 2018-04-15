@@ -32,8 +32,25 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         collabTableView.allowsSelection = false
 
         collabTableView.register(UINib(nibName: "customListingCell", bundle: nil), forCellReuseIdentifier: "cusListCell")
+        self.collabTableView.addSubview(self.refreshControl)
+
         configureTableView()
         // Do any additional setup after loading the view.
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshTable), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0)
+        
+        return refreshControl
+    }()
+    
+    //Used for when refreshed is called, need to query the data here too
+    @objc func refreshTable(_ refreshControl: UIRefreshControl){
+        collabModel.getCollabUpdates()
+        self.collabTableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     func finishedLoading(_ posts: [CollabPost]?) {
