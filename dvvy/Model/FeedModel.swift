@@ -65,6 +65,26 @@ class FeedModel {
         }
     }
     
+    func makePost(post: Post){
+        
+        //Sets the data of the global collab collection
+        let ref = db.collection("feed").document("world").collection("posts").document()
+        ref.setData([
+            "uid": post.uid,
+            "description": post.description,
+            "title": post.title,
+            "datePosted": post.datePosted
+        ]) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+            }
+        }
+        
+    }
+    
+    
     
     
 }

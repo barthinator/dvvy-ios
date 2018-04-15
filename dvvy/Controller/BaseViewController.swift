@@ -180,6 +180,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
 
         let popVC : PopUpViewController = self.storyboard!.instantiateViewController(withIdentifier: "PostPopUp") as! PopUpViewController
         popVC.collabModel = collabModel
+        popVC.feedModel = feedModel
         popVC.btnCreate = sender
         popVC.delegate = self
         self.view.addSubview(popVC.view)
