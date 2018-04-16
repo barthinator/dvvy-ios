@@ -511,6 +511,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-m7-qyG">
                                 <rect key="frame" x="187" y="214" width="172" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="riD-do-3Mf"/>
                                 </constraints>
@@ -518,9 +519,16 @@
                                 <state key="normal" title="COLLAB">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="woL-bO-bus" appends="YES" id="RDM-kd-uUK"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zack Goldstein" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-Wp-0jm">
                                 <rect key="frame" x="16" y="27" width="171" height="160"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="woL-bO-bus" appends="YES" id="h3f-2v-ky8"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2s-ri-ZEa">
                                 <rect key="frame" x="199" y="102" width="116" height="39"/>
@@ -581,11 +589,17 @@
                     <navigationItem key="navigationItem" id="Has-vY-JGA"/>
                     <connections>
                         <outlet property="friendsBtn" destination="x2s-ri-ZEa" id="IcI-Z6-Qzy"/>
+                        <outlet property="imgProf" destination="xJY-Wp-0jm" id="S9i-Qe-CcV"/>
                         <outlet property="profileTableView" destination="xTE-hm-j8l" id="l7w-Wm-esN"/>
                         <outlet property="usernameLabel" destination="0Vu-ye-Sud" id="bOg-aA-L71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mfE-k3-3Vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="woL-bO-bus">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="vEE-8N-vqN" id="nTJ-u8-KkD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3240.8000000000002" y="921.58920539730138"/>
         </scene>
@@ -904,7 +918,7 @@ SUBMISSION</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LRJ-4v-TDD">
                                 <rect key="frame" x="16" y="20" width="343" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">1. ACKNOWLEDGMENT AND ACCEPTANCE OF TERMS OF SERVICE
+                                <string key="text">1. ACKNOWLEDGMENT AND ACCEPTANCE OF TERMS OF SERVICE
 THIS IS A LEGAL AGREEMENT BETWEEN YOU ("USER" OR "YOU") AND WONDERSOFT INC ("Wondersoft"). BY COMPLETING THE REGISTRATION PROCESS, YOU ARE INDICATING YOUR AGREEMENT TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. The Online Service ("Service") is provided to you ("User") under the following Wondersoft terms ("Terms"). The Terms comprise the entire agreement between User and Wondersoft and supersede all prior agreements between the parties regarding the subject matter contained herein.
 
 
@@ -953,7 +967,7 @@ The User may terminate the Service with or without cause at any time and effecti
 All notices to a party shall be in writing and shall be made either via email or conventional mail. Wondersoft may broadcast notices or messages through the Service to inform User of changes to the Terms, the Service, or other matters of importance; such broadcasts shall constitute notice to User.
 
 15. PROPRIETARY RIGHTS TO CONTENT
-User acknowledges that content, including but not limited to text, software, music, sound, photographs, video, graphics or other material contained in either sponsor advertisements or email-distributed, commercially produced information presented to User by the Service ("Content") by Wondersoft or Wondersoft's Advertisers (“Advertiser”), is protected by copyrights, trademarks, service marks, patents or other proprietary rights and laws; therefore, User is only permitted to use this Content as expressly authorized by the Service or the Advertiser. User may not copy, reproduce, distribute, or create derivative works from this Content without expressly being authorized to do so by the Service or the Advertiser.</mutableString>
+User acknowledges that content, including but not limited to text, software, music, sound, photographs, video, graphics or other material contained in either sponsor advertisements or email-distributed, commercially produced information presented to User by the Service ("Content") by Wondersoft or Wondersoft's Advertisers (“Advertiser”), is protected by copyrights, trademarks, service marks, patents or other proprietary rights and laws; therefore, User is only permitted to use this Content as expressly authorized by the Service or the Advertiser. User may not copy, reproduce, distribute, or create derivative works from this Content without expressly being authorized to do so by the Service or the Advertiser.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1174,9 +1188,8 @@ User acknowledges that content, including but not limited to text, software, mus
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="b7A-RI-vSX"/>
         <segue reference="SGx-6z-McB"/>
-        <segue reference="b7A-RI-vSX"/>
-        <segue reference="b7A-RI-vSX"/>
         <segue reference="ecc-fz-7DY"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="7TJ-90-9bJ"/>
