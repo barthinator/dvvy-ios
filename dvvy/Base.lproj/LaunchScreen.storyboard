@@ -19,15 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="vKF-ie-Ic6">
-                                <rect key="frame" x="53" y="193" width="268" height="281"/>
+                                <rect key="frame" x="140" y="284" width="95" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="3ld-OS-DLD"/>
+                                    <constraint firstAttribute="width" constant="95" id="gxK-sB-Yqm"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.45882352941176469" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vKF-ie-Ic6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="173" id="0oI-Zn-eXZ"/>
-                            <constraint firstItem="vKF-ie-Ic6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="6Bf-FG-MAy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vKF-ie-Ic6" secondAttribute="bottom" constant="193" id="LB1-aV-XRX"/>
-                            <constraint firstItem="vKF-ie-Ic6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ma7-Z2-hxv"/>
+                            <constraint firstItem="vKF-ie-Ic6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="aMY-zs-WsX"/>
+                            <constraint firstItem="vKF-ie-Ic6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qPj-Tx-Sxr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

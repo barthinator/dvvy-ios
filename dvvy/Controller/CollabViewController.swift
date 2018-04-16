@@ -14,6 +14,7 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     
     
     
+    @IBOutlet weak var sortViewBtn: UIButton!
     @IBAction func sortViewBtn(_ sender: Any) {
         collabTableView.isHidden = !collabTableView.isHidden
         swipeableCardView.isHidden = !swipeableCardView.isHidden
@@ -31,6 +32,12 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         //cards
         swipeableCardView.dataSource = self
         swipeableCardView.isHidden = true
+        //
+        
+        //sort button styling
+        sortViewBtn.layer.borderWidth = 1
+        sortViewBtn.layer.cornerRadius = 5
+        sortViewBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
         //
         
         super.collabModel.delegate = self
