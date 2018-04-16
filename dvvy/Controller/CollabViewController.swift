@@ -8,16 +8,18 @@
 
 import UIKit
 
-class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-
+class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CollabModelDelegate {
+    
+    var allPosts: [CollabPost] = []
+    
     @IBOutlet weak var collabTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
-    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier", "Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
-    let needArray = ["guitar", "piano", "composition", "producer", "drums", "violin", "guitar", "piano", "composition", "producer", "drums", "violin"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        
+        super.collabModel.delegate = self
+        super.collabModel.getCollabUpdates()
 
         collabTableView.delegate = self
         collabTableView.dataSource = self
@@ -25,12 +27,35 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         collabTableView.allowsSelection = false
 
         collabTableView.register(UINib(nibName: "customListingCell", bundle: nil), forCellReuseIdentifier: "cusListCell")
+        self.collabTableView.addSubview(self.refreshControl)
+
         configureTableView()
-
-
-
-
         // Do any additional setup after loading the view.
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshTable), for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0)
+        
+        return refreshControl
+    }()
+    
+    //Used for when refreshed is called, need to query the data here too
+    @objc func refreshTable(_ refreshControl: UIRefreshControl){
+        collabModel.getCollabUpdates()
+        self.collabTableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
+    func finishedLoading(_ posts: [CollabPost]?) {
+        
+        //Grabs the data passed in from the model class and then puts it in the allPosts array
+        allPosts = posts!
+        
+        //Reloads the data after it is all fetched
+        self.collabTableView.reloadData()
+        
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -39,7 +64,7 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
 
     //sections test
     func numberOfSections(in tableView: UITableView) -> Int {
-        return nameArray.count
+        return allPosts.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -61,9 +86,9 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         cell.clipsToBounds = true
 
         //cell.layer.cornerRadius = 60
-        cell.lblNameListing.text = nameArray[indexPath.section].uppercased()
-        cell.imageListing.image = UIImage(named: nameArray[indexPath.section])
-        cell.lblNeedTypeCollab.text = needArray[indexPath.section].lowercased()
+        cell.lblNameListing.text = allPosts[indexPath.section].name.uppercased()
+        //cell.imageListing.image = UIImage(named: nameArray[indexPath.section])
+        cell.lblNeedTypeCollab.text = allPosts[indexPath.section].category.lowercased()
 
         return cell
     }
