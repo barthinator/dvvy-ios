@@ -3,6 +3,11 @@ import UIKit
 
 
 class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
+    
+    let collabModel = CollabModel.init()
+    let feedModel = FeedModel.init()
+    
+    var delegate : PopUpDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +54,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
 
             break
         default:
-            print("default\n", terminator: "")
+            1 == 1
         }
     }
 
@@ -174,6 +179,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         sender.tag = 10
 
         let popVC : PopUpViewController = self.storyboard!.instantiateViewController(withIdentifier: "PostPopUp") as! PopUpViewController
+        popVC.collabModel = collabModel
+        popVC.feedModel = feedModel
         popVC.btnCreate = sender
         popVC.delegate = self
         self.view.addSubview(popVC.view)

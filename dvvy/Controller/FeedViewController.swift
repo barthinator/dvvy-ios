@@ -12,12 +12,10 @@ import Firebase
 class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDelegate, UITableViewDataSource {
     
     //Creates the feed data class and delegate connection
-    let feedData = FeedModel.init()
     var allPosts: [Post] = []
 
     @IBOutlet var feedTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
-    let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
     
     //Makes the refresh happen when pulled down
     lazy var refreshControl: UIRefreshControl = {
@@ -30,7 +28,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
     
     //Used for when refreshed is called, need to query the data here too
     @objc func refreshTable(_ refreshControl: UIRefreshControl){
-        feedData.getFeedUpdates()
+        super.feedModel.getFeedUpdates()
         self.feedTableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -52,15 +50,14 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         addSlideMenuButton()
         
         //The model
-        feedData.delegate = self
-        feedData.getFeedUpdates()
+        super.feedModel.delegate = self
+        super.feedModel.getFeedUpdates()
 
         // The table view delegate
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
         //do this on all table views to remove highlighting
-        feedTableView.allowsSelection = false
         feedTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
         self.feedTableView.addSubview(self.refreshControl)
 
@@ -99,8 +96,11 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         //cell.layer.cornerRadius = 60
         cell.feedNameLbl.text = allPosts[indexPath.section].title
         cell.feedMessageTextView.text = allPosts[indexPath.section].description
+        
+        cell.uid = allPosts[indexPath.section].uid
+        
         //This will have to wait until we figure out images
-        //cell.feedProfileImage.image = UIImage(named: nameArray[indexPath.section])
+        cell.feedProfileImage.image = #imageLiteral(resourceName: "Zack Goldstein")
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
@@ -118,7 +118,20 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
 //
 //        return 6
 //    }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = feedTableView.cellForRow(at: indexPath)  as! customFeedCell
+        let cellUID = cell.uid
+        
+        let profVC : ProfileViewController = self.storyboard!.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
+        print("Prof feed")
+        profVC.uid = cellUID
+        
+        //Will push the new one with the users data
+        self.navigationController!.pushViewController(profVC, animated: true)
+        
+    }
+    
     func configureTableView(){
         feedTableView.rowHeight = UITableViewAutomaticDimension
         feedTableView.estimatedRowHeight = 120.0

@@ -17,6 +17,7 @@ class SignInViewController : UIViewController {
     
     @IBOutlet weak var passwordLbl: UITextField!
     
+    @IBOutlet weak var errorLabel: UILabel!
     
     @IBAction func logInPressed(_ sender: Any) {
         
@@ -25,16 +26,18 @@ class SignInViewController : UIViewController {
             Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
                 
                 if let error = error as NSError? {
-                    
+                    self.errorLabel.isHidden = false
                     guard let errorCode = AuthErrorCode(rawValue: error.code) else {
                         print("there was an error logging in but it could not be matched with a firebase code")
                         return
                     }
                     
                     switch errorCode {
+                    
+                        
                         
                     case .invalidEmail:
-                        print("invalid email")
+                        self.errorLabel.text = "invalid email"
                     case .invalidCustomToken:
                         print("invalid custom token")
                     case .customTokenMismatch:
@@ -52,7 +55,7 @@ class SignInViewController : UIViewController {
                     case .tooManyRequests:
                         print("too many requests")
                     case .userNotFound:
-                        print("user not found")
+                        self.errorLabel.text = "User not found"
                     case .accountExistsWithDifferentCredential:
                         print("Account exists with different credentials")
                     case .requiresRecentLogin:
@@ -169,6 +172,8 @@ class SignInViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.errorLabel.isHidden = true
+
     }
     
     //Checks if the user is already logged in. If so then go to home page!

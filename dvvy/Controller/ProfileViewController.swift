@@ -10,7 +10,9 @@ import UIKit
 
 class ProfileViewController: BaseViewController, UserModelDelegate{
     
+    
     var profileUser = User(first: "nil", last: "nil")
+    var follows = ["nil", "nil"]
     @IBOutlet var friendsBtn: UIButton!
     
     @IBOutlet var popUp: UIView!
@@ -18,6 +20,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
     @IBOutlet weak var profileTableView: UITableView!
     var isHidden = true
     var profileModel = UserModel.init()
+    var uid = UserDefaults.standard.value(forKey: "currentUser")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +34,8 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
         
         profileTableView.backgroundColor = UIColor.darkGray
         profileModel.delegate = self
-        profileModel.getUser(uid: UserDefaults.standard.value(forKey: "currentUser") as! String)
+        profileModel.getUser(uid: uid as! String)
+        profileModel.getFollowers(uid: uid as! String)
     }
     
 
@@ -43,9 +47,15 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
     
     func finishedLoading(user: User) {
         profileUser = user
-        print(profileUser)
         usernameLabel.text = profileUser.first + " " + profileUser.last
+        print(user)
     }
+    
+    func finishLoadingFollowers(followers: [String]) {
+        follows = followers
+        print(follows)
+    }
+    
     
 }
 
