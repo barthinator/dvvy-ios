@@ -43,6 +43,7 @@
 		7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BA2029A30C009AE35F /* CollabViewController.swift */; };
 		7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4234BC2029A3A5009AE35F /* FeedViewController.swift */; };
 		7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */; };
+		960FADD62084376700A861E8 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960FADD52084376700A861E8 /* TermsViewController.swift */; };
 		96A031552057927800BDC4DA /* customListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A031532057927800BDC4DA /* customListingCell.swift */; };
 		96A031562057927800BDC4DA /* customListingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96A031542057927800BDC4DA /* customListingCell.xib */; };
 		D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80B0DC3202A987900677E53 /* SettingsViewController.swift */; };
@@ -112,6 +113,7 @@
 		7F4234BA2029A30C009AE35F /* CollabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabViewController.swift; sourceTree = "<group>"; };
 		7F4234BC2029A3A5009AE35F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		7F8C08BB2028434F0051B6F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		960FADD52084376700A861E8 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		96A031532057927800BDC4DA /* customListingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = customListingCell.swift; path = "dvvy/Views/Custom Listing Cell/customListingCell.swift"; sourceTree = SOURCE_ROOT; };
 		96A031542057927800BDC4DA /* customListingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = customListingCell.xib; path = "dvvy/Views/Custom Listing Cell/customListingCell.xib"; sourceTree = SOURCE_ROOT; };
 		C77D72FCE7C8D8157904926D /* Pods-dvvy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvy.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvy/Pods-dvvy.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				D80B0DC3202A987900677E53 /* SettingsViewController.swift */,
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
 				19819553203AAD3500E88201 /* MessageViewController.swift */,
+				960FADD52084376700A861E8 /* TermsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */,
 				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
+				960FADD62084376700A861E8 /* TermsViewController.swift in Sources */,
 				797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */,
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,

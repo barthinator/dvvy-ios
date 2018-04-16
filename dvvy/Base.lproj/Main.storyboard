@@ -783,14 +783,187 @@
                     <view key="view" contentMode="scaleToFill" id="9F5-Je-nYf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="zGz-WR-Wrz">
+                                <rect key="frame" x="16" y="20" width="343" height="528"/>
+                                <color key="backgroundColor" red="0.95386785269999996" green="0.45658040049999998" blue="0.37660285830000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="         READY TO MAKE IT BIG?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pAS-qC-Sre">
+                                <rect key="frame" x="16" y="72" width="343" height="476"/>
+                                <color key="textColor" red="0.2156862745" green="0.2156862745" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="65"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJg-Pn-J29">
+                                <rect key="frame" x="193" y="556" width="166" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="fWo-Xj-AyI"/>
+                                    <constraint firstAttribute="width" constant="166" id="h5v-Lj-qQf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="j2y-Zq-5WN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="18"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="1" green="0.45882352939999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zOj-vs-HpE" kind="show" id="Pg6-wj-pqI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Mob-iA-nJA">
+                                <rect key="frame" x="16" y="556" width="169" height="73"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="fhC-md-krd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="18"/>
+                                <state key="normal">
+                                    <string key="title">CHECK ON A 
+SUBMISSION</string>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zGz-WR-Wrz" firstAttribute="top" secondItem="Bq0-ks-z9d" secondAttribute="top" id="0fh-Tl-zhG"/>
+                            <constraint firstItem="Mob-iA-nJA" firstAttribute="top" secondItem="pAS-qC-Sre" secondAttribute="bottom" constant="8" symbolic="YES" id="1xa-Vw-hwj"/>
+                            <constraint firstItem="zGz-WR-Wrz" firstAttribute="trailing" secondItem="pAS-qC-Sre" secondAttribute="trailing" id="4Y0-bn-rQg"/>
+                            <constraint firstItem="Mob-iA-nJA" firstAttribute="top" secondItem="DJg-Pn-J29" secondAttribute="top" id="92I-bE-wH9"/>
+                            <constraint firstItem="pAS-qC-Sre" firstAttribute="trailing" secondItem="DJg-Pn-J29" secondAttribute="trailing" id="AvH-rg-dGf"/>
+                            <constraint firstItem="Mob-iA-nJA" firstAttribute="bottom" secondItem="DJg-Pn-J29" secondAttribute="bottom" id="TEX-TD-JTN"/>
+                            <constraint firstItem="zGz-WR-Wrz" firstAttribute="leading" secondItem="9F5-Je-nYf" secondAttribute="leadingMargin" id="VLY-eI-cT2"/>
+                            <constraint firstItem="Bq0-ks-z9d" firstAttribute="bottom" secondItem="Mob-iA-nJA" secondAttribute="bottom" constant="38" id="cOH-86-JNf"/>
+                            <constraint firstItem="zGz-WR-Wrz" firstAttribute="leading" secondItem="pAS-qC-Sre" secondAttribute="leading" id="eCU-Eq-8ej"/>
+                            <constraint firstItem="pAS-qC-Sre" firstAttribute="top" secondItem="Bq0-ks-z9d" secondAttribute="top" constant="52" id="hdQ-aD-usn"/>
+                            <constraint firstItem="DJg-Pn-J29" firstAttribute="leading" secondItem="Mob-iA-nJA" secondAttribute="trailing" constant="8" symbolic="YES" id="s3u-GV-q1o"/>
+                            <constraint firstItem="zGz-WR-Wrz" firstAttribute="trailing" secondItem="9F5-Je-nYf" secondAttribute="trailingMargin" id="y9M-vF-zbg"/>
+                            <constraint firstItem="pAS-qC-Sre" firstAttribute="leading" secondItem="Mob-iA-nJA" secondAttribute="leading" id="yC9-7B-zKp"/>
+                            <constraint firstItem="Mob-iA-nJA" firstAttribute="top" secondItem="zGz-WR-Wrz" secondAttribute="bottom" constant="8" symbolic="YES" id="zHu-yA-kHP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bq0-ks-z9d"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZUu-D1-znb"/>
+                    <connections>
+                        <outlet property="btnCheck" destination="Mob-iA-nJA" id="V6a-cD-FfM"/>
+                        <outlet property="btnSubmit" destination="DJg-Pn-J29" id="J1O-BD-fGB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNe-RV-PSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1580" y="-637.33133433283365"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="WGj-Jx-y80">
+            <objects>
+                <viewController id="zOj-vs-HpE" customClass="TermsViewController" customModule="dvvy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SiJ-E2-xD3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LRJ-4v-TDD">
+                                <rect key="frame" x="16" y="20" width="343" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">1. ACKNOWLEDGMENT AND ACCEPTANCE OF TERMS OF SERVICE 
+THIS IS A LEGAL AGREEMENT BETWEEN YOU ("USER" OR "YOU") AND WONDERSOFT INC ("Wondersoft"). BY COMPLETING THE REGISTRATION PROCESS, YOU ARE INDICATING YOUR AGREEMENT TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. The Online Service ("Service") is provided to you ("User") under the following Wondersoft terms ("Terms"). The Terms comprise the entire agreement between User and Wondersoft and supersede all prior agreements between the parties regarding the subject matter contained herein.
+
+
+2. DESCRIPTION OF SERVICE 
+Wondersoft is providing User with a capability to create and convert PDF files. User must: (1) provide all equipment and communications services, including a computer and modem, necessary to establish a connection to the World Wide Web and (2) provide for own access to the World Wide Web and pay any connection and service fees associated with such access. In consideration for this Service, User agrees to: (1) provide certain current, complete, and accurate information about User as prompted to do so by the Service and (2) maintain and update this information as required to keep it current, complete and accurate. All information requested on original sign up shall be referred to as registration Information ("Registration Information"). Wondersoft will maintain Registration Information in accordance with these Terms and then current PDF Copy Paste privacy policy, available at http://www.pdfcopypaste.com/privacy.html. Should there be any conflict between these Terms and Wondersoft's privacy policy, these Terms shall supersede the privacy policy. You authorize a recurring monthly or annual charge to your credit card in exchange for use of the Wondersoft service as indicated by published standard plans or a customized quote provided for your specific use. You also agree that the enrollment for the next service period is automatic. Please note that refunds on a pro-rated basis are issued only for yearly plans. When yearly subscriptions are cancelled before the subscriptions end, refunds are issued based on a pro-rated calculation of the subscription charges at the monthly rate for the plan, for the actual number of months the account was subscribed (the number of months between the most recent yearly charges and the cancellation date). If the calculated refund amount exceeds the yearly subscription rate, then no refund is issued. 
+
+Wondersoft will not issue any pro-rated refunds for the remaining period during the month when an account with a monthly subscription plan ("current plan") is downgraded to a smaller plan ("new plan") (a plan that costs less per month than the current plan) during the middle of a month. However the rate applicable to the new plan will automatically be charged starting the first of the subsequent month, and you must contact sales@pdfcopypaste.com in order to downgrade. If you attempt to sign up for a downgraded account via the online system, it will be considers as a new account and therefore you will be charged for both accounts until you cancel your old subscription.
+
+
+
+3. CONDITIONS OF USE 
+You are solely responsible for the content of all data You store or retrieve from, or attempt to store or retrieve from, Your Account. Your use of the Service is subject to all applicable local, state, national and international laws and regulations. You will: (a) not use the Service for any illegal purposes; (b) not use the Service to store, retrieve, transmit or view any file, data, image or program that contains: (i) any illegal pictures, materials or information; (ii) any harassing, libelous, abusive, threatening, harmful, vulgar, pornographic, obscene or otherwise objectionable material of any kind or nature; (iii) any material that encourages conduct that could constitute a criminal offense, give rise to civil liability or otherwise violate any applicable local, state, national or international law or regulation; (iv) any code or material that violates the intellectual property rights of others; (v) any Windows temporary files of any kind (including, without limitation, any *.p or ~*.* files); or (vi) any viruses, worms, "Trojan horses" or any other similar contaminating or destructive features; (c) comply with United States and other applicable law regarding the exportation and re-exportation of any data or other materials from the United States or other jurisdictions through the Service; (d) not use the Service for any spamming, chain letters or other use that may otherwise disrupt the Service or the networks through which You access and use the Service; (e) comply with all regulations, policies and procedures of networks through which You access and use the Service; and (f) not access or attempt to access any Service account for which You have no access authorization or duplicate, modify, distribute or display any of the data or files from any such account. (h) Wondersoft PDF creation service should not be used to sell digital content to others. It is not a media for dissemination of digital content for commercial purposes. WE WILL NOT APPROACH YOUR DATA BUT IF WE SUSPECT ILLEGAL ACTIVITY WE WILL NOTIFY YOU FOR ACCOUNT TERMINATION 
+
+4. MODIFICATIONS TO SERVICE 
+Wondersoft reserves the right to modify or discontinue the Service with or without notice to User. Wondersoft shall not be liable to User or any third party should Wondersoft exercise its right to modify or discontinue the Service. 
+
+5. AUTOMATIC CONVERSION OF TRIAL TO PAID ACCOUNTS 
+Wondersoft may offer trial accounts that require users to provide credit card information which may be used to convert the trial to a paid account at the end of free trial period. If the card transaction fails at the end of free trial period, an email would be sent to the user requesting the user to upgrade the account manually online. In such a case, if the user fails to upgrade to a paid account within three business days, account will be suspended. 
+
+6. USER ACCOUNT, PASSWORD, AND SECURITY 
+Once you become a User of the Service, you shall receive a password and an account. You are entirely responsible if you do not maintain the confidentiality of your password and account. Furthermore, you are entirely responsible for any and all activities which occur under your account. You may change your password at any time by following instructions which we provide to you through our on line support. You agree to immediately notify Wondersoft of any unauthorized use of your account or any other breach of security of which you become aware. 
+
+7. DISCLAIMER OF WARRANTIES 
+USER EXPRESSLY AGREES THAT USE OF THE SERVICE IS AT USER'S SOLE RISK. ALTHOUGH Wondersoft WILL ATTEMPT TO PROVIDE UNINTERRUPTED, TIMELY, AND SECURE SERVICES, Wondersoft MAKES NO REPRESENTATION THAT IT WILL BE ABLE TO DO SO. THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. Wondersoft EXPRESSLY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. Wondersoft MAKES NO WARRANTY THAT THE SERVICE WILL MEET YOUR REQUIREMENTS, OR THAT THE SERVICE WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR FREE. USER UNDERSTANDS AND AGREES THAT ANY MATERIAL AND/OR DATA DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF THE SERVICE IS DONE AT USER'S OWN DISCRETION AND RISK AND THAT USER WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO USER'S COMPUTER \ SYSTEM OR LOSS OF DATA OR UNAUTHORIZED DISCLOSURE OF DATA THAT RESULTS FROM THE UPLOAD, DOWNLOAD OR STORAGE OF SUCH MATERIAL AND/OR DATA. Wondersoft MAKES NO WARRANTY REGARDING ANY GOODS OR SERVICES PURCHASED OR OBTAINED THROUGH THE SERVICE OR ANY TRANSACTIONS ENTERED INTO THROUGH THE SERVICE. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY USER FROM Wondersoft OR THROUGH THE SERVICE SHALL CREATE ANY WARRANTY NOT EXPRESSLY MADE HEREIN. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES, SO SOME OF THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU. 
+
+8. LIMITATIONS OF LIABILITY 
+IN NO EVENT SHALL Wondersoft OR ITS ADVERTISERS OR SUPPLIERS HAVE ANY OBLIGATION OR LIABILITY TO YOU FOR THE COST OF PROCUREMENT OF SUBSTITUTE SERVICES OR DATA OR FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL DAMAGES (INCLUDING, WITHOUT LIMITATION, ANY LOSS OF DATA, REVENUE OR PROFITS OR BUSINESS INTERRUPTION) OR OTHER PECUNIARY LOSS ARISING OUT OF YOUR USE OR INABILITY TO USE YOUR ACCOUNT OR THE SERVICE OR YOUR LOSS OF DATA OR FILES STORED THEREIN. 
+
+9. NO RESALE OR COMMERCIAL USE OF THE SERVICE 
+User's right to use the Service is personal to User. User agrees not to resell or make any commercial use of the Service, without the prior express written consent of Wondersoft. 
+
+10. SECURITY OF STORED DATA AND FILES 
+Wondersoft will endeavor to restrict access to the data and files You store or retrieve from Your Account to persons accessing such data and files through use of Your Account or Password. It may also be necessary to access users accounts to verify that the accounts are not being misused, especially with respect to digital copy-right laws and resource misuse checks including bandwidth. 
+
+
+11. INDEMNIFICATION 
+User agrees to indemnify and hold Wondersoft, contractors, suppliers and its and their employees, harmless from and against any claim or demand, including reasonable attorneys' fees, made by any third party due to or arising out of User's use of the Service, the violation of these Terms by User, or the infringement by User, or other user of the Service using User's computer, of any intellectual property or other right of any person or entity. 
+
+12. ACCOUNT SUSPENSION: 
+Account suspension will occur if the user fails to provide a valid credit card for transactions. If the user fails to provide valid credit card information within a month of suspension, the account and the entire data stored in the quota for the user will be terminated. However, if the succeeds to provide the information the account will be completely recovered. 
+
+13. TERMINATION 
+The User may terminate the Service with or without cause at any time and effective immediately. Should User object to any terms and conditions of the Terms or any subsequent modifications thereto or become dissatisfied with the Service in any way, User's only recourse is to immediately: (1) discontinue use of the Service; (2) terminate Service Membership; and (3) notify Wondersoft of termination. Upon termination of the Service, User's right to use the Service and Software immediately ceases. User shall have no right and Wondersoft will have no obligation thereafter to continue to store User’s data or information or to forward any unread or unsent messages to User or any third party. Wondersoft will terminate accounts in two cases (1) after a month of account suspension. (2) Misuse suspicion. In either case, the user is notified of the action via an email from Wondersoft. 
+
+14. NOTICE 
+All notices to a party shall be in writing and shall be made either via email or conventional mail. Wondersoft may broadcast notices or messages through the Service to inform User of changes to the Terms, the Service, or other matters of importance; such broadcasts shall constitute notice to User. 
+
+15. PROPRIETARY RIGHTS TO CONTENT 
+User acknowledges that content, including but not limited to text, software, music, sound, photographs, video, graphics or other material contained in either sponsor advertisements or email-distributed, commercially produced information presented to User by the Service ("Content") by Wondersoft or Wondersoft's Advertisers (“Advertiser”), is protected by copyrights, trademarks, service marks, patents or other proprietary rights and laws; therefore, User is only permitted to use this Content as expressly authorized by the Service or the Advertiser. User may not copy, reproduce, distribute, or create derivative works from this Content without expressly being authorized to do so by the Service or the Advertiser.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQD-LV-iZC">
+                                <rect key="frame" x="193" y="554" width="166" height="73"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.4549019608" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="RFl-od-vN4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="18"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-f5-nhD">
+                                <rect key="frame" x="16" y="554" width="169" height="73"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="GYb-ra-fJK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="18"/>
+                                <state key="normal" title="GO BACK">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dpQ-8x-XxP" kind="show" id="SGx-6z-McB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pga-f5-nhD" firstAttribute="top" secondItem="LRJ-4v-TDD" secondAttribute="bottom" constant="8" symbolic="YES" id="5ts-6U-KbR"/>
+                            <constraint firstItem="LRJ-4v-TDD" firstAttribute="top" secondItem="w0T-Sx-8tX" secondAttribute="top" id="Ghs-f1-ytG"/>
+                            <constraint firstItem="Pga-f5-nhD" firstAttribute="baseline" secondItem="XQD-LV-iZC" secondAttribute="firstBaseline" id="HBu-LX-hV1"/>
+                            <constraint firstItem="LRJ-4v-TDD" firstAttribute="trailing" secondItem="SiJ-E2-xD3" secondAttribute="trailingMargin" id="Ihi-Jm-oBI"/>
+                            <constraint firstItem="Pga-f5-nhD" firstAttribute="top" secondItem="XQD-LV-iZC" secondAttribute="top" id="WuZ-9l-rv2"/>
+                            <constraint firstItem="LRJ-4v-TDD" firstAttribute="leading" secondItem="Pga-f5-nhD" secondAttribute="leading" id="a3D-xc-dQo"/>
+                            <constraint firstItem="LRJ-4v-TDD" firstAttribute="leading" secondItem="SiJ-E2-xD3" secondAttribute="leadingMargin" id="cIE-77-6CW"/>
+                            <constraint firstItem="XQD-LV-iZC" firstAttribute="leading" secondItem="Pga-f5-nhD" secondAttribute="trailing" constant="8" symbolic="YES" id="ciI-36-5jm"/>
+                            <constraint firstItem="w0T-Sx-8tX" firstAttribute="bottom" secondItem="Pga-f5-nhD" secondAttribute="bottom" constant="40" id="gjP-BN-z6Y"/>
+                            <constraint firstItem="LRJ-4v-TDD" firstAttribute="trailing" secondItem="XQD-LV-iZC" secondAttribute="trailing" id="yaO-LZ-7RZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w0T-Sx-8tX"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtView" destination="LRJ-4v-TDD" id="GRb-Mr-6HZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8z-3s-D0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2392.8000000000002" y="-637.33133433283365"/>
         </scene>
         <!--Feed View Controller-->
         <scene sceneID="r0O-4M-6Aa">
@@ -956,9 +1129,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="942" height="1024"/>
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SGx-6z-McB"/>
         <segue reference="ecc-fz-7DY"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="7TJ-90-9bJ"/>
