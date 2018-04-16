@@ -652,7 +652,6 @@
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
 				960FADD62084376700A861E8 /* TermsViewController.swift in Sources */,
 				79245D2F20812FA300DF3423 /* CollabModel.swift in Sources */,
-				79245D2F20812FA300DF3423 /* CollabModel.swift in Sources */,
 				797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */,
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
