@@ -8,15 +8,30 @@
 
 import UIKit
 
-class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CollabModelDelegate {
+class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CollabModelDelegate, SwipeableCardViewDataSource {
     
     var allPosts: [CollabPost] = []
     
+    
+    
+    @IBAction func sortViewBtn(_ sender: Any) {
+        collabTableView.isHidden = !collabTableView.isHidden
+        swipeableCardView.isHidden = !swipeableCardView.isHidden
+    }
+    //collab listings view
     @IBOutlet weak var collabTableView: UITableView!
+    //cards view
+    @IBOutlet private weak var swipeableCardView: SwipeableCardViewContainer!
+    
     let cellSpacingHeight: CGFloat = 5
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
+        
+        //cards
+        swipeableCardView.dataSource = self
+        swipeableCardView.isHidden = true
+        //
         
         super.collabModel.delegate = self
         super.collabModel.getCollabUpdates()
@@ -111,4 +126,54 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     }
     //test comments
 
+}
+extension CollabViewController {
+    
+    func numberOfCards() -> Int {
+        return viewModels.count
+    }
+    
+    func card(forItemAtIndex index: Int) -> SwipeableCardViewCard {
+        let viewModel = viewModels[index]
+        let cardView = SampleSwipeableCard()
+        cardView.viewModel = viewModel
+        return cardView
+    }
+    
+    func viewForEmptyCards() -> UIView? {
+        return nil
+    }
+    
+}
+extension CollabViewController {
+    
+    var viewModels: [SampleSwipeableCellViewModel] {
+        
+        let hamburger = SampleSwipeableCellViewModel(title: "dvvy",
+                                                     color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                     image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        let panda = SampleSwipeableCellViewModel(title: "dvvy",
+                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        let puppy = SampleSwipeableCellViewModel(title: "dvvy",
+                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        let poop = SampleSwipeableCellViewModel(title: "dvvy",
+                                                color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        let robot = SampleSwipeableCellViewModel(title: "dvvy",
+                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        let clown = SampleSwipeableCellViewModel(title: "dvvy",
+                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
+                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
+        
+        return [hamburger, panda, puppy, poop, robot, clown]
+    }
+    
 }
