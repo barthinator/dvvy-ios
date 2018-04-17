@@ -24,6 +24,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         topViewController.isModalInPopover = true
         topViewController.modalPresentationStyle = .overCurrentContext
         switch(index){
+        case 0:
+            
+            self.openViewControllerBasedOnIdentifier("Profile")
+            
+            break
         case 1:
 
             self.openViewControllerBasedOnIdentifier("Messages")
@@ -48,17 +53,23 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
             self.openViewControllerBasedOnIdentifier("Settings")
 
             break
-        case 6:
-
-            self.openViewControllerBasedOnIdentifier("Profile")
-
-            break
         default:
             1 == 1
         }
     }
 
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){
+        if strIdentifier == "Profile" && self.navigationController!.topViewController is ProfileViewController{
+            let destViewController : ProfileViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier) as! ProfileViewController
+            destViewController.uid = UserDefaults.standard.value(forKey: "currentUser") as! String
+            let topViewController : ProfileViewController = self.navigationController!.topViewController! as! ProfileViewController
+            if topViewController.uid == destViewController.uid{
+                print("same profile")
+                return
+            }
+            self.navigationController!.pushViewController(destViewController, animated: true)
+            return
+        }
         let destViewController : UIViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier)
 
         let topViewController : UIViewController = self.navigationController!.topViewController!

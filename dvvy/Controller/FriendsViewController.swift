@@ -11,6 +11,8 @@ import UIKit
 class FriendsViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var friendsTableView: UITableView!
+    var followers : [User] = []
+    var uid : String = "nil"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,17 +36,24 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cusFriendCell", for: indexPath) as! customFriendCell
         
-        let nameArray = ["Drea Driver", "Zack Goldstein", "Jason Kirschenmann", "Keaka Kaakau", "David Bartholomew", "Nathan Frasier"]
-        
         cell.layer.cornerRadius = 20
-        cell.nameLbl.text = nameArray[indexPath.row]
-        cell.profileImage.image = UIImage(named: nameArray[indexPath.row])
+        cell.nameLbl.text = followers[indexPath.row].first + " " + followers[indexPath.row].last
+        //cell.profileImage.image = UIImage(named: nameArray[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 6
+        return followers.count
+    }
+    
+    //Makes sure the uid is passed back to load the user that was there
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ProfileViewController
+        {
+            let vc = segue.destination as? ProfileViewController
+            vc?.uid = uid
+        }
     }
     
     func configureTableView(){
