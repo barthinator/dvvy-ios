@@ -15,6 +15,8 @@ protocol SlideMenuDelegate {
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserModelDelegate {
     
+    //NEED TO USE USER DEFAULTS NOT USERMODELDELEGATE IN THE SIDEBAR SO WE CAN ERASE BELOW CODE
+    
     var userQuery: [User] = []
     
     

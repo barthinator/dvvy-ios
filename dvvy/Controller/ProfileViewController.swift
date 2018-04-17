@@ -11,12 +11,17 @@ import UIKit
 
 class ProfileViewController: BaseViewController, UserModelDelegate{
     
+    //Reference to protocol UserModelDelegate, **dont manipulate value please
     var userQuery: [User] = []
     
+    //Current user we are viewing
     var profileUser = User(first: "nil", last: "nil", uid: "nil")
+    
+    //Stores strings of uids for the current instance of the Profile
     var follows = ["nil", "nil"]
     var followings = ["nil", "nil"]
     
+    //Stores the user information for the friends page
     var followers : [User] = []
 
     
@@ -24,7 +29,11 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
     @IBOutlet weak var profileTableView: UITableView!
     var isHidden = true
     var profileModel = UserModel.init()
+    
+    //uid of the profile instance
     var uid : String = ""
+    
+    //Logged in user for reference when making follow decisions
     let loggedInUser = UserDefaults.standard.value(forKey:"currentUser") as! String
     
     @IBOutlet weak var followBtn: UIButton!
@@ -38,8 +47,8 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
         followersBtn.layer.borderWidth = 1
         followersBtn.layer.cornerRadius = 5
         followersBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
-        //Set the data of the user
         
+        //Checks if string is empty , if so then the currentUser is added to the id
         if uid.isEmpty {
             uid = UserDefaults.standard.value(forKey: "currentUser") as! String
         }
@@ -59,6 +68,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
             followBtn.setTitle("NOPE", for: UIControlState.normal)
         }
         else{
+            //If already following the user, thens setTitle if not already
             if (follows.contains(loggedInUser)) {
                 followBtn.setTitle("FOLLOWED", for: UIControlState.normal)
             }
@@ -76,6 +86,8 @@ class ProfileViewController: BaseViewController, UserModelDelegate{
         if segue.destination is FriendsViewController
         {
             let vc = segue.destination as? FriendsViewController
+            
+            //Passes in follower data and uid of class to pass back later
             vc?.followers = userQuery
             vc?.uid = uid
         }

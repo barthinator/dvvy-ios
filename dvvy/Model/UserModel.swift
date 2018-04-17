@@ -151,6 +151,8 @@ class UserModel {
         }
     }
     
+    //Uses the UserModelDelegates userQuery variable to store multiple users by querying
+    //many times depending upon how many ids are in the uids array
     func getUsers(uids: [String]){
         
         self.delegate?.userQuery = []
