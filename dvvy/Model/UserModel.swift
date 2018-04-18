@@ -11,19 +11,25 @@ import Firebase
 struct User {
     var first: String
     var last: String
+    var uid: String
 }
 
 protocol UserModelDelegate: class {
     func finishedLoading(user: User)
     func finishLoadingFollowers(followers: [String])
+    func finishedLoadingFollowing(following: [String])
+    var userQuery: [User] {get set}
 }
 
 class UserModel {
     
     var db: Firestore!
-    var user = User(first: "nil", last: "nil")
+    var user = User(first: "nil", last: "nil", uid: "nil")
     weak var delegate: UserModelDelegate?
     var followers : [String] = []
+    var following : [String] = []
+    
+    var users : [User] = []
     
     //TODO: Add some error handling to ensure the data is valid. Eg the phone number
     
@@ -84,7 +90,8 @@ class UserModel {
     }
     
     func getFollowers(uid: String){
-        db.collection("users").document(uid).collection("followers").order(by: "dateFollowed").getDocuments(){
+        followers = []
+        db.collection("users").document(uid).collection("followers").order(by: "datePosted").getDocuments(){
             (querySnapshot, err) in
             if let err = err {
                 print("Error geting posts: \(err)")
@@ -94,6 +101,22 @@ class UserModel {
                     self.followers.append(document.documentID)
                 }
                 self.delegate?.finishLoadingFollowers(followers: self.followers )
+            }
+        }
+    }
+    
+    func getFollowing(uid: String){
+        following = []
+        db.collection("users").document(uid).collection("following").order(by: "datePosted").getDocuments(){
+            (querySnapshot, err) in
+            if let err = err {
+                print("Error geting posts: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+                    self.following.append(document.documentID)
+                }
+                self.delegate?.finishedLoadingFollowing(following: self.following )
             }
         }
     }
@@ -118,12 +141,37 @@ class UserModel {
                 let dataDict = document.data()
                 self.user = User(
                     first: dataDict!["firstname"] as! String,
-                    last: dataDict!["lastname"] as! String )
-            } else {
+                    last: dataDict!["lastname"] as! String,
+                    uid: uid
+            )} else {
                 print("Document does not exist")
             }
 
             self.delegate?.finishedLoading(user: self.user)
+        }
+    }
+    
+    //Uses the UserModelDelegates userQuery variable to store multiple users by querying
+    //many times depending upon how many ids are in the uids array
+    func getUsers(uids: [String]){
+        
+        self.delegate?.userQuery = []
+        
+        for user in uids{
+            var userStruct : User = User(first: "nil", last: "nil", uid: "nil")
+            db.collection("users").document(user).getDocument {
+                (document, err) in
+                if let document = document {
+                    let dataDict = document.data()
+                    userStruct = User(
+                        first: dataDict!["firstname"] as! String,
+                        last: dataDict!["lastname"] as! String,
+                        uid: user
+                    )} else {
+                    print("Document does not exist")
+                }
+                self.delegate?.userQuery.append(userStruct)
+            }
         }
     }
     

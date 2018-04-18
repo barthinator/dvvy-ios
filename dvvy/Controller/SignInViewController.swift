@@ -8,8 +8,11 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseStorage
 
 class SignInViewController : UIViewController {
+    
+    var storage: Storage!
     
     @IBOutlet weak var signInBtn: UIButton!
     
@@ -21,10 +24,12 @@ class SignInViewController : UIViewController {
     
     @IBAction func logInPressed(_ sender: Any) {
         
+        let storageRef = storage.reference()
+        
         // TODO: Make some sort of email / pass validation
         if let email = usernameLbl.text, let pass = passwordLbl.text {
             Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
-                
+            
                 if let error = error as NSError? {
                     self.errorLabel.isHidden = false
                     guard let errorCode = AuthErrorCode(rawValue: error.code) else {
@@ -153,6 +158,22 @@ class SignInViewController : UIViewController {
                         // User found go to home screen
                         self.performSegue(withIdentifier: "pushToHome", sender: self)
                         
+                        
+                        // Create a reference to the file you want to download
+                        let imgProfRef = storageRef.child("userphotos/\(Auth.auth().currentUser?.uid ?? "fail").jpg")
+                        
+                        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+                        imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                            if let error = error {
+                                // Uh-oh, an error occurred!
+                                UserDefaults.standard.set(nil, forKey: "userPhoto" )
+                                print(error)
+                            } else {
+                                // Data for "images/island.jpg" is returned
+                                UserDefaults.standard.set(data!, forKey: "userPhoto" )
+                            }
+                        }
+                        
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.set(user?.uid, forKey: "currentUser")
                         UserDefaults.standard.synchronize()
@@ -173,13 +194,26 @@ class SignInViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.errorLabel.isHidden = true
-
+        storage = Storage.storage()
     }
     
     //Checks if the user is already logged in. If so then go to home page!
     override func viewDidAppear(_ animated: Bool) {
         if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
-            // User found go to home screen
+            let storageRef = storage.reference()
+            let imgProfRef = storageRef.child("userphotos/\(Auth.auth().currentUser?.uid ?? "fail").jpg")
+            
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let error = error {
+                    // Uh-oh, an error occurred!
+                    UserDefaults.standard.set(nil, forKey: "userPhoto" )
+                    print(error)
+                } else {
+                    // Data for "images/island.jpg" is returned
+                    UserDefaults.standard.set(data!, forKey: "userPhoto" )
+                }
+            }
             UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUser")
             UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "pushToHome", sender: self)

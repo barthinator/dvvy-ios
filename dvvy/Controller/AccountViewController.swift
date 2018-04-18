@@ -19,6 +19,7 @@ class AccountViewController: UIViewController {
     @IBAction func handleLogout(_ target: UIButton) {
         //Need to implement something that sets the value to false for signed in user here
         UserDefaults.standard.set(false, forKey: "isLoggedIn")
+        UserDefaults.standard.set(nil, forKey: "userPhoto")
         UserDefaults.standard.synchronize()
         if Auth.auth().currentUser != nil {
             do {

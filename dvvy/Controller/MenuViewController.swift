@@ -15,6 +15,16 @@ protocol SlideMenuDelegate {
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserModelDelegate {
     
+    //NEED TO USE USER DEFAULTS NOT USERMODELDELEGATE IN THE SIDEBAR SO WE CAN ERASE BELOW CODE
+    
+    var userQuery: [User] = []
+    
+    
+    func finishedLoadingFollowing(following: [String]) {
+        
+    }
+    
+    
     func finishLoadingFollowers(followers: [String]) {
         
     }
@@ -46,7 +56,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      */
     var delegate : SlideMenuDelegate?
 
-    var userInfo = User(first: "not", last: "correct")
+    var userInfo = User(first: "not", last: "correct", uid: "")
     let userModel = UserModel.init()
 
     override func viewDidLoad() {
@@ -84,7 +94,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
-        arrayMenuOptions.append(["title":"Profile"])
 
         tblMenuOptions.reloadData()
     }
@@ -129,6 +138,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             headCell.backgroundColor = UIColor.clear
             headCell.userLbl.text = userInfo.first + " " + userInfo.last
             headCell.userLbl.textColor = UIColor.white
+            if (UserDefaults.standard.object(forKey: "userPhoto") != nil) {
+                headCell.userImg.image = UIImage(data: UserDefaults.standard.object(forKey: "userPhoto") as! Data)
+            }
+            else{
+                headCell.userImg.image = #imageLiteral(resourceName: "Zack Goldstein")
+            }
             return headCell
         }
         else{
