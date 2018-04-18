@@ -393,7 +393,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i4M-eE-16C">
-                                <rect key="frame" x="323" y="151" width="36" height="32"/>
+                                <rect key="frame" x="327" y="156" width="25" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Sym-pL-dFQ"/>
+                                    <constraint firstAttribute="width" constant="25" id="UUM-eu-0Wv"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="Settings Button"/>
                                 <connections>
                                     <segue destination="d7i-XB-GjA" kind="show" id="1VC-7I-dYS"/>
@@ -403,7 +407,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OCg-vR-TF5" firstAttribute="leading" secondItem="0Vu-ye-Sud" secondAttribute="leading" id="583-bw-aeW"/>
-                            <constraint firstItem="i4M-eE-16C" firstAttribute="leading" secondItem="OCg-vR-TF5" secondAttribute="trailing" constant="8" symbolic="YES" id="72c-dd-Svu"/>
                             <constraint firstItem="GCD-2E-PYO" firstAttribute="firstBaseline" secondItem="qRG-m7-qyG" secondAttribute="baseline" id="9S1-0U-qbl"/>
                             <constraint firstItem="xTE-hm-j8l" firstAttribute="leading" secondItem="O4c-NU-D0o" secondAttribute="leadingMargin" id="BZc-cz-sKK"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="centerX" secondItem="0Vu-ye-Sud" secondAttribute="centerX" id="Bqb-W5-bjU"/>
@@ -413,13 +416,13 @@
                             <constraint firstItem="xJY-Wp-0jm" firstAttribute="top" secondItem="XnH-ae-yIC" secondAttribute="top" constant="7" id="MNg-C0-4ik"/>
                             <constraint firstItem="x2s-ri-ZEa" firstAttribute="top" secondItem="0Vu-ye-Sud" secondAttribute="bottom" constant="20" id="OY3-II-7we"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="leading" secondItem="GCD-2E-PYO" secondAttribute="trailing" constant="1" id="PHs-eS-cy4"/>
-                            <constraint firstItem="i4M-eE-16C" firstAttribute="centerY" secondItem="OCg-vR-TF5" secondAttribute="centerY" id="QhK-4v-dNQ"/>
+                            <constraint firstItem="i4M-eE-16C" firstAttribute="leading" secondItem="OCg-vR-TF5" secondAttribute="trailing" constant="12" id="XEy-24-O6X"/>
                             <constraint firstItem="xJY-Wp-0jm" firstAttribute="bottom" secondItem="OCg-vR-TF5" secondAttribute="bottom" id="YSg-lS-lV1"/>
                             <constraint firstItem="0Vu-ye-Sud" firstAttribute="leading" secondItem="xJY-Wp-0jm" secondAttribute="trailing" constant="12" id="aG5-tn-rVC"/>
-                            <constraint firstItem="i4M-eE-16C" firstAttribute="trailing" secondItem="qRG-m7-qyG" secondAttribute="trailing" id="bKm-c7-Atr"/>
                             <constraint firstItem="GCD-2E-PYO" firstAttribute="top" secondItem="qRG-m7-qyG" secondAttribute="top" id="dmI-eV-EIM"/>
                             <constraint firstItem="GCD-2E-PYO" firstAttribute="leading" secondItem="XnH-ae-yIC" secondAttribute="leading" constant="15" id="eUK-jM-6vw"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="top" secondItem="O4c-NU-D0o" secondAttribute="top" constant="214" id="gb7-l8-Oj1"/>
+                            <constraint firstItem="i4M-eE-16C" firstAttribute="centerY" secondItem="OCg-vR-TF5" secondAttribute="centerY" id="gyI-gd-rtQ"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="top" secondItem="OCg-vR-TF5" secondAttribute="bottom" constant="27" id="ior-Aa-0Ua"/>
                             <constraint firstAttribute="bottomMargin" secondItem="xTE-hm-j8l" secondAttribute="bottom" constant="20" id="jWf-vR-v4z"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="trailing" secondItem="xTE-hm-j8l" secondAttribute="trailing" id="kKP-Cb-7kw"/>
@@ -1354,6 +1357,7 @@ User acknowledges that content, including but not limited to text, software, mus
         <image name="Zack Goldstein" width="291" height="294"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="1VC-7I-dYS"/>
         <segue reference="czH-Ve-A0Y"/>
         <segue reference="VcZ-2k-rB6"/>
         <segue reference="wcy-86-Pnc"/>
