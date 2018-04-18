@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060A6D8C2087C53A000F43AE /* SettingsPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */; };
 		06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109665203A97F0004827E4 /* PopUpViewController.swift */; };
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
-		0617FF852087ADAE001EFD6A /* SettingsPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0617FF842087ADAE001EFD6A /* SettingsPageTableViewController.swift */; };
 		064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */; };
 		064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */; };
 		064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */; };
@@ -88,11 +88,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageTableViewController.swift; sourceTree = "<group>"; };
 		06109665203A97F0004827E4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
-		0617FF842087ADAE001EFD6A /* SettingsPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsPageTableViewController.swift; path = "/Users/zackgoldstein/Desktop/dvvy/dvvy-ios/dvvy/Controller/SettingsPageTableViewController.swift"; sourceTree = "<absolute>"; };
 		064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListingsViewController.swift; sourceTree = "<group>"; };
 		064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
 		064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
 				19819553203AAD3500E88201 /* MessageViewController.swift */,
 				960FADD52084376700A861E8 /* TermsViewController.swift */,
-				0617FF842087ADAE001EFD6A /* SettingsPageTableViewController.swift */,
+				060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -721,7 +721,6 @@
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
 				064C2E69208546DD000F33E7 /* SwipeableViewDelegate.swift in Sources */,
 				064C2E67208546DD000F33E7 /* SwipeableCardViewDelegate.swift in Sources */,
-				0617FF852087ADAE001EFD6A /* SettingsPageTableViewController.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
 				064C2E63208546DD000F33E7 /* SwipeableCardViewCard.swift in Sources */,
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,
@@ -730,6 +729,7 @@
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
 				D8F8FFB4207F1AEC0061E8B4 /* ChatModel.swift in Sources */,
 				064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */,
+				060A6D8C2087C53A000F43AE /* SettingsPageTableViewController.swift in Sources */,
 				96A031552057927800BDC4DA /* customListingCell.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,

@@ -26,16 +26,4 @@ class SettingsPageTableViewController: UITableViewController {
             }
         }
     }
-    
-
-    
-
-}
-class SettingsPageBaseViewController: BaseViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addSlideMenuButton()
-    }
-    
 }

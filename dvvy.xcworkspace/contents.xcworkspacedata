@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/zackgoldstein/Desktop/dvvy/dvvy-ios/dvvy/Controller/SettingsPageTableViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:dvvy.xcodeproj">
    </FileRef>
    <FileRef
