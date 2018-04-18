@@ -11,7 +11,8 @@ target 'dvvy' do
   pod 'Firebase/Auth'
   pod 'KeychainSwift'
   pod 'pop', '~> 1.0'
-
+  pod 'Firebase/Messaging'
+  
   target 'dvvyTests' do
     inherit! :search_paths
     # Pods for testing
