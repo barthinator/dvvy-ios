@@ -125,7 +125,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         
         let profVC : ProfileViewController = self.storyboard!.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
         print("Prof feed")
-        profVC.uid = cellUID
+        profVC.uid = cellUID!
         
         //Will push the new one with the users data
         self.navigationController!.pushViewController(profVC, animated: true)

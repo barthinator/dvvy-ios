@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePickerControllerDelegate{
     
@@ -21,7 +22,9 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
     @IBOutlet weak var profileTableView: UITableView!
     var isHidden = true
     var profileModel = UserModel.init()
-    var uid = UserDefaults.standard.value(forKey: "currentUser")
+    var uid = UserDefaults.standard.value(forKey: "currentUser") as! String
+    
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,22 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
         friendsBtn.layer.borderWidth = 1
         friendsBtn.layer.cornerRadius = 5
         friendsBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
+        let storageRef = storage.reference()
+        
+        // Create a reference to the file you want to download
+        let imgProfRef = storageRef.child("userphotos/\(uid).jpg")
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "images/island.jpg" is returned
+                self.imgProf.image = UIImage(data: data!)
+            }
+        }
         
         //Set the data of the user
         profileTableView.backgroundColor = UIColor.darkGray
