@@ -11,6 +11,22 @@
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
+		064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */; };
+		064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */; };
+		064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */; };
+		064C2E5F208546DD000F33E7 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4F208546DD000F33E7 /* NibView.swift */; };
+		064C2E60208546DD000F33E7 /* SampleSwipeableCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E50208546DD000F33E7 /* SampleSwipeableCard.swift */; };
+		064C2E61208546DD000F33E7 /* SampleSwipeableCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064C2E51208546DD000F33E7 /* SampleSwipeableCard.xib */; };
+		064C2E62208546DD000F33E7 /* SampleSwipeableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E52208546DD000F33E7 /* SampleSwipeableCellViewModel.swift */; };
+		064C2E63208546DD000F33E7 /* SwipeableCardViewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E53208546DD000F33E7 /* SwipeableCardViewCard.swift */; };
+		064C2E64208546DD000F33E7 /* SwipeableCardViewCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064C2E54208546DD000F33E7 /* SwipeableCardViewCard.xib */; };
+		064C2E65208546DD000F33E7 /* SwipeableCardViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E55208546DD000F33E7 /* SwipeableCardViewContainer.swift */; };
+		064C2E66208546DD000F33E7 /* SwipeableCardViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E56208546DD000F33E7 /* SwipeableCardViewDataSource.swift */; };
+		064C2E67208546DD000F33E7 /* SwipeableCardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E57208546DD000F33E7 /* SwipeableCardViewDelegate.swift */; };
+		064C2E68208546DD000F33E7 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E58208546DD000F33E7 /* SwipeableView.swift */; };
+		064C2E69208546DD000F33E7 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E59208546DD000F33E7 /* SwipeableViewDelegate.swift */; };
+		064C2E6A208546DD000F33E7 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E5A208546DD000F33E7 /* SwipeDirection.swift */; };
+		064C2E6B208546DD000F33E7 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E5B208546DD000F33E7 /* UIView+Constraints.swift */; };
 		06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06806E84203D4E9F00D4EE34 /* customFeedCell.xib */; };
 		06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06806E85203D4E9F00D4EE34 /* customFeedCell.swift */; };
 		06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
@@ -76,6 +92,22 @@
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
+		064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListingsViewController.swift; sourceTree = "<group>"; };
+		064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
+		064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
+		064C2E4F208546DD000F33E7 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
+		064C2E50208546DD000F33E7 /* SampleSwipeableCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCard.swift; sourceTree = "<group>"; };
+		064C2E51208546DD000F33E7 /* SampleSwipeableCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleSwipeableCard.xib; sourceTree = "<group>"; };
+		064C2E52208546DD000F33E7 /* SampleSwipeableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleSwipeableCellViewModel.swift; sourceTree = "<group>"; };
+		064C2E53208546DD000F33E7 /* SwipeableCardViewCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewCard.swift; sourceTree = "<group>"; };
+		064C2E54208546DD000F33E7 /* SwipeableCardViewCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeableCardViewCard.xib; sourceTree = "<group>"; };
+		064C2E55208546DD000F33E7 /* SwipeableCardViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewContainer.swift; sourceTree = "<group>"; };
+		064C2E56208546DD000F33E7 /* SwipeableCardViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDataSource.swift; sourceTree = "<group>"; };
+		064C2E57208546DD000F33E7 /* SwipeableCardViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableCardViewDelegate.swift; sourceTree = "<group>"; };
+		064C2E58208546DD000F33E7 /* SwipeableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		064C2E59208546DD000F33E7 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
+		064C2E5A208546DD000F33E7 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
+		064C2E5B208546DD000F33E7 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		06806E84203D4E9F00D4EE34 /* customFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customFeedCell.xib; sourceTree = "<group>"; };
 		06806E85203D4E9F00D4EE34 /* customFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customFeedCell.swift; sourceTree = "<group>"; };
 		06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Light-trial.ttf"; sourceTree = "<group>"; };
@@ -124,7 +156,7 @@
 		D886FF2B203BBC91008573A2 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		D8F8FFB1207F195D0061E8B4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
-		DC08679F92E4A8560130B8D2 /* Pods-dvvyUITests.release.xcconfsig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyUITests/Pods-dvvyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DC08679F92E4A8560130B8D2 /* Pods-dvvyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyUITests/Pods-dvvyUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +194,29 @@
 				0610966E203AAAFD004827E4 /* customFriendCell.swift */,
 			);
 			path = "Custom Friends Cell";
+			sourceTree = "<group>";
+		};
+		064C2E4B208546DD000F33E7 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */,
+				064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */,
+				064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */,
+				064C2E4F208546DD000F33E7 /* NibView.swift */,
+				064C2E50208546DD000F33E7 /* SampleSwipeableCard.swift */,
+				064C2E51208546DD000F33E7 /* SampleSwipeableCard.xib */,
+				064C2E52208546DD000F33E7 /* SampleSwipeableCellViewModel.swift */,
+				064C2E53208546DD000F33E7 /* SwipeableCardViewCard.swift */,
+				064C2E54208546DD000F33E7 /* SwipeableCardViewCard.xib */,
+				064C2E55208546DD000F33E7 /* SwipeableCardViewContainer.swift */,
+				064C2E56208546DD000F33E7 /* SwipeableCardViewDataSource.swift */,
+				064C2E57208546DD000F33E7 /* SwipeableCardViewDelegate.swift */,
+				064C2E58208546DD000F33E7 /* SwipeableView.swift */,
+				064C2E59208546DD000F33E7 /* SwipeableViewDelegate.swift */,
+				064C2E5A208546DD000F33E7 /* SwipeDirection.swift */,
+				064C2E5B208546DD000F33E7 /* UIView+Constraints.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		06806E83203D4E9F00D4EE34 /* Custom Feed Cell */ = {
@@ -263,6 +318,7 @@
 		7F8C08B6202831A80051B6F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				064C2E4B208546DD000F33E7 /* Cards */,
 				79FA59A920316815003C7131 /* BottomNavController.swift */,
 				D8F8FFB1207F195D0061E8B4 /* BaseViewController.swift */,
 				06109667203AA603004827E4 /* FriendsViewController.swift */,
@@ -434,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064C2E61208546DD000F33E7 /* SampleSwipeableCard.xib in Resources */,
 				796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */,
 				79BDE3D620395E8F0011853A /* GoogleService-Info.plist in Resources */,
 				06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */,
@@ -443,6 +500,7 @@
 				06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */,
 				796E1599201E5C4E0051605E /* Main.storyboard in Resources */,
 				96A031562057927800BDC4DA /* customListingCell.xib in Resources */,
+				064C2E64208546DD000F33E7 /* SwipeableCardViewCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +609,7 @@
 				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -565,6 +624,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -643,31 +703,45 @@
 			files = (
 				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
+				064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */,
 				79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */,
 				79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */,
+				064C2E65208546DD000F33E7 /* SwipeableCardViewContainer.swift in Sources */,
 				D80B0DC4202A987900677E53 /* SettingsViewController.swift in Sources */,
 				D8F8FFB2207F195D0061E8B4 /* BaseViewController.swift in Sources */,
+				064C2E66208546DD000F33E7 /* SwipeableCardViewDataSource.swift in Sources */,
 				D8187AB5203CC7E2005EEAC8 /* GeneralViewController.swift in Sources */,
+				064C2E5F208546DD000F33E7 /* NibView.swift in Sources */,
+				064C2E6B208546DD000F33E7 /* UIView+Constraints.swift in Sources */,
 				06109666203A97F0004827E4 /* PopUpViewController.swift in Sources */,
 				7F8C08BC2028434F0051B6F9 /* MenuViewController.swift in Sources */,
 				960FADD62084376700A861E8 /* TermsViewController.swift in Sources */,
+				064C2E60208546DD000F33E7 /* SampleSwipeableCard.swift in Sources */,
 				79245D2F20812FA300DF3423 /* CollabModel.swift in Sources */,
 				797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */,
 				79BDE3DA203977BE0011853A /* SignUpViewController.swift in Sources */,
+				064C2E69208546DD000F33E7 /* SwipeableViewDelegate.swift in Sources */,
+				064C2E67208546DD000F33E7 /* SwipeableCardViewDelegate.swift in Sources */,
 				7F4234BB2029A30C009AE35F /* CollabViewController.swift in Sources */,
+				064C2E63208546DD000F33E7 /* SwipeableCardViewCard.swift in Sources */,
 				79BDE3D820396DF50011853A /* SignInViewController.swift in Sources */,
 				06109668203AA603004827E4 /* FriendsViewController.swift in Sources */,
+				064C2E6A208546DD000F33E7 /* SwipeDirection.swift in Sources */,
 				06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */,
 				D8F8FFB4207F1AEC0061E8B4 /* ChatModel.swift in Sources */,
+				064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */,
 				96A031552057927800BDC4DA /* customListingCell.swift in Sources */,
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
 				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
+				064C2E62208546DD000F33E7 /* SampleSwipeableCellViewModel.swift in Sources */,
 				06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 				79FFFD6A2049E97500DE4E18 /* UserModel.swift in Sources */,
+				064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */,
 				D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */,
+				064C2E68208546DD000F33E7 /* SwipeableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
