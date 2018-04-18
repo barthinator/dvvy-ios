@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-hm-j8l">
-                                <rect key="frame" x="16" y="254" width="343" height="349"/>
+                                <rect key="frame" x="16" y="254" width="343" height="393"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZACK GOLDSTEIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-ye-Sud">
@@ -541,8 +541,9 @@
                                     <outletCollection property="gestureRecognizers" destination="woL-bO-bus" appends="YES" id="RDM-kd-uUK"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zack Goldstein" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-Wp-0jm">
-                                <rect key="frame" x="16" y="27" width="171" height="160"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dvvyBtnImg" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-Wp-0jm">
+                                <rect key="frame" x="16" y="27" width="160" height="160"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.4549019608" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="woL-bO-bus" appends="YES" id="h3f-2v-ky8"/>
@@ -555,11 +556,11 @@
                                     <constraint firstAttribute="width" constant="116" id="TBx-y8-QZF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="14"/>
-                                <state key="normal" title="FRIENDS">
+                                <state key="normal" title="FOLLOWERS">
                                     <color key="titleColor" red="1" green="0.45882352941176469" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HFW-7q-2lv" kind="show" id="b7A-RI-vSX"/>
+                                    <segue destination="HFW-7q-2lv" kind="show" id="7kq-k7-qZE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCg-vR-TF5">
@@ -570,11 +571,11 @@
                                     <constraint firstAttribute="height" constant="39" id="xT0-6O-KHu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="COCOMAT-Light" family="COCOMAT" pointSize="14"/>
-                                <state key="normal" title="PORTFOLIO">
+                                <state key="normal" title="FOLLOW">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hJ7-Cm-Hd6" kind="show" id="yYY-Y8-D6X"/>
+                                    <action selector="followPressed:" destination="vEE-8N-vqN" eventType="touchUpInside" id="Dau-yT-pXW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -591,7 +592,7 @@
                             <constraint firstItem="x2s-ri-ZEa" firstAttribute="top" secondItem="0Vu-ye-Sud" secondAttribute="bottom" constant="20" id="OY3-II-7we"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="leading" secondItem="GCD-2E-PYO" secondAttribute="trailing" constant="1" id="PHs-eS-cy4"/>
                             <constraint firstItem="xJY-Wp-0jm" firstAttribute="bottom" secondItem="OCg-vR-TF5" secondAttribute="bottom" id="YSg-lS-lV1"/>
-                            <constraint firstItem="0Vu-ye-Sud" firstAttribute="leading" secondItem="xJY-Wp-0jm" secondAttribute="trailing" constant="12" id="aG5-tn-rVC"/>
+                            <constraint firstItem="0Vu-ye-Sud" firstAttribute="leading" secondItem="xJY-Wp-0jm" secondAttribute="trailing" constant="23" id="aG5-tn-rVC"/>
                             <constraint firstItem="GCD-2E-PYO" firstAttribute="top" secondItem="qRG-m7-qyG" secondAttribute="top" id="dmI-eV-EIM"/>
                             <constraint firstItem="GCD-2E-PYO" firstAttribute="leading" secondItem="XnH-ae-yIC" secondAttribute="leading" constant="15" id="eUK-jM-6vw"/>
                             <constraint firstItem="qRG-m7-qyG" firstAttribute="top" secondItem="O4c-NU-D0o" secondAttribute="top" constant="214" id="gb7-l8-Oj1"/>
@@ -606,7 +607,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Has-vY-JGA"/>
                     <connections>
-                        <outlet property="friendsBtn" destination="x2s-ri-ZEa" id="IcI-Z6-Qzy"/>
+                        <outlet property="followBtn" destination="OCg-vR-TF5" id="HOg-xG-TVf"/>
+                        <outlet property="followersBtn" destination="x2s-ri-ZEa" id="xJ5-Ib-1Y6"/>
                         <outlet property="imgProf" destination="xJY-Wp-0jm" id="S9i-Qe-CcV"/>
                         <outlet property="profileTableView" destination="xTE-hm-j8l" id="l7w-Wm-esN"/>
                         <outlet property="usernameLabel" destination="0Vu-ye-Sud" id="bOg-aA-L71"/>
@@ -733,7 +735,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xyg-0a-AmH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f5X-vN-h72">
@@ -747,7 +749,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdp-MR-8dE">
-                                <rect key="frame" x="150" y="548" width="75" height="38"/>
+                                <rect key="frame" x="150" y="592" width="75" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="DxN-Dt-SHa"/>
                                 </constraints>
@@ -778,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xro-EL-Hyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4197.6000000000004" y="434.93253373313348"/>
+            <point key="canvasLocation" x="4354" y="446"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="mNm-ii-eoS">
@@ -789,7 +791,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDb-Na-Glp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xu0-JR-Ydk">
                                         <rect key="frame" x="39" y="331" width="296" height="30"/>
@@ -1204,10 +1206,12 @@ User acknowledges that content, including but not limited to text, software, mus
     <resources>
         <image name="Image" width="942" height="1024"/>
         <image name="Zack Goldstein" width="291" height="294"/>
+        <image name="dvvyBtnImg" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7kq-k7-qZE"/>
         <segue reference="czH-Ve-A0Y"/>
-        <segue reference="7h5-pj-dFd"/>
+        <segue reference="ecc-fz-7DY"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="7TJ-90-9bJ"/>
     </inferredMetricsTieBreakers>

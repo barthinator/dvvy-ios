@@ -39,7 +39,7 @@ class FeedModel {
         //Suppose to grab the posts from the world document, then order them by
         //the date posted (only limit to 10 for now)
         
-        db.collection("feed").document("world").collection("posts").order(by: "datePosted").limit(to: 10).getDocuments(){
+        db.collection("feed").document("world").collection("posts").order(by: "datePosted", descending: true).limit(to: 10).getDocuments(){
             (querySnapshot, err) in
             if let err = err {
                 print("Error geting posts: \(err)")
