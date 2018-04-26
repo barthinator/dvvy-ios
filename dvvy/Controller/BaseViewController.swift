@@ -51,9 +51,9 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
 
             break
         case 5:
-
+            
             self.openViewControllerBasedOnIdentifier("Settings")
-
+            
             break
         default:
             1 == 1

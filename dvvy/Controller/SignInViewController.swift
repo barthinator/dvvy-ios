@@ -10,7 +10,25 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 
-class SignInViewController : UIViewController {
+class SignInViewController : UIViewController, UserModelDelegate {
+    func finishedLoading(user: User) {
+        name = "\(user.first) \(user.last)"
+        UserDefaults.standard.set(self.name, forKey: "name")
+    }
+    
+    func finishLoadingFollowers(followers: [String]) {
+        
+    }
+    
+    func finishedLoadingFollowing(following: [String]) {
+        
+    }
+    
+    var userQuery: [User] = []
+    
+    var userModel : UserModel!
+    
+    var name : String!
     
     var storage: Storage!
     
@@ -174,6 +192,8 @@ class SignInViewController : UIViewController {
                             }
                         }
                         
+                        self.userModel.getUser(uid: (user?.uid)!)
+                        
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.set(user?.uid, forKey: "currentUser")
                         UserDefaults.standard.synchronize()
@@ -195,11 +215,18 @@ class SignInViewController : UIViewController {
         super.viewDidLoad()
         self.errorLabel.isHidden = true
         storage = Storage.storage()
+        userModel = UserModel.init()
+        userModel.delegate = self
     }
     
     //Checks if the user is already logged in. If so then go to home page!
     override func viewDidAppear(_ animated: Bool) {
+
         if(UserDefaults.standard.bool(forKey: "isLoggedIn")){
+            
+            userModel.delegate = self
+            userModel.getUser(uid: (Auth.auth().currentUser?.uid)!)
+            
             let storageRef = storage.reference()
             let imgProfRef = storageRef.child("userphotos/\(Auth.auth().currentUser?.uid ?? "fail").jpg")
             
@@ -214,6 +241,8 @@ class SignInViewController : UIViewController {
                     UserDefaults.standard.set(data!, forKey: "userPhoto" )
                 }
             }
+            
+            UserDefaults.standard.set(self.name, forKey: "name")
             UserDefaults.standard.set(Auth.auth().currentUser?.uid, forKey: "currentUser")
             UserDefaults.standard.synchronize()
             self.performSegue(withIdentifier: "pushToHome", sender: self)

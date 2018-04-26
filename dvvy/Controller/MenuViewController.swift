@@ -13,24 +13,8 @@ protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
 }
 
-class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UserModelDelegate {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    //NEED TO USE USER DEFAULTS NOT USERMODELDELEGATE IN THE SIDEBAR SO WE CAN ERASE BELOW CODE
-    
-    var userQuery: [User] = []
-    
-    
-    func finishedLoadingFollowing(following: [String]) {
-        
-    }
-    
-    
-    func finishLoadingFollowers(followers: [String]) {
-        
-    }
-    
-
-
     /**
      *  Array to display menu options
      */
@@ -55,16 +39,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
      *  Delegate of the MenuVC
      */
     var delegate : SlideMenuDelegate?
-
-    var userInfo = User(first: "not", last: "correct", uid: "")
-    let userModel = UserModel.init()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        userModel.delegate = self
-        userModel.getUser(uid: UserDefaults.standard.value(forKey: "currentUser") as! String)
-
+        
         tblMenuOptions.tableFooterView = UIView()
         tblMenuOptions.backgroundColor = UIColor(red:0.22, green:0.22, blue:0.22, alpha:1.0)
         tblMenuOptions.tintColor = UIColor.white
@@ -94,7 +73,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Submit"])
         arrayMenuOptions.append(["title":"Settings"])
-
         tblMenuOptions.reloadData()
     }
 
@@ -136,7 +114,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if (indexPath.row == 0){
             let headCell = tableView.dequeueReusableCell(withIdentifier: "head") as! SideUserCell
             headCell.backgroundColor = UIColor.clear
-            headCell.userLbl.text = userInfo.first + " " + userInfo.last
+            headCell.userLbl.text = UserDefaults.standard.value(forKey: "name") as? String
             headCell.userLbl.textColor = UIColor.white
             if (UserDefaults.standard.object(forKey: "userPhoto") != nil) {
                 headCell.userImg.image = UIImage(data: UserDefaults.standard.object(forKey: "userPhoto") as! Data)
@@ -164,10 +142,5 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
-    }
-
-    func finishedLoading(user: User) {
-        userInfo = user
-        self.tblMenuOptions.reloadData()
     }
 }
