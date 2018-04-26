@@ -70,7 +70,6 @@ class CollabModel {
     }
     
     func makePost(post: CollabPost){
-        
         //Sets the data of the global collab collection
         let ref = db.collection("collab").document("global").collection("collabpost").document()
         ref.setData([
