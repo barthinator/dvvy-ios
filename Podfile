@@ -9,6 +9,7 @@ target 'dvvy' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
   pod 'KeychainSwift'
   pod 'pop', '~> 1.0'
 
