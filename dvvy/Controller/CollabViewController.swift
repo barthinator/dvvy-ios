@@ -5,18 +5,19 @@
 //  Created by David B on 2/6/18.
 //  Copyright © 2018 David Bartholomew. All rights reserved.
 //
-
 import UIKit
-
+protocol SwipeCollabDelegate {
+    func loadData(collab: CollabModel)
+}
 class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CollabModelDelegate, SwipeableCardViewDataSource {
     
     var allPosts: [CollabPost] = []
-    
-    
+    var cardPosts: [SampleSwipeableCellViewModel] = []
     
     @IBOutlet weak var sortViewBtn: UIButton!
     @IBAction func sortViewBtn(_ sender: Any) {
         collabTableView.isHidden = !collabTableView.isHidden
+        super.collabModel.getCollabUpdates()
         swipeableCardView.isHidden = !swipeableCardView.isHidden
     }
     //collab listings view
@@ -42,15 +43,10 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         
         super.collabModel.delegate = self
         super.collabModel.getCollabUpdates()
-
         collabTableView.delegate = self
         collabTableView.dataSource = self
-
-        collabTableView.allowsSelection = false
-
         collabTableView.register(UINib(nibName: "customListingCell", bundle: nil), forCellReuseIdentifier: "cusListCell")
         self.collabTableView.addSubview(self.refreshControl)
-
         configureTableView()
         // Do any additional setup after loading the view.
     }
@@ -78,12 +74,14 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         //Reloads the data after it is all fetched
         self.collabTableView.reloadData()
         
+        //Give data to the cards view
+        cardPosts = convertPostsToCardData(posts: posts!)
+        
+        swipeableCardView.reloadData()
     }
-
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-
     //sections test
     func numberOfSections(in tableView: UITableView) -> Int {
         return allPosts.count
@@ -99,41 +97,63 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         headerView.backgroundColor = UIColor.clear
         return headerView
     }
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cusListCell", for: indexPath) as! customListingCell
-
         cell.backgroundColor = UIColor.white
         cell.layer.cornerRadius = 12
         cell.clipsToBounds = true
-
         //cell.layer.cornerRadius = 60
         cell.lblNameListing.text = allPosts[indexPath.section].name.uppercased()
         //cell.imageListing.image = UIImage(named: nameArray[indexPath.section])
         cell.lblNeedTypeCollab.text = allPosts[indexPath.section].category.lowercased()
-
         return cell
     }
-
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    //Trying to add david to the user model with the button
-    @IBAction func addDavid(_ sender: Any) {
-    }
-
-
     func configureTableView(){
         collabTableView.rowHeight = UITableViewAutomaticDimension
         collabTableView.estimatedRowHeight = 120.0
     }
-    //test comments
+    
+    func setCollabPosition(index: Int){
+        var tempPosts = cardPosts
+        
+        cardPosts = rearrange(array: cardPosts, fromIndex: index, toIndex: 0)
+        swipeableCardView.reloadData()
+        
+        collabTableView.isHidden = !collabTableView.isHidden
+        swipeableCardView.isHidden = !swipeableCardView.isHidden
+        
+        cardPosts = tempPosts
+    }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = collabTableView.cellForRow(at: indexPath)  as! customListingCell
+        let index = indexPath.section
+        setCollabPosition(index: index)
+
+    }
+    
+    func rearrange<T>(array: Array<T>, fromIndex: Int, toIndex: Int) -> Array<T>{
+        var arr = array
+        let element = arr.remove(at: fromIndex)
+        arr.insert(element, at: toIndex)
+        
+        return arr
+    }
+    
+    func convertPostsToCardData(posts: [CollabPost]) -> [SampleSwipeableCellViewModel]{
+        var cardPosts : [SampleSwipeableCellViewModel] = []
+        for post in posts{
+            let cardPost = SampleSwipeableCellViewModel(title: post.name, color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0), image: #imageLiteral(resourceName: "Image"), description: post.description, category: post.category)
+            cardPosts.append(cardPost)
+        }
+        return cardPosts
+    }
 }
+
 extension CollabViewController {
     
     func numberOfCards() -> Int {
@@ -152,35 +172,11 @@ extension CollabViewController {
     }
     
 }
+
 extension CollabViewController {
     
     var viewModels: [SampleSwipeableCellViewModel] {
-        
-        let hamburger = SampleSwipeableCellViewModel(title: "dvvy",
-                                                     color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                     image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        let panda = SampleSwipeableCellViewModel(title: "dvvy",
-                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        let puppy = SampleSwipeableCellViewModel(title: "dvvy",
-                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        let poop = SampleSwipeableCellViewModel(title: "dvvy",
-                                                color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        let robot = SampleSwipeableCellViewModel(title: "dvvy",
-                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        let clown = SampleSwipeableCellViewModel(title: "dvvy",
-                                                 color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0),
-                                                 image: #imageLiteral(resourceName: "David Bartholomew"))
-        
-        return [hamburger, panda, puppy, poop, robot, clown]
+        return cardPosts
     }
     
 }

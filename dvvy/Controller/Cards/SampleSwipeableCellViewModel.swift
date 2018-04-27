@@ -9,9 +9,11 @@
 import UIKit
 
 struct SampleSwipeableCellViewModel {
-
+    
     let title: String
     let color: UIColor
     let image: UIImage
-
+    let description: String
+    let category: String
+    
 }
