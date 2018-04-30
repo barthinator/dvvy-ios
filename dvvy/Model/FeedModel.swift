@@ -65,6 +65,37 @@ class FeedModel {
         }
     }
     
+    
+    //Get user created posts
+    func getUserCreatedPosts(uid: String){
+        
+        db.collection("feed").document("world").collection("posts").whereField("uid", isEqualTo: uid)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    
+                    //Clears it out. Maybe its more efficient to check if there is anything new? need to research more
+                    
+                    self.posts = [Post]()
+                    
+                    for document in querySnapshot!.documents {
+                        var dataDict = document.data()
+                        
+                        let documentPost = Post(
+                            uid: dataDict["uid"] as! String,
+                            description: dataDict["description"] as! String,
+                            title: dataDict["title"] as! String,
+                            datePosted: dataDict["datePosted"] as! Date
+                        )
+                        
+                        self.posts.append(documentPost)
+                    }
+                    self.delegate?.finishedLoading(self.posts)
+                }
+        }
+    }
+    
     func makePost(post: Post){
         
         //Sets the data of the global collab collection

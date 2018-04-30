@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseStorage
 
-class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePickerControllerDelegate{
+class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource{
 
     //Reference to protocol UserModelDelegate, **dont manipulate value please
     var userQuery: [User] = []
@@ -23,6 +23,9 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
 
     //Stores the user information for the friends page
     var followers : [User] = []
+    
+    //Stores the feed user posts
+    var feedPosts: [Post] = []
 
 
     @IBOutlet var imgProf: UIImageView!
@@ -42,6 +45,8 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
 
     @IBOutlet weak var followBtn: UIButton!
     @IBOutlet weak var followersBtn: UIButton!
+    
+    let cellSpacingHeight: CGFloat = 5
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +61,10 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
         if uid.isEmpty {
             uid = UserDefaults.standard.value(forKey: "currentUser") as! String
         }
-
+        
+        //The model
+        super.feedModel.delegate = self
+        super.feedModel.getUserCreatedPosts(uid: uid)
         
         let storageRef = storage.reference()
 
@@ -75,13 +83,26 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
         }
 
         //Set the data of the user
-        profileTableView.backgroundColor = UIColor.darkGray
+        profileTableView.backgroundColor = UIColor.white
         profileModel.delegate = self
         profileModel.getUser(uid: uid)
         profileModel.getFollowers(uid: uid)
 
         imgProf.isUserInteractionEnabled = true
         imgProf.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        
+        // The table view delegate
+        profileTableView.delegate = self
+        profileTableView.dataSource = self
+        
+        //do this on all table views to remove highlighting
+        profileTableView.register(UINib(nibName: "customFeedCell", bundle: nil), forCellReuseIdentifier: "cusFeedCell")
+        
+        //self.profileTableView.addSubview(self.refreshControl)
+        
+        configureTableView()
+        
     }
     @objc func handleTap(){
         let imagePicker = UIImagePickerController()
@@ -157,6 +178,14 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
     func finishedLoadingFollowing(following: [String]) {
         followings = following
     }
+    
+    //This loads the users feed posts from the feedModelDelegate
+    func finishedLoading(_ posts: [Post]?) {
+        feedPosts = posts!
+        
+        //reloads the profile data
+        self.profileTableView.reloadData()
+    }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
 
@@ -170,5 +199,60 @@ class ProfileViewController: BaseViewController, UserModelDelegate, UIImagePicke
 
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    //sections test
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return feedPosts.count
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return cellSpacingHeight
+    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        return headerView
+    }
+    //end
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cusFeedCell", for: indexPath) as! customFeedCell
+        
+        cell.backgroundColor = UIColor.white
+        cell.layer.cornerRadius = 12
+        cell.clipsToBounds = true
+        
+        //cell.layer.cornerRadius = 60
+        cell.feedNameLbl.text = feedPosts[indexPath.section].title
+        cell.feedMessageTextView.text = feedPosts[indexPath.section].description
+        
+        cell.uid = feedPosts[indexPath.section].uid
+        
+        //This will have to wait until we figure out images
+        cell.feedProfileImage.image = #imageLiteral(resourceName: "Zack Goldstein")
+        cell.feedMessageView.layer.cornerRadius = 20
+        cell.feedMessageView.layer.borderWidth = 1
+        cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
+        //buttons
+        cell.btnDvvy.layer.cornerRadius = 10
+        cell.btnLike.layer.cornerRadius = 10
+        cell.btnOptions.layer.cornerRadius = 10
+        
+        
+        return cell
+    }
+
+    
+    func configureTableView(){
+        profileTableView.rowHeight = UITableViewAutomaticDimension
+        profileTableView.estimatedRowHeight = 120.0
     }
 }
