@@ -47,6 +47,8 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     @IBOutlet weak var followersBtn: UIButton!
     
     let cellSpacingHeight: CGFloat = 5
+    
+    var userImage: UIImage = #imageLiteral(resourceName: "dvvyBtnImg")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +79,10 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
                 // Uh-oh, an error occurred!
                 print(error)
             } else {
-                // Data for "images/island.jpg" is returned
-                self.imgProf.image = UIImage(data: data!)
+                // Data for "userphotos/uid" is returned
+                self.userImage = UIImage(data: data!)!
+                self.imgProf.image = self.userImage
+                self.profileTableView.reloadData()
             }
         }
 
@@ -236,7 +240,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
         cell.uid = feedPosts[indexPath.section].uid
         
         //This will have to wait until we figure out images
-        cell.feedProfileImage.image = #imageLiteral(resourceName: "Zack Goldstein")
+        cell.feedProfileImage.image = userImage
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor

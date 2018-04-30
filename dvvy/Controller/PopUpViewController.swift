@@ -126,6 +126,7 @@ class PopUpViewController: UIViewController {
                     uid: UserDefaults.standard.value(forKey: "currentUser") as! String,
                     description: descriptionField.text!,
                     title: categoryField.text!,
+                    userImage: #imageLiteral(resourceName: "dvvyBtnImg"),
                     datePosted: Date()
                 )
                 feedModel?.makePost(post: self.feedPost!)
