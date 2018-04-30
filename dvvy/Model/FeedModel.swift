@@ -18,6 +18,7 @@ struct Post {
 
 protocol FeedModelDelegate: class {
     func finishedLoading(_ posts: [Post]?)
+    func finishedLoadingImages(_ userImages: [String: UIImage])
 }
 
 class FeedModel {
@@ -71,6 +72,10 @@ class FeedModel {
                         } else {
                             // Data for "userphotos/uid" is returned
                             self.userImages[dataDict["uid"] as! String] = UIImage(data: data!)!
+                            
+                            if document == querySnapshot?.documents.last{
+                                self.delegate?.finishedLoadingImages(self.userImages)
+                            }
                         }
                     }
                     
@@ -91,23 +96,6 @@ class FeedModel {
     
     //Get user created posts
     func getUserCreatedPosts(uid: String){
-        
-        let storageRef = storage.reference()
-        
-        // Create a reference to the file you want to download
-        let imgProfRef = storageRef.child("userphotos/\(uid).jpg")
-        
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-            if let error = error {
-                // Uh-oh, an error occurred!
-                print(error)
-            } else {
-                // Data for "userphotos/uid" is returned
-                self.postAssociatedImage = UIImage(data: data!)!
-            }
-        }
-        
         
         db.collection("feed").document("world").collection("posts").whereField("uid", isEqualTo: uid)
             .getDocuments() { (querySnapshot, err) in

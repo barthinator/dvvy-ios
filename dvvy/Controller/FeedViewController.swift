@@ -13,6 +13,8 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
     
     //Creates the feed data class and delegate connection
     var allPosts: [Post] = []
+    
+    var allImages = [String: UIImage]()
 
     @IBOutlet var feedTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
@@ -41,6 +43,12 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         //Reloads the data after it is all fetched
         self.feedTableView.reloadData()
         
+    }
+    
+    func finishedLoadingImages(_ userImages: [String : UIImage]) {
+        self.allImages = userImages
+        
+        self.feedTableView.reloadData()
     }
     
     
@@ -100,7 +108,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         cell.uid = allPosts[indexPath.section].uid
         
         //This will have to wait until we figure out images
-        cell.feedProfileImage.image = allPosts[indexPath.section].userImage
+        cell.feedProfileImage.image = allImages[allPosts[indexPath.section].uid] ?? #imageLiteral(resourceName: "dvvyBtnImg")
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor

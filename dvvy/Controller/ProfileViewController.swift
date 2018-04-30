@@ -10,6 +10,11 @@ import UIKit
 import FirebaseStorage
 
 class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource{
+    
+    func finishedLoadingImages(_ userImages: [String : UIImage]) {
+        self.allImages = userImages
+    }
+    
 
     //Reference to protocol UserModelDelegate, **dont manipulate value please
     var userQuery: [User] = []
@@ -26,6 +31,9 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     
     //Stores the feed user posts
     var feedPosts: [Post] = []
+    
+    //All the images, need to be passed to the friends view controller as well
+    var allImages = [String: UIImage]()
 
 
     @IBOutlet var imgProf: UIImageView!
@@ -67,6 +75,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
         //The model
         super.feedModel.delegate = self
         super.feedModel.getUserCreatedPosts(uid: uid)
+        super.feedModel.getFeedUpdates()
         
         let storageRef = storage.reference()
 
@@ -161,6 +170,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
             //Passes in follower data and uid of class to pass back later
             vc?.followers = userQuery
             vc?.uid = uid
+            vc?.allImages = allImages
         }
     }
 
