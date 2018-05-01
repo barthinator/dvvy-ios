@@ -17,6 +17,8 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
     
     @IBOutlet weak var sendMessage: UIButton!
     
+    var message = ""
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -27,11 +29,19 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         addSlideMenuButton()
         
+        
         messageCollection.delegate = self
         messageCollection.dataSource = self
         
         //messageBox.becomeFirstResponder()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func sendPressed(_ sender: Any) {
+        message = messageBox.text!
+        messages.append(message)
+        
+        messageCollection.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

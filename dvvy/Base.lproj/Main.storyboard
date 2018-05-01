@@ -1103,6 +1103,9 @@
                                         <state key="normal" title="Send">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="r8K-nG-1Xw" eventType="touchUpInside" id="13S-mu-uLD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1130,7 +1133,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="qOw-tx-yiS"/>
                     <connections>
+                        <outlet property="messageBox" destination="HkV-R7-iJ4" id="hN7-d3-EfM"/>
                         <outlet property="messageCollection" destination="8ap-oN-QkG" id="KKE-F8-BVl"/>
+                        <outlet property="sendMessage" destination="G3X-QA-Aao" id="fKp-cb-WJc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeZ-4X-DbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
