@@ -12,6 +12,7 @@
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
+		06182D1220981EB30046E15A /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06182D1120981EB30046E15A /* ShakingTextField.swift */; };
 		061F76922085BFF7004D107F /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F76912085BFF7004D107F /* LaunchScreen.swift */; };
 		064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */; };
 		064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */; };
@@ -94,6 +95,7 @@
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
+		06182D1120981EB30046E15A /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
 		061F76912085BFF7004D107F /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListingsViewController.swift; sourceTree = "<group>"; };
 		064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				960FADD52084376700A861E8 /* TermsViewController.swift */,
 				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 				060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */,
+				06182D1120981EB30046E15A /* ShakingTextField.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 			files = (
 				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
+				06182D1220981EB30046E15A /* ShakingTextField.swift in Sources */,
 				064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */,
 				79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */,
 				79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */,

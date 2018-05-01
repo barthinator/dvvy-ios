@@ -192,7 +192,7 @@
                                 <color key="textColor" red="0.49631186548223349" green="0.0" blue="0.013935480276062697" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-V5-uDm" userLabel="Password Lbl">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-V5-uDm" userLabel="Password Lbl" customClass="ShakingTextField" customModule="dvvy" customModuleProvider="target">
                                 <rect key="frame" x="78" y="318" width="218" height="30"/>
                                 <color key="backgroundColor" red="0.2156862745" green="0.2156862745" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
@@ -1381,8 +1381,6 @@ User acknowledges that content, including but not limited to text, software, mus
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="czH-Ve-A0Y"/>
-        <segue reference="ecc-fz-7DY"/>
-        <segue reference="wcy-86-Pnc"/>
         <segue reference="VcZ-2k-rB6"/>
         <segue reference="wcy-86-Pnc"/>
         <segue reference="dVc-Xs-pkB"/>

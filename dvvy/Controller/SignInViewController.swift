@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 
-class SignInViewController : UIViewController, UserModelDelegate {
+class SignInViewController : UIViewController, UserModelDelegate, UITextFieldDelegate {
     func finishedLoading(user: User) {
         name = "\(user.first) \(user.last)"
         UserDefaults.standard.set(self.name, forKey: "name")
@@ -36,7 +36,7 @@ class SignInViewController : UIViewController, UserModelDelegate {
     
     @IBOutlet weak var usernameLbl: UITextField!
     
-    @IBOutlet weak var passwordLbl: UITextField!
+    @IBOutlet weak var passwordLbl: ShakingTextField!
     
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -55,10 +55,11 @@ class SignInViewController : UIViewController, UserModelDelegate {
                         return
                     }
                     
-                    switch errorCode {
+                    //Shaking Text Field Animation
+                    self.passwordLbl.shake()
                     
-                        
-                        
+                    switch errorCode {
+
                     case .invalidEmail:
                         self.errorLabel.text = "invalid email"
                     case .invalidCustomToken:
@@ -217,6 +218,9 @@ class SignInViewController : UIViewController, UserModelDelegate {
         storage = Storage.storage()
         userModel = UserModel.init()
         userModel.delegate = self
+        
+        //Shaking Text Field Animation
+        passwordLbl.delegate = self
     }
     
     //Checks if the user is already logged in. If so then go to home page!
