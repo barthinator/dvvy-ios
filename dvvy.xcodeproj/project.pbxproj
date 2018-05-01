@@ -12,6 +12,8 @@
 		06109668203AA603004827E4 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06109667203AA603004827E4 /* FriendsViewController.swift */; };
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
+		0634D7E22091A553003C9E1B /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0634D7E12091A553003C9E1B /* SubmissionViewController.swift */; };
+		0634D7E42091A655003C9E1B /* SubmitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0634D7E32091A655003C9E1B /* SubmitModel.swift */; };
 		061F76922085BFF7004D107F /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F76912085BFF7004D107F /* LaunchScreen.swift */; };
 		064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */; };
 		064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */; };
@@ -93,6 +95,8 @@
 		06109667203AA603004827E4 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
+		0634D7E12091A553003C9E1B /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
+		0634D7E32091A655003C9E1B /* SubmitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitModel.swift; sourceTree = "<group>"; };
 		061F76912085BFF7004D107F /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
 		064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
@@ -310,6 +314,7 @@
 				79FFFD692049E97500DE4E18 /* UserModel.swift */,
 				79245D2E20812FA300DF3423 /* CollabModel.swift */,
 				D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */,
+				0634D7E32091A655003C9E1B /* SubmitModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,8 +340,9 @@
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
 				19819553203AAD3500E88201 /* MessageViewController.swift */,
 				960FADD52084376700A861E8 /* TermsViewController.swift */,
-				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 				060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */,
+				0634D7E12091A553003C9E1B /* SubmissionViewController.swift */,
+				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -739,8 +745,10 @@
 				06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 				79FFFD6A2049E97500DE4E18 /* UserModel.swift in Sources */,
+				0634D7E22091A553003C9E1B /* SubmissionViewController.swift in Sources */,
 				064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */,
 				D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */,
+				0634D7E42091A655003C9E1B /* SubmitModel.swift in Sources */,
 				064C2E68208546DD000F33E7 /* SwipeableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -50,6 +50,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
             self.openViewControllerBasedOnIdentifier("Submit")
 
             break
+        case 5:
+            
+            self.openViewControllerBasedOnIdentifier("Settings")
+            
+            break
         default:
             1 == 1
         }
