@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SampleSwipeableCard" customModule="dvvy" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundContainerView" destination="lhL-QV-UVc" id="9WB-36-Jyf"/>
+                <outlet property="categoryLbl" destination="6W9-P8-nBH" id="GNb-QP-VXl"/>
                 <outlet property="imageBackgroundColorView" destination="KzP-I3-pDi" id="CHr-e4-GU0"/>
                 <outlet property="imageView" destination="n1H-9c-dJi" id="NMN-LW-ykc"/>
                 <outlet property="listenBtn" destination="Pym-BO-kt1" id="OkR-IF-3cM"/>
