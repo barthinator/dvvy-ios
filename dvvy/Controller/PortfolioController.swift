@@ -5,19 +5,34 @@
 //  Created by Zack Goldstein on 2/17/18.
 //  Copyright © 2018 David Bartholomew. All rights reserved.
 //
-
 import UIKit
-import Foundation
-class PortfolioController: BaseViewController {
-    @IBOutlet weak var portfolioBtn: UIButton!
-    var isPortfolioLinked : Bool = false
+class PortfolioController : BaseViewController  {
     
-    //if portfolio is already linked go to external link. if not linked, go to PortfolioController
-//    if (isPortfolioLinked == false){
-//
-//    }
-//    else{
-//
-//    }
-
+    var portfolioModel: PortfolioModel?
+    var portfolio: Portfolio?
+    
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet var txtUrl: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSlideMenuButton()
+        
+        submitBtn.layer.cornerRadius = 7
+        
+        super.viewDidLoad()
+        portfolioModel = PortfolioModel.init()
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+        
+    }
+    @IBAction func submit(_ sender: Any) {
+        portfolio = Portfolio(
+            uid: UserDefaults.standard.value(forKey: "currentUser") as! String,
+            url: txtUrl.text!,
+            name: UserDefaults.standard.value(forKey: "name") as! String
+        )
+        portfolioModel?.makePost(post: self.portfolio!)
+    }
 }

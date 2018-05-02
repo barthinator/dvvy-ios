@@ -20,12 +20,12 @@ class SubmitViewController : BaseViewController {
         super.viewDidLoad()
         //Calls the slide menu button
         addSlideMenuButton()
-        btnSubmit.layer.borderWidth = 1
-        btnSubmit.layer.cornerRadius = 5
+        btnSubmit.layer.borderWidth = 2
+        btnSubmit.layer.cornerRadius = 7
         btnSubmit.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
-        btnCheck.layer.borderWidth = 1
-        btnCheck.layer.cornerRadius = 5
+        btnCheck.layer.cornerRadius = 7
         //btnCheck.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
         
         
         

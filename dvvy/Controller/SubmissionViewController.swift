@@ -8,18 +8,22 @@
 
 import UIKit
 
-class SubmissionViewController: UIViewController {
+class SubmissionViewController: BaseViewController {
     
     @IBOutlet weak var txtUrl: UITextField!
+    @IBOutlet weak var beHeardBtn: UIButton!
     
     var submitModel: SubmitModel?
     var submission: Submit?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackModeBtn(collab: false)
 
         // Do any additional setup after loading the view.
         submitModel = SubmitModel.init()
+        
+        beHeardBtn.layer.cornerRadius = 7
     }
 
     override func didReceiveMemoryWarning() {

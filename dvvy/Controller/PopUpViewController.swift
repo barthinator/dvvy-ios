@@ -127,7 +127,8 @@ class PopUpViewController: UIViewController {
                     description: descriptionField.text!,
                     title: categoryField.text!,
                     userImage: #imageLiteral(resourceName: "dvvyBtnImg"),
-                    datePosted: Date()
+                    datePosted: Date(),
+                    name: UserDefaults.standard.value(forKey: "name") as! String
                 )
                 feedModel?.makePost(post: self.feedPost!)
             case "Collab":

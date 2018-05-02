@@ -15,6 +15,8 @@ struct Post {
     var title: String
     var userImage: UIImage
     var datePosted: Date
+    var name: String
+
 }
 
 protocol FeedModelDelegate: class {
@@ -85,7 +87,8 @@ class FeedModel {
                         description: dataDict["description"] as! String,
                         title: dataDict["title"] as! String,
                         userImage: self.userImages[dataDict["uid"] as! String] ?? #imageLiteral(resourceName: "dvvyBtnImg"),
-                        datePosted: dataDict["datePosted"] as! Date
+                        datePosted: dataDict["datePosted"] as! Date,
+                        name: dataDict["name"] as! String
                     )
                     
                     self.posts.append(documentPost)
@@ -116,7 +119,8 @@ class FeedModel {
                             description: dataDict["description"] as! String,
                             title: dataDict["title"] as! String,
                             userImage: self.postAssociatedImage,
-                            datePosted: dataDict["datePosted"] as! Date
+                            datePosted: dataDict["datePosted"] as! Date,
+                            name: dataDict["name"] as! String
                         )
                         
                         self.posts.append(documentPost)
@@ -134,7 +138,8 @@ class FeedModel {
             "uid": post.uid,
             "description": post.description,
             "title": post.title,
-            "datePosted": post.datePosted
+            "datePosted": post.datePosted,
+            "name": post.name
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

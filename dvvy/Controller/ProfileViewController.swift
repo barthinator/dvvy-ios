@@ -34,8 +34,12 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     
     //All the images, need to be passed to the friends view controller as well
     var allImages = [String: UIImage]()
+    
+    //Follow count
+    var followCount = 0
 
 
+    @IBOutlet weak var portfolioBtn: UIButton!
     @IBOutlet var imgProf: UIImageView!
     @IBOutlet var popUp: UIView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -54,18 +58,25 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     @IBOutlet weak var followBtn: UIButton!
     @IBOutlet weak var followersBtn: UIButton!
     
-    let cellSpacingHeight: CGFloat = 5
+    let cellSpacingHeight: CGFloat = 7
     
     var userImage: UIImage = #imageLiteral(resourceName: "dvvyBtnImg")
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Image Rounded Corners
+        imgProf.layer.cornerRadius = 10
+        imgProf.clipsToBounds = true
+        
         //Calls the slide menu button
         addSlideMenuButton()
-
-        followersBtn.layer.borderWidth = 1
-        followersBtn.layer.cornerRadius = 5
+        
+        followersBtn.layer.borderWidth = 2
+        followersBtn.layer.cornerRadius = 7
         followersBtn.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
+        portfolioBtn.layer.cornerRadius = 5
 
         //Checks if string is empty , if so then the currentUser is added to the id
         if uid.isEmpty {
@@ -145,15 +156,15 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     @IBAction func followPressed(_ sender: Any) {
         //Checks to see if the current profile isntance of user is the same as the logged in user
         if (uid == UserDefaults.standard.value(forKey:"currentUser") as! String) {
-            followBtn.setTitle("NOPE", for: UIControlState.normal)
+            //followBtn.setTitle("NOPE", for: UIControlState.normal)
         }
         else{
             //If already following the user, thens setTitle if not already
             if (follows.contains(loggedInUser)) {
-                followBtn.setTitle("FOLLOWED", for: UIControlState.normal)
+                followBtn.setBackgroundImage(#imageLiteral(resourceName: "Followed Button"), for: UIControlState.normal)
             }
             else{
-                followBtn.setTitle("FOLLOWED", for: UIControlState.normal)
+                followBtn.setBackgroundImage(#imageLiteral(resourceName: "Followed Button"), for: UIControlState.normal)
                 profileModel.follow(senderUID: loggedInUser, recieverUID: uid)
                 profileModel.getFollowers(uid: uid)
             }
@@ -178,13 +189,17 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     func finishedLoading(user: User) {
         profileUser = user
         usernameLabel.text = profileUser.first + " " + profileUser.last
+        usernameLabel.text = usernameLabel.text?.uppercased()
     }
 
     func finishLoadingFollowers(followers: [String]) {
         follows = followers
+        followCount = follows.count
+        
+        followersBtn.setTitle("\(followCount) FOLLOWERS", for: UIControlState.normal)
 
         if (follows.contains(loggedInUser)) {
-            followBtn.setTitle("FOLLOWED", for: UIControlState.normal)
+            followBtn.setBackgroundImage(#imageLiteral(resourceName: "Followed Button"), for: UIControlState.normal)
         }
         profileModel.getUsers(uids: follows)
     }

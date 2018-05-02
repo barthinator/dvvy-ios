@@ -12,6 +12,8 @@ import UIKit
 class TermsViewController: BaseViewController {
     @IBOutlet var txtView: UITextView!
     
+    @IBOutlet weak var backBtn: UIButton!
+    @IBOutlet weak var agreeBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideMenuButton()
@@ -22,6 +24,9 @@ class TermsViewController: BaseViewController {
         txtView.layer.borderWidth = 2
         txtView.layer.cornerRadius = 5
         txtView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
+        
+        backBtn.layer.cornerRadius = 7
+        agreeBtn.layer.cornerRadius = 7
         
     }
 

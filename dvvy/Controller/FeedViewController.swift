@@ -102,7 +102,7 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         cell.clipsToBounds = true
 
         //cell.layer.cornerRadius = 60
-        cell.feedNameLbl.text = allPosts[indexPath.section].title
+        cell.feedNameLbl.text = allPosts[indexPath.section].name.uppercased()
         cell.feedMessageTextView.text = allPosts[indexPath.section].description
         
         cell.uid = allPosts[indexPath.section].uid
