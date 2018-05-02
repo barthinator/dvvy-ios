@@ -176,6 +176,7 @@ class SignUpViewController : UIViewController {
                         userModel.setupUser(firstname: fn, lastname: ln, username: fn + " " + ln, email: email)
                         
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
+                        UserDefaults.standard.set(fn + " " +  ln, forKey: "name")
                         UserDefaults.standard.synchronize()
                         
                         self.performSegue(withIdentifier: "pushToHome", sender: self)

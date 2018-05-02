@@ -83,7 +83,7 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var currentUser = UserDefaults.standard.value(forKey: "currentUser") as! String
+        let currentUser = UserDefaults.standard.value(forKey: "currentUser") as! String
         
         let isOwnerCell = messages[indexPath.row].senderID == currentUser
 
@@ -103,29 +103,6 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
         }
         
         cell.messageLbl.text = messages[indexPath.row].message
-        
-//        if (chatModel.isReciever){
-//            print("it worked")
-//            cell = messageCollection.dequeueReusableCell(withReuseIdentifier: "recipientMessage", for: indexPath) as! MessageViewCell
-//            cell.layer.borderColor = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0).cgColor
-//            cell.layer.borderWidth = 1.5
-//            cell.layer.cornerRadius = 20
-//
-//            if !messages[indexPath.row].isSentMessage {
-//                //Recipient cell, need to mark these somehow
-//                cell = messageCollection.dequeueReusableCell(withReuseIdentifier: "senderMessage", for: indexPath) as! MessageViewCell
-//
-//                cell.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor
-//                cell.layer.borderWidth = 1.5
-//                cell.layer.cornerRadius = 20
-//            }
-        
-            
-            //cell.messageLbl.text = messages[indexPath.row].message
-            
-            //return cell
-            
-        //}
         
         return cell
     }
