@@ -115,17 +115,20 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let headCell = tableView.dequeueReusableCell(withIdentifier: "head") as! SideUserCell
             headCell.backgroundColor = UIColor.clear
             headCell.userLbl.text = UserDefaults.standard.value(forKey: "name") as? String
+            headCell.userLbl.text = headCell.userLbl.text?.uppercased()
             headCell.userLbl.textColor = UIColor.white
+            headCell.userLbl.font = UIFont.init(name: "Cocomat Light-trial.ttf", size: 17)
             if (UserDefaults.standard.object(forKey: "userPhoto") != nil) {
                 headCell.userImg.image = UIImage(data: UserDefaults.standard.object(forKey: "userPhoto") as! Data)
             }
             else{
-                headCell.userImg.image = #imageLiteral(resourceName: "Zack Goldstein")
+                headCell.userImg.image = #imageLiteral(resourceName: "dvvy Logo Coral")
             }
             return headCell
         }
         else{
             lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
+            lblTitle.font = UIFont.init(name: "Cocomat Light-trial.ttf", size: 17)
             return cell
         }
     }

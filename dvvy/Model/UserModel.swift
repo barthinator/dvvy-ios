@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseStorage
 
 struct User {
     var first: String
@@ -32,6 +33,8 @@ class UserModel {
     var users : [User] = []
     
     //TODO: Add some error handling to ensure the data is valid. Eg the phone number
+    
+    let storage = Storage.storage()
     
     init() {
         // [START setup]
@@ -148,6 +151,24 @@ class UserModel {
             }
 
             self.delegate?.finishedLoading(user: self.user)
+        }
+    }
+    
+    func getUserImage(uid: String){
+        let storageRef = storage.reference()
+        
+        // Create a reference to the file you want to download
+        let imgProfRef = storageRef.child("userphotos/\(uid).jpg")
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "userphotos/uid" is returned
+                //self.delegate?.loadUserImage(userImage: UIImage(data: data!)!)
+            }
         }
     }
     

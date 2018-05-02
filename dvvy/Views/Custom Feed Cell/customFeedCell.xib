@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="c57-9k-oNY" firstAttribute="centerX" secondItem="sms-kK-H62" secondAttribute="centerX" id="Maj-uh-TeD"/>
                             <constraint firstItem="c57-9k-oNY" firstAttribute="top" secondItem="sms-kK-H62" secondAttribute="top" constant="15" id="qP2-qN-W1x"/>
@@ -74,7 +74,7 @@
                         <state key="normal" image="likeBtnImg"/>
                     </button>
                 </subviews>
-                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="oRv-0i-cE0" firstAttribute="leading" secondItem="F5S-oD-5cl" secondAttribute="leading" id="0E7-m6-Oma"/>
                     <constraint firstItem="nDy-rK-0zd" firstAttribute="leading" secondItem="TAf-Pm-XTb" secondAttribute="trailing" constant="24" id="1bM-lD-Znb"/>
