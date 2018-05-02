@@ -13,6 +13,8 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
     
     //Creates the feed data class and delegate connection
     var allPosts: [Post] = []
+    
+    var allImages = [String: UIImage]()
 
     @IBOutlet var feedTableView: UITableView!
     let cellSpacingHeight: CGFloat = 5
@@ -36,11 +38,17 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
     func finishedLoading(_ posts: [Post]?) {
         
         //Grabs the data passed in from the model class and then puts it in the allPosts array
-        allPosts = posts!
+        self.allPosts = posts!
         
         //Reloads the data after it is all fetched
         self.feedTableView.reloadData()
         
+    }
+    
+    func finishedLoadingImages(_ userImages: [String : UIImage]) {
+        self.allImages = userImages
+        
+        self.feedTableView.reloadData()
     }
     
     
@@ -94,13 +102,13 @@ class FeedViewController: BaseViewController, UITableViewDelegate, FeedModelDele
         cell.clipsToBounds = true
 
         //cell.layer.cornerRadius = 60
-        cell.feedNameLbl.text = allPosts[indexPath.section].title
+        cell.feedNameLbl.text = allPosts[indexPath.section].name.uppercased()
         cell.feedMessageTextView.text = allPosts[indexPath.section].description
         
         cell.uid = allPosts[indexPath.section].uid
         
         //This will have to wait until we figure out images
-        cell.feedProfileImage.image = #imageLiteral(resourceName: "Zack Goldstein")
+        cell.feedProfileImage.image = allImages[allPosts[indexPath.section].uid] ?? #imageLiteral(resourceName: "dvvyBtnImg")
         cell.feedMessageView.layer.cornerRadius = 20
         cell.feedMessageView.layer.borderWidth = 1
         cell.feedMessageView.layer.borderColor = UIColor(red:1.00, green:0.46, blue:0.37, alpha:1.0).cgColor

@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseStorage
 
 struct User {
     var first: String
@@ -33,6 +34,8 @@ class UserModel {
     
     //TODO: Add some error handling to ensure the data is valid. Eg the phone number
     
+    let storage = Storage.storage()
+    
     init() {
         // [START setup]
         let settings = FirestoreSettings()
@@ -41,7 +44,7 @@ class UserModel {
         db = Firestore.firestore()
     }
 
-    func setupUser(firstname : String, lastname: String, username: String, email: String, phoneNumber: String) {
+    func setupUser(firstname : String, lastname: String, username: String, email: String) {
         // [START add_ada_lovelace]
         // Add a new document with a generated ID
         let uid = Auth.auth().currentUser?.uid
@@ -51,7 +54,6 @@ class UserModel {
             "lastname": lastname,
             "username": username,
             "email": email,
-            "phoneNumber": phoneNumber
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -148,6 +150,24 @@ class UserModel {
             }
 
             self.delegate?.finishedLoading(user: self.user)
+        }
+    }
+    
+    func getUserImage(uid: String){
+        let storageRef = storage.reference()
+        
+        // Create a reference to the file you want to download
+        let imgProfRef = storageRef.child("userphotos/\(uid).jpg")
+        
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        imgProfRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                // Uh-oh, an error occurred!
+                print(error)
+            } else {
+                // Data for "userphotos/uid" is returned
+                //self.delegate?.loadUserImage(userImage: UIImage(data: data!)!)
+            }
         }
     }
     

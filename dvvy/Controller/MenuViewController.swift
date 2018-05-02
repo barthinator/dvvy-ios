@@ -72,7 +72,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         arrayMenuOptions.append(["title":"Feed"])
         arrayMenuOptions.append(["title":"Collab"])
         arrayMenuOptions.append(["title":"Submit"])
-
+        arrayMenuOptions.append(["title":"Settings"])
         tblMenuOptions.reloadData()
     }
 
@@ -115,7 +115,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let headCell = tableView.dequeueReusableCell(withIdentifier: "head") as! SideUserCell
             headCell.backgroundColor = UIColor.clear
             headCell.userLbl.text = UserDefaults.standard.value(forKey: "name") as? String
+            headCell.userLbl.text = headCell.userLbl.text?.uppercased()
             headCell.userLbl.textColor = UIColor.white
+            headCell.userLbl.font = UIFont.init(name: "Cocomat Light-trial.ttf", size: 17)
             if (UserDefaults.standard.object(forKey: "userPhoto") != nil) {
                 headCell.userImg.image = UIImage(data: UserDefaults.standard.object(forKey: "userPhoto") as! Data)
             }
@@ -126,6 +128,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else{
             lblTitle.text = arrayMenuOptions[indexPath.row]["title"]!
+            lblTitle.font = UIFont.init(name: "Cocomat Light-trial.ttf", size: 17)
             return cell
         }
     }

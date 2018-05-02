@@ -14,6 +14,8 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
     var followers : [User] = []
     var uid : String = "nil"
     
+    var allImages : [String: UIImage] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,7 @@ class FriendsViewController: BaseViewController, UITableViewDelegate, UITableVie
         
         cell.layer.cornerRadius = 20
         cell.nameLbl.text = followers[indexPath.row].first + " " + followers[indexPath.row].last
-        //cell.profileImage.image = UIImage(named: nameArray[indexPath.row])
+        cell.profileImage.image = allImages[followers[indexPath.row].uid] ?? #imageLiteral(resourceName: "David Bartholomew")
         return cell
     }
     

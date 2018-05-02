@@ -11,19 +11,19 @@ import FirebaseAuth
 
 class SignUpViewController : UIViewController {
     
-    @IBOutlet weak var usernameLbl: UITextField!
-    
     @IBOutlet weak var frName: UITextField!
     
     @IBOutlet weak var emailLbl: UITextField!
     
     @IBOutlet weak var lName: UITextField!
     
-    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBOutlet weak var passwordLbl: UITextField!
     
     
+    @IBOutlet var errLbl: UILabel!
+    
+    @IBOutlet weak var createBtn: UIButton!
     
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
@@ -33,12 +33,12 @@ class SignUpViewController : UIViewController {
         
         
         // TODO: Make some sort of email / pass validation
-        if let email = emailLbl.text, let pass = passwordLbl.text, let username = usernameLbl.text, let fn = frName.text, let ln = lName.text, let phone = phoneNumber.text {
+        if let email = emailLbl.text, let pass = passwordLbl.text, let fn = frName.text, let ln = lName.text{
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                 // ...
                 
                 let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                changeRequest?.displayName = username
+                changeRequest?.displayName = fn + " " + ln
                 changeRequest?.commitChanges { error in
                     if error == nil {
                         print("User ")
@@ -53,125 +53,127 @@ class SignUpViewController : UIViewController {
                         
                     }
                     
+                    self.errLbl.isHidden = false
+                    
                     switch errorCode {
                         
                     case .emailAlreadyInUse:
-                        print("invalid email")
+                        self.errLbl.text = "Email already in use!"
                     case .invalidCustomToken:
-                        print("invalid custom token")
+                        self.errLbl.text = "Invalid custom token"
                     case .customTokenMismatch:
-                        print("custom token mismatch")
+                        self.errLbl.text = "Custom token mismatch"
                     case .invalidCredential:
-                        print("invalid credentials")
+                        self.errLbl.text = "Invalid credentials"
                     case .userDisabled:
-                        print("User currently disabled")
+                        self.errLbl.text = "User currently disabled"
                     case .operationNotAllowed:
-                        print("Operation not allowed")
+                        self.errLbl.text = "Operation not allowed"
                     case .invalidEmail:
-                        print("Invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .wrongPassword:
-                        print("Wrong Password")
+                        self.errLbl.text = "Wrong Password"
                     case .tooManyRequests:
-                        print("Too many Requests")
+                        self.errLbl.text = "Too many Requests"
                     case .userNotFound:
-                        print("User not found")
+                        self.errLbl.text = "User not found"
                     case .accountExistsWithDifferentCredential:
-                        print("Accound exists with different credentials")
+                        self.errLbl.text = "Accound exists with different credentials"
                     case .requiresRecentLogin:
-                        print("Requires recent login")
+                        self.errLbl.text = "Requires recent login"
                     case .providerAlreadyLinked:
-                        print("Provider already linked")
+                        self.errLbl.text = "Provider already linked"
                     case .noSuchProvider:
-                        print("No such provider")
+                        self.errLbl.text = "No such provider"
                     case .invalidUserToken:
-                        print("Invalid user token")
+                        self.errLbl.text = "Invalid user token"
                     case .networkError:
-                        print("Network error")
+                        self.errLbl.text = "Network error"
                     case .userTokenExpired:
-                        print("User token has expired")
+                        self.errLbl.text = "User token has expired"
                     case .invalidAPIKey:
-                        print("Invalid API key")
+                        self.errLbl.text = "Invalid API key"
                     case .userMismatch:
-                        print("User mismatch")
+                        self.errLbl.text = "User mismatch"
                     case .credentialAlreadyInUse:
-                        print("Already logged in")
+                        self.errLbl.text = "Already logged in"
                     case .weakPassword:
-                        print("Weak Password")
+                        self.errLbl.text = "Weak Password"
                     case .appNotAuthorized:
-                        print("App not authorized")
+                       self.errLbl.text = "App not authorized"
                     case .expiredActionCode:
-                        print("Expired action code")
+                        self.errLbl.text = "Expired action code"
                     case .invalidActionCode:
-                        print("Invalid action code")
+                        self.errLbl.text = "Invalid action code"
                     case .invalidMessagePayload:
-                        print("Invalid message payload")
+                        self.errLbl.text = "Invalid message payload"
                     case .invalidSender:
-                        print("Invalid sender")
+                        self.errLbl.text = "Invalid sender"
                     case .invalidRecipientEmail:
-                        print("Invalid recipient email")
-                    case .missingPhoneNumber:
-                        print("Missing phone number")
-                    case .invalidPhoneNumber:
-                        print("Invalid phone number")
+                        self.errLbl.text = "Invalid recipient email"
                     case .missingVerificationCode:
-                        print("Missing verification code")
+                        self.errLbl.text = "Missing verification code"
                     case .invalidVerificationCode:
-                        print("Invalid verification code")
+                        self.errLbl.text = "Invalid verification code"
                     case .missingVerificationID:
-                        print("Missing verification ID")
+                        self.errLbl.text = "Missing verification ID"
                     case .invalidVerificationID:
-                        print("Invalid verification ID")
+                        self.errLbl.text = "Invalid verification ID"
                     case .missingAppCredential:
-                        print("Missing app credential")
+                        self.errLbl.text = "Missing app credential"
                     case .invalidAppCredential:
-                        print("Invalid app credential")
+                        self.errLbl.text = "Invalid app credential"
                     case .sessionExpired:
-                        print("Session expired")
+                        self.errLbl.text = "Session expired"
                     case .quotaExceeded:
-                        print("Quota exceeded")
+                        self.errLbl.text = "Quota exceeded"
                     case .missingAppToken:
-                        print("Missing app token")
+                        self.errLbl.text = "Missing app token"
                     case .notificationNotForwarded:
-                        print("Notification not forwarded")
+                        self.errLbl.text = "Notification not forwarded"
                     case .appNotVerified:
-                        print("App not verified")
+                        self.errLbl.text = "App not verified"
                     case .keychainError:
-                        print("Keychain error")
+                        self.errLbl.text = "Keychain error"
                     case .internalError:
-                        print("Internal error")
+                        self.errLbl.text = "Internal error"
                     case .missingEmail:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .missingIosBundleID:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .missingAndroidPackageName:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .unauthorizedDomain:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .invalidContinueURI:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .missingContinueURI:
-                        print("invalid email")
+                       self.errLbl.text = "Invalid email"
                     case .captchaCheckFailed:
-                        print("invalid email")
+                       self.errLbl.text = "Invalid email"
                     case .webContextAlreadyPresented:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .webContextCancelled:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .appVerificationUserInteractionFailure:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .invalidClientID:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .webNetworkRequestFailed:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
                     case .webInternalError:
-                        print("invalid email")
+                        self.errLbl.text = "Invalid email"
+                    case .missingPhoneNumber:
+                        self.errLbl.text = "Invalid phone"
+                    case .invalidPhoneNumber:
+                        self.errLbl.text = "Invalid phone"
                     }
                 } else {
                     
                     if let u = user {
                         
                         //user added to database if successful
-                        userModel.setupUser(firstname: fn, lastname: ln, username: username, email: email, phoneNumber: phone)
+                        userModel.setupUser(firstname: fn, lastname: ln, username: fn + " " + ln, email: email)
                         
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.synchronize()
@@ -188,7 +190,6 @@ class SignUpViewController : UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        usernameLbl.resignFirstResponder()
         passwordLbl.resignFirstResponder()
         emailLbl.resignFirstResponder()
     }
@@ -196,5 +197,14 @@ class SignUpViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        errLbl.isHidden = true
+        
+        createBtn.layer.cornerRadius = 10
+        createBtn.layer.borderWidth = 1
+        createBtn.layer.borderColor = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0).cgColor
+        emailLbl.layer.cornerRadius = 8
+        passwordLbl.layer.cornerRadius = 8
+        frName.layer.cornerRadius = 8
+        lName.layer.cornerRadius = 8
     }
 }

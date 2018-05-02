@@ -13,7 +13,8 @@
 		0610966D203AA907004827E4 /* FriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0610966C203AA907004827E4 /* FriendsCell.xib */; };
 		0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0610966E203AAAFD004827E4 /* customFriendCell.swift */; };
 		061F76922085BFF7004D107F /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F76912085BFF7004D107F /* LaunchScreen.swift */; };
-		064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */; };
+		0634D7E22091A553003C9E1B /* SubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0634D7E12091A553003C9E1B /* SubmissionViewController.swift */; };
+		0634D7E42091A655003C9E1B /* SubmitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0634D7E32091A655003C9E1B /* SubmitModel.swift */; };
 		064C2E5D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */; };
 		064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */; };
 		064C2E5F208546DD000F33E7 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E4F208546DD000F33E7 /* NibView.swift */; };
@@ -29,12 +30,13 @@
 		064C2E69208546DD000F33E7 /* SwipeableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E59208546DD000F33E7 /* SwipeableViewDelegate.swift */; };
 		064C2E6A208546DD000F33E7 /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E5A208546DD000F33E7 /* SwipeDirection.swift */; };
 		064C2E6B208546DD000F33E7 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064C2E5B208546DD000F33E7 /* UIView+Constraints.swift */; };
+		066692DE2099C76B002B6702 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06648A5C209970A500E92F5A /* Cocomat Ultralight-trial.ttf */; };
+		066692DF2099C772002B6702 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06648A5C209970A500E92F5A /* Cocomat Ultralight-trial.ttf */; };
+		066692E02099C772002B6702 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06648A5C209970A500E92F5A /* Cocomat Ultralight-trial.ttf */; };
 		06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06806E84203D4E9F00D4EE34 /* customFeedCell.xib */; };
 		06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06806E85203D4E9F00D4EE34 /* customFeedCell.swift */; };
+		0684F27D20994BC1002F9960 /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0684F27C20994BC1002F9960 /* PortfolioModel.swift */; };
 		06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
-		06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
-		06AE2BCB2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
-		06AE2BCC2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */; };
 		06AE2BCD2038EB89008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
 		06AE2BCE2038EB8A008E24B5 /* Cocomat Light-trial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */; };
 		06EE225A2039249B00DED1CA /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE22592039249B00DED1CA /* PortfolioController.swift */; };
@@ -98,7 +100,8 @@
 		0610966C203AA907004827E4 /* FriendsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsCell.xib; sourceTree = "<group>"; };
 		0610966E203AAAFD004827E4 /* customFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFriendCell.swift; sourceTree = "<group>"; };
 		061F76912085BFF7004D107F /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
-		064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListingsViewController.swift; sourceTree = "<group>"; };
+		0634D7E12091A553003C9E1B /* SubmissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionViewController.swift; sourceTree = "<group>"; };
+		0634D7E32091A655003C9E1B /* SubmitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitModel.swift; sourceTree = "<group>"; };
 		064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+SwipeableAdditions.swift"; sourceTree = "<group>"; };
 		064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+SwipeAdditions.swift"; sourceTree = "<group>"; };
 		064C2E4F208546DD000F33E7 /* NibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
@@ -114,10 +117,11 @@
 		064C2E59208546DD000F33E7 /* SwipeableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableViewDelegate.swift; sourceTree = "<group>"; };
 		064C2E5A208546DD000F33E7 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		064C2E5B208546DD000F33E7 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		06648A5C209970A500E92F5A /* Cocomat Ultralight-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Ultralight-trial.ttf"; sourceTree = "<group>"; };
 		06806E84203D4E9F00D4EE34 /* customFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = customFeedCell.xib; sourceTree = "<group>"; };
 		06806E85203D4E9F00D4EE34 /* customFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customFeedCell.swift; sourceTree = "<group>"; };
+		0684F27C20994BC1002F9960 /* PortfolioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
 		06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Light-trial.ttf"; sourceTree = "<group>"; };
-		06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cocomat Ultralight-trial.ttf"; sourceTree = "<group>"; };
 		06EE22592039249B00DED1CA /* PortfolioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
 		0EE2B3E50ADA629D152C9CCB /* Pods-dvvyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dvvyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dvvyUITests/Pods-dvvyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		15F5454B1C5AA6E68F33A858 /* Pods_dvvy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dvvy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,7 +211,6 @@
 		064C2E4B208546DD000F33E7 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				064C2E4C208546DD000F33E7 /* CardListingsViewController.swift */,
 				064C2E4D208546DD000F33E7 /* CGPoint+SwipeableAdditions.swift */,
 				064C2E4E208546DD000F33E7 /* CGRect+SwipeAdditions.swift */,
 				064C2E4F208546DD000F33E7 /* NibView.swift */,
@@ -239,7 +242,7 @@
 		06AE2BCA2038EB55008E24B5 /* font */ = {
 			isa = PBXGroup;
 			children = (
-				06AE2BC72038EB3E008E24B5 /* Cocomat Ultralight-trial.ttf */,
+				06648A5C209970A500E92F5A /* Cocomat Ultralight-trial.ttf */,
 				06AE2BC62038EB3D008E24B5 /* Cocomat Light-trial.ttf */,
 			);
 			path = font;
@@ -330,6 +333,8 @@
 				79FFFD692049E97500DE4E18 /* UserModel.swift */,
 				79245D2E20812FA300DF3423 /* CollabModel.swift */,
 				D8F8FFB3207F1AEC0061E8B4 /* ChatModel.swift */,
+				0634D7E32091A655003C9E1B /* SubmitModel.swift */,
+				0684F27C20994BC1002F9960 /* PortfolioModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -355,8 +360,9 @@
 				06EE22592039249B00DED1CA /* PortfolioController.swift */,
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
 				960FADD52084376700A861E8 /* TermsViewController.swift */,
-				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 				060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */,
+				0634D7E12091A553003C9E1B /* SubmissionViewController.swift */,
+				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -514,12 +520,12 @@
 				796E159E201E5C4E0051605E /* LaunchScreen.storyboard in Resources */,
 				79BDE3D620395E8F0011853A /* GoogleService-Info.plist in Resources */,
 				06806E86203D4E9F00D4EE34 /* customFeedCell.xib in Resources */,
-				06AE2BC92038EB40008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */,
 				796E159B201E5C4E0051605E /* Assets.xcassets in Resources */,
 				0610966D203AA907004827E4 /* FriendsCell.xib in Resources */,
 				06AE2BC82038EB40008E24B5 /* Cocomat Light-trial.ttf in Resources */,
 				796E1599201E5C4E0051605E /* Main.storyboard in Resources */,
 				96A031562057927800BDC4DA /* customListingCell.xib in Resources */,
+				066692DE2099C76B002B6702 /* Cocomat Ultralight-trial.ttf in Resources */,
 				064C2E64208546DD000F33E7 /* SwipeableCardViewCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06AE2BCD2038EB89008E24B5 /* Cocomat Light-trial.ttf in Resources */,
-				06AE2BCB2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */,
+				066692DF2099C772002B6702 /* Cocomat Ultralight-trial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06AE2BCE2038EB8A008E24B5 /* Cocomat Light-trial.ttf in Resources */,
-				06AE2BCC2038EB87008E24B5 /* Cocomat Ultralight-trial.ttf in Resources */,
+				066692E02099C772002B6702 /* Cocomat Ultralight-trial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +730,6 @@
 				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
 				797BE14220996EBB00FE05A4 /* ChatViewController.swift in Sources */,
-				064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */,
 				79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */,
 				79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */,
 				064C2E65208546DD000F33E7 /* SwipeableCardViewContainer.swift in Sources */,
@@ -763,8 +768,11 @@
 				06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */,
 				796E1594201E5C4E0051605E /* AppDelegate.swift in Sources */,
 				79FFFD6A2049E97500DE4E18 /* UserModel.swift in Sources */,
+				0634D7E22091A553003C9E1B /* SubmissionViewController.swift in Sources */,
 				064C2E5E208546DD000F33E7 /* CGRect+SwipeAdditions.swift in Sources */,
 				D886FF2C203BBC91008573A2 /* AccountViewController.swift in Sources */,
+				0634D7E42091A655003C9E1B /* SubmitModel.swift in Sources */,
+				0684F27D20994BC1002F9960 /* PortfolioModel.swift in Sources */,
 				064C2E68208546DD000F33E7 /* SwipeableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -933,11 +941,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blah.dvvy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.dvvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -950,11 +958,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7W5US56K3E;
+				DEVELOPMENT_TEAM = Y79DCNAYR9;
 				INFOPLIST_FILE = dvvy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blah.dvvy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.music.dvvy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
