@@ -137,7 +137,8 @@ class PopUpViewController: UIViewController {
                     title: categoryField.text!,
                     datePosted: Date(),
                     category: categoryField.text!,
-                    name: "test"
+                    userImage: #imageLiteral(resourceName: "dvvyBtnImg"),
+                    name: UserDefaults.standard.value(forKey: "name") as! String
                 )
                 collabModel?.makePost(post: self.collabPost!)
             default: break

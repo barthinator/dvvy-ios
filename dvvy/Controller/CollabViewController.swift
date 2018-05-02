@@ -10,7 +10,10 @@ protocol SwipeCollabDelegate {
     func loadData(collab: CollabModel)
 }
 class CollabViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource, CollabModelDelegate, SwipeableCardViewDataSource {
+
     
+    var allImages = [String: UIImage]()
+
     var allPosts: [CollabPost] = []
     var cardPosts: [SampleSwipeableCellViewModel] = []
     
@@ -79,6 +82,11 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         
         swipeableCardView.reloadData()
     }
+    func finishedLoadingImages(_ userImages: [String : UIImage]) {
+        self.allImages = userImages
+        
+        self.collabTableView.reloadData()
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
@@ -104,7 +112,7 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
         cell.clipsToBounds = true
         //cell.layer.cornerRadius = 60
         cell.lblNameListing.text = allPosts[indexPath.section].name.uppercased()
-        //cell.imageListing.image = UIImage(named: nameArray[indexPath.section])
+        cell.imageListing.image = allImages[allPosts[indexPath.section].uid] ?? #imageLiteral(resourceName: "dvvyBtnImg")
         cell.lblNeedTypeCollab.text = allPosts[indexPath.section].category.lowercased()
         return cell
     }
@@ -147,7 +155,7 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     func convertPostsToCardData(posts: [CollabPost]) -> [SampleSwipeableCellViewModel]{
         var cardPosts : [SampleSwipeableCellViewModel] = []
         for post in posts{
-            let cardPost = SampleSwipeableCellViewModel(title: post.name, color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0), image: #imageLiteral(resourceName: "Image"), description: post.description, category: post.category)
+            let cardPost = SampleSwipeableCellViewModel(title: post.name, color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0), image: post.userImage, description: post.description, category: post.category)
             cardPosts.append(cardPost)
         }
         return cardPosts

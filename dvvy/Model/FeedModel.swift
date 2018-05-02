@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseStorage
 
 struct Post {
     var uid: String
