@@ -51,6 +51,8 @@
 		796E15A9201E5C4F0051605E /* dvvyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15A8201E5C4F0051605E /* dvvyTests.swift */; };
 		796E15B4201E5C4F0051605E /* dvvyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E15B3201E5C4F0051605E /* dvvyUITests.swift */; };
 		797A6DDA207CB43B00583A77 /* SideUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A6DD9207CB43B00583A77 /* SideUserCell.swift */; };
+		797BE14220996EBB00FE05A4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BE14120996EBB00FE05A4 /* ChatViewController.swift */; };
+		797BE144209974AA00FE05A4 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797BE143209974AA00FE05A4 /* ChatViewCell.swift */; };
 		79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A75253202AC76F00B9BC99 /* ProfileViewController.swift */; };
 		79B7F14A209822DB00942F6F /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B7F149209822DB00942F6F /* MessageViewCell.swift */; };
 		79BDE3D620395E8F0011853A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79BDE3D520395E8F0011853A /* GoogleService-Info.plist */; };
@@ -140,6 +142,8 @@
 		796E15B3201E5C4F0051605E /* dvvyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dvvyUITests.swift; sourceTree = "<group>"; };
 		796E15B5201E5C4F0051605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		797A6DD9207CB43B00583A77 /* SideUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideUserCell.swift; sourceTree = "<group>"; };
+		797BE14120996EBB00FE05A4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		797BE143209974AA00FE05A4 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
 		79A75253202AC76F00B9BC99 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		79B7F149209822DB00942F6F /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
 		79BDE3D520395E8F0011853A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -311,7 +315,10 @@
 		79B7F148209821DE00942F6F /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				19819553203AAD3500E88201 /* MessageViewController.swift */,
 				79B7F149209822DB00942F6F /* MessageViewCell.swift */,
+				797BE14120996EBB00FE05A4 /* ChatViewController.swift */,
+				797BE143209974AA00FE05A4 /* ChatViewCell.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -347,7 +354,6 @@
 				79BDE3D9203977BE0011853A /* SignUpViewController.swift */,
 				06EE22592039249B00DED1CA /* PortfolioController.swift */,
 				1902703E203AA685000A09CC /* SubmitViewController.swift */,
-				19819553203AAD3500E88201 /* MessageViewController.swift */,
 				960FADD52084376700A861E8 /* TermsViewController.swift */,
 				061F76912085BFF7004D107F /* LaunchScreen.swift */,
 				060A6D8B2087C53A000F43AE /* SettingsPageTableViewController.swift */,
@@ -717,6 +723,7 @@
 			files = (
 				0610966F203AAAFD004827E4 /* customFriendCell.swift in Sources */,
 				796E1596201E5C4E0051605E /* ViewController.swift in Sources */,
+				797BE14220996EBB00FE05A4 /* ChatViewController.swift in Sources */,
 				064C2E5C208546DD000F33E7 /* CardListingsViewController.swift in Sources */,
 				79FA59AA20316815003C7131 /* BottomNavController.swift in Sources */,
 				79EDD5BC205B9D990022DDCC /* FeedModel.swift in Sources */,
@@ -750,6 +757,7 @@
 				7F4234BD2029A3A5009AE35F /* FeedViewController.swift in Sources */,
 				19819554203AAD3500E88201 /* MessageViewController.swift in Sources */,
 				1902703F203AA685000A09CC /* SubmitViewController.swift in Sources */,
+				797BE144209974AA00FE05A4 /* ChatViewCell.swift in Sources */,
 				79A75254202AC76F00B9BC99 /* ProfileViewController.swift in Sources */,
 				064C2E62208546DD000F33E7 /* SampleSwipeableCellViewModel.swift in Sources */,
 				06806E87203D4E9F00D4EE34 /* customFeedCell.swift in Sources */,

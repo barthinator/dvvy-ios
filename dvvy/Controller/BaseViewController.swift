@@ -56,6 +56,7 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
     }
 
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String){
+        print(strIdentifier)
         if strIdentifier == "Profile" && self.navigationController!.topViewController is ProfileViewController{
             let destViewController : ProfileViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier) as! ProfileViewController
             destViewController.uid = UserDefaults.standard.value(forKey: "currentUser") as! String
@@ -67,6 +68,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
             self.navigationController!.pushViewController(destViewController, animated: true)
             return
         }
+        
+        if strIdentifier == "Messages" && self.navigationController!.topViewController is ChatViewController {
+            print("Hit")
+        }
+        
         let destViewController : UIViewController = self.storyboard!.instantiateViewController(withIdentifier: strIdentifier)
 
         let topViewController : UIViewController = self.navigationController!.topViewController!
