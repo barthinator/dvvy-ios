@@ -64,11 +64,13 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
     }
     
     @IBAction func sendPressed(_ sender: Any) {
-        var message : Message = Message(message: messageBox.text!, dateSent: Date(), senderID: UserDefaults.standard.value(forKey: "currentUser") as! String)
+        let message : Message = Message(message: messageBox.text!, dateSent: Date(), senderID: UserDefaults.standard.value(forKey: "currentUser") as! String)
         
         chatModel.sendMessage(chatID: chat.id, senderID: UserDefaults.standard.value(forKey: "currentUser") as! String, message: message.message)
         
         messages.append(message)
+        
+        messageBox.text = ""
         
         messageCollection.reloadData()
     }
@@ -83,7 +85,7 @@ class MessageViewController : BaseViewController, UICollectionViewDelegate, UICo
         
         var currentUser = UserDefaults.standard.value(forKey: "currentUser") as! String
         
-        var isOwnerCell = messages[indexPath.row].senderID == currentUser
+        let isOwnerCell = messages[indexPath.row].senderID == currentUser
 
         var cell = messageCollection.dequeueReusableCell(withReuseIdentifier: "senderMessage", for: indexPath) as! MessageViewCell
         

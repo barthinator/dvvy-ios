@@ -210,6 +210,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
     
     //This loads the users feed posts from the feedModelDelegate
     func finishedLoading(_ posts: [Post]?) {
+        feedPosts = []
         feedPosts = posts!
         
         //reloads the profile data

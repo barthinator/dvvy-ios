@@ -98,9 +98,13 @@ class ChatViewController : BaseViewController, UICollectionViewDelegate, UIColle
         //Default sender cell
         let cell = chatCollection.dequeueReusableCell(withReuseIdentifier: "chatCell", for: indexPath) as! ChatViewCell
         
-        cell.name.text = chats[indexPath.section].recieverID
-        cell.userImage.image = #imageLiteral(resourceName: "David Bartholomew")
-        cell.lastMessageTime.text = chats[indexPath.section].messages.first?.dateSent.description
+        cell.name.text = "Chuck Norris"
+        let currentUser = UserDefaults.standard.value(forKey: "currentUser") as! String
+        if (currentUser != chats[indexPath.section].recieverID){
+            cell.name.text = "Daniel Grissom"
+        }
+        cell.userImage.image = #imageLiteral(resourceName: "dvvyBtnImg")
+        cell.lastMessageTime.text = "Click to open!"
         
         return cell
     }
