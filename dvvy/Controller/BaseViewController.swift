@@ -50,6 +50,11 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
             self.openViewControllerBasedOnIdentifier("Submit")
 
             break
+        case 5:
+            
+            self.openViewControllerBasedOnIdentifier("Settings")
+            
+            break
         default:
             1 == 1
         }
@@ -94,6 +99,24 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
         //self.navigationItem.rightBarButtonItem = customBarItemRight;
 
         self.setToolbarItems([customBarItem, customBarItemRight], animated: false)
+    }
+    func addBackModeBtn(collab:Bool){
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let btnShowMenu = UIButton(type: UIButtonType.system)
+        btnShowMenu.setImage(#imageLiteral(resourceName: "Back Button"), for: UIControlState())
+        btnShowMenu.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        if(!collab){
+        btnShowMenu.addTarget(self, action: #selector(BaseViewController.onBackButtonPress(_:)), for: UIControlEvents.touchUpInside)
+        }
+        else{
+            btnShowMenu.addTarget(self, action: #selector(BaseViewController.onBackToCollabPress(_:)), for: UIControlEvents.touchUpInside)
+
+        }
+        let customBarItem = UIBarButtonItem(customView: btnShowMenu)
+        
+        self.setToolbarItems([customBarItem, flexibleSpace], animated: false)
     }
 
     func defaultMenuImage() -> UIImage {
@@ -158,6 +181,17 @@ class BaseViewController: UIViewController, SlideMenuDelegate, PopUpDelegate {
             menuVC.view.frame=CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height);
             sender.isEnabled = true
         }, completion:nil)
+    }
+    
+    @objc func onBackButtonPress(_ sender : UIButton){
+        _ = navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
+    }
+    @objc func onBackToCollabPress(_ sender : UIButton){
+        let vc: CollabViewController =
+        self.storyboard!.instantiateViewController(withIdentifier: "Collab") as! CollabViewController
+            
+        self.navigationController!.pushViewController(vc, animated: true)
     }
 
     @objc func onCreatePostPress(_ sender : UIButton){

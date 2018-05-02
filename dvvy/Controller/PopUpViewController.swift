@@ -126,7 +126,9 @@ class PopUpViewController: UIViewController {
                     uid: UserDefaults.standard.value(forKey: "currentUser") as! String,
                     description: descriptionField.text!,
                     title: categoryField.text!,
-                    datePosted: Date()
+                    userImage: #imageLiteral(resourceName: "dvvyBtnImg"),
+                    datePosted: Date(),
+                    name: UserDefaults.standard.value(forKey: "name") as! String
                 )
                 feedModel?.makePost(post: self.feedPost!)
             case "Collab":
@@ -136,7 +138,8 @@ class PopUpViewController: UIViewController {
                     title: categoryField.text!,
                     datePosted: Date(),
                     category: categoryField.text!,
-                    name: "test"
+                    userImage: #imageLiteral(resourceName: "dvvyBtnImg"),
+                    name: UserDefaults.standard.value(forKey: "name") as! String
                 )
                 collabModel?.makePost(post: self.collabPost!)
             default: break
