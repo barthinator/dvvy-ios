@@ -122,7 +122,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 headCell.userImg.image = UIImage(data: UserDefaults.standard.object(forKey: "userPhoto") as! Data)
             }
             else{
-                headCell.userImg.image = #imageLiteral(resourceName: "dvvy Logo Coral")
+                headCell.userImg.image = #imageLiteral(resourceName: "Zack Goldstein")
             }
             return headCell
         }

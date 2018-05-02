@@ -259,7 +259,7 @@ class ProfileViewController: BaseViewController, UserModelDelegate, FeedModelDel
         cell.clipsToBounds = true
         
         //cell.layer.cornerRadius = 60
-        cell.feedNameLbl.text = feedPosts[indexPath.section].title
+        cell.feedNameLbl.text = feedPosts[indexPath.section].name.uppercased()
         cell.feedMessageTextView.text = feedPosts[indexPath.section].description
         
         cell.uid = feedPosts[indexPath.section].uid

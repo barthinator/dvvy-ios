@@ -113,10 +113,6 @@ class SignInViewController : UIViewController, UserModelDelegate {
                         print("invalid email")
                     case .invalidRecipientEmail:
                         print("invalid email")
-                    case .missingPhoneNumber:
-                        print("invalid email")
-                    case .invalidPhoneNumber:
-                        print("invalid email")
                     case .missingVerificationCode:
                         print("invalid email")
                     case .invalidVerificationCode:
@@ -169,6 +165,10 @@ class SignInViewController : UIViewController, UserModelDelegate {
                         print("invalid email")
                     case .webInternalError:
                         print("invalid email")
+                    case .missingPhoneNumber:
+                        print("invalid phone")
+                    case .invalidPhoneNumber:
+                        print("invalid phone")
                     }
                 } else {
                     
@@ -217,6 +217,14 @@ class SignInViewController : UIViewController, UserModelDelegate {
         storage = Storage.storage()
         userModel = UserModel.init()
         userModel.delegate = self
+        
+        signInBtn.layer.cornerRadius = 10
+        signInBtn.layer.borderWidth = 1
+        signInBtn.layer.borderColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0).cgColor
+        usernameLbl.layer.cornerRadius = 8
+        passwordLbl.layer.cornerRadius = 8
+        usernameLbl.clipsToBounds = true
+        passwordLbl.clipsToBounds = true
     }
     
     //Checks if the user is already logged in. If so then go to home page!

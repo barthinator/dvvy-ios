@@ -17,12 +17,13 @@ class SignUpViewController : UIViewController {
     
     @IBOutlet weak var lName: UITextField!
     
-    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBOutlet weak var passwordLbl: UITextField!
     
     
     @IBOutlet var errLbl: UILabel!
+    
+    @IBOutlet weak var createBtn: UIButton!
     
     @IBAction func createUser(_ sender: Any) {
         // TODO: Make username actually add to database, its not actually doing anything rignt now
@@ -32,7 +33,7 @@ class SignUpViewController : UIViewController {
         
         
         // TODO: Make some sort of email / pass validation
-        if let email = emailLbl.text, let pass = passwordLbl.text, let fn = frName.text, let ln = lName.text, let phone = phoneNumber.text {
+        if let email = emailLbl.text, let pass = passwordLbl.text, let fn = frName.text, let ln = lName.text{
             Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
                 // ...
                 
@@ -110,10 +111,6 @@ class SignUpViewController : UIViewController {
                         self.errLbl.text = "Invalid sender"
                     case .invalidRecipientEmail:
                         self.errLbl.text = "Invalid recipient email"
-                    case .missingPhoneNumber:
-                        self.errLbl.text = "Missing phone number"
-                    case .invalidPhoneNumber:
-                        self.errLbl.text = "Invalid phone number"
                     case .missingVerificationCode:
                         self.errLbl.text = "Missing verification code"
                     case .invalidVerificationCode:
@@ -166,13 +163,17 @@ class SignUpViewController : UIViewController {
                         self.errLbl.text = "Invalid email"
                     case .webInternalError:
                         self.errLbl.text = "Invalid email"
+                    case .missingPhoneNumber:
+                        self.errLbl.text = "Invalid phone"
+                    case .invalidPhoneNumber:
+                        self.errLbl.text = "Invalid phone"
                     }
                 } else {
                     
                     if let u = user {
                         
                         //user added to database if successful
-                        userModel.setupUser(firstname: fn, lastname: ln, username: fn + " " + ln, email: email, phoneNumber: phone)
+                        userModel.setupUser(firstname: fn, lastname: ln, username: fn + " " + ln, email: email)
                         
                         UserDefaults.standard.set(true, forKey: "isLoggedIn")
                         UserDefaults.standard.synchronize()
@@ -197,5 +198,13 @@ class SignUpViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errLbl.isHidden = true
+        
+        createBtn.layer.cornerRadius = 10
+        createBtn.layer.borderWidth = 1
+        createBtn.layer.borderColor = UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0).cgColor
+        emailLbl.layer.cornerRadius = 8
+        passwordLbl.layer.cornerRadius = 8
+        frName.layer.cornerRadius = 8
+        lName.layer.cornerRadius = 8
     }
 }

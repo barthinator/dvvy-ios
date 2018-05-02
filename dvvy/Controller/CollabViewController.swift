@@ -155,7 +155,7 @@ class CollabViewController: BaseViewController, UITableViewDelegate, UITableView
     func convertPostsToCardData(posts: [CollabPost]) -> [SampleSwipeableCellViewModel]{
         var cardPosts : [SampleSwipeableCellViewModel] = []
         for post in posts{
-            let cardPost = SampleSwipeableCellViewModel(title: post.name, color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0), image: post.userImage, description: post.description, category: post.category)
+            let cardPost = SampleSwipeableCellViewModel(title: post.name, color: UIColor(red:0.33, green:0.33, blue:0.33, alpha:1.0), image: post.userImage, description: post.description, category: "seeking: " + post.category)
             cardPosts.append(cardPost)
         }
         return cardPosts

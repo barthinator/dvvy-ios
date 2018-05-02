@@ -44,7 +44,7 @@ class UserModel {
         db = Firestore.firestore()
     }
 
-    func setupUser(firstname : String, lastname: String, username: String, email: String, phoneNumber: String) {
+    func setupUser(firstname : String, lastname: String, username: String, email: String) {
         // [START add_ada_lovelace]
         // Add a new document with a generated ID
         let uid = Auth.auth().currentUser?.uid
@@ -54,7 +54,6 @@ class UserModel {
             "lastname": lastname,
             "username": username,
             "email": email,
-            "phoneNumber": phoneNumber
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")

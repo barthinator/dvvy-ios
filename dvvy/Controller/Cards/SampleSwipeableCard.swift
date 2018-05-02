@@ -40,7 +40,7 @@ class SampleSwipeableCard: SwipeableCardViewCard {
         if let viewModel = viewModel {
             imageBackgroundColorView.backgroundColor = viewModel.color
             imageView.image = viewModel.image
-            titleLabel.text = viewModel.title
+            titleLabel.text = viewModel.title.uppercased()
             messageLbl.text = viewModel.description
             categoryLbl.text = viewModel.category
             
